@@ -98,3 +98,8 @@ If you want to make bold use `<b>` tag
   </tr>
 </table>
 ```
+
+| Name  | City    | Course   |
+| ----- | ------- | -------- |
+| Jay   | Rajkot  | WD       |
+| Jigar | Rajkjot | Full PHP |
