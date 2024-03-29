@@ -99,7 +99,19 @@ If you want to make bold use `<b>` tag
 </table>
 ```
 
-| Name  | City    | Course   |
-| ----- | ------- | -------- |
-| Jay   | Rajkot  | WD       |
-| Jigar | Rajkjot | Full PHP |
+| Name  | City    | Course        |
+| ----- | ------- | ------------- |
+| Jay   | Rajkot  | WD            |
+| Jigar | Rajkjot | Fullstack PHP |
+
+- This
+
+  - some
+
+    - else
+
+      [] Do this
+
+> some
+
+:)
