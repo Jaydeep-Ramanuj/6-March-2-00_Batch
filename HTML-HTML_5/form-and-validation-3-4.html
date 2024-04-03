@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" method="">
+      <fieldset>
+        <legend>Personal Details</legend>
+        <input
+          type="text"
+          name=""
+          id=""
+          placeholder="Enter your name"
+          required
+          minlength="3"
+          maxlength="5"
+          autocomplete="off"
+          pattern=""
+        />
+        <br />
+        <input type="email" placeholder="Enter your email" /> <br />
+        <input type="password" placeholder="Enter your password" />
+
+        <br />
+        <input type="number" name="" id="" min="5" placeholder="Your age" />
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>Professional Details</legend>
+        <br /><input
+          type="text"
+          name=""
+          id=""
+          placeholder="Enter your course name"
+        />
+        <br /><input type="number" name="" id="" placeholder="Your CGPA" />
+        <br /><input
+          type="text"
+          name=""
+          id=""
+          placeholder="Enter your past company name"
+        />
+        <br /><select name="" id="">
+          <option value="">Rajkot</option>
+          <option value="">Surat</option>
+          <option value="">Ahmedabad</option>
+        </select>
+
+        <br /><input type="range" name="" id="range" step="10" />
+      </fieldset>
+
+      <br /><button>Submit</button>
+      <input type="reset" name="" id="" />
+    </form>
+
+    <script>
+      range = document.getElementById('range');
+      range.addEventListener('input', () => {
+        console.log(range.value);
+      });
+    </script>
+  </body>
+</html>
+
+<!-- get -->
+
+<!-- less secure -->
+<!-- limited character length ~3000 -->
+
+<!-- post -->
+<!-- more secure -->
+<!-- no such character limits -->
+
+<!-- required, use will have to enter some data if want to submit, without data form will not be submitted  -->
+
+<!-- minlength, minimum required length of characters  -->
+
+<!-- minlength, maximum allowed length of characters  -->
+
+<!-- min, minium required number  -->
+<!-- max, maximum allowed number  -->
+
+<!-- autocomplete, decides weather you want input to autocomplete or not -->
