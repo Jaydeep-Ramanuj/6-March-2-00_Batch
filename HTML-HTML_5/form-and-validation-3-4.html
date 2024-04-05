@@ -13,16 +13,22 @@
           type="text"
           name=""
           id=""
-          placeholder="Enter your name"
-          required
           minlength="3"
           maxlength="5"
+          placeholder="Enter your name"
+          required
           autocomplete="off"
-          pattern=""
         />
+
         <br />
-        <input type="email" placeholder="Enter your email" /> <br />
-        <input type="password" placeholder="Enter your password" />
+        <input type="email" placeholder="Enter your email" value="" />
+        <br />
+        <input
+          type="password"
+          placeholder="Enter your password"
+          required
+          pattern="[a-z0-9A-Z.!@#%]{5,10}"
+        />
 
         <br />
         <input type="number" name="" id="" min="5" placeholder="Your age" />
