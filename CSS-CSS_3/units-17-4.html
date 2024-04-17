@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .parent {
+        /* absolute unit */
+        width: 200px;
+
+        /*  relative unit*/
+        /* width: 30%; */
+
+        height: 300px;
+        background-color: yellowgreen;
+      }
+      .child {
+        /* absolute */
+        /* width: 200px; */
+
+        /* relative */
+        /* width: 40%; */
+        /* width: 70vw; */
+        /* width: 100ch; */
+
+        height: 40vh;
+        background-color: tomato;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">Child</div>
+    </div>
+  </body>
+</html>
