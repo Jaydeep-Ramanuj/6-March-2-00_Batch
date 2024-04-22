@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 500px;
+        height: 500px;
+        background-color: yellowgreen;
+        border-radius: 12px;
+        margin: 50px auto;
+        transition: all 300ms;
+      }
+
+      /* pseudo class selector */
+      .box:hover {
+        background-color: hotpink;
+        height: 300px;
+      }
+      #name:focus {
+        background-color: violet;
+      }
+
+      #link:active {
+        color: yellow;
+      }
+
+      #link:visited {
+        color: purple;
+      }
+
+      #check:checked {
+        outline: 3px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://developer.mozilla.org/en-US/" id="link">Go there</a>
+    <input type="checkbox" name="" id="check" />
+    <input type="text" name="" id="name" placeholder="Enter your name" />
+    <div class="box"></div>
+  </body>
+</html>
