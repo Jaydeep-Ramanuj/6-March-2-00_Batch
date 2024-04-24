@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 500px;
+        height: 500px;
+        background-color: yellowgreen;
+        margin: 50px auto;
+      }
+
+      .box::before {
+        content: 'jay';
+        background-color: tomato;
+      }
+
+      li {
+        list-style-type: none;
+        text-align: center;
+      }
+
+      li::before {
+        content: '\21DD';
+        color: yellowgreen;
+        font-weight: 600;
+      }
+      li::after {
+        /* content: '\21DC'; */
+        content: attr(data-name);
+        color: yellowgreen;
+        font-weight: 600;
+      }
+
+      li:hover::after {
+        color: red;
+        margin-left: 10px;
+      }
+      li:hover::before {
+        color: red;
+        margin-right: 10px;
+      }
+
+      input::placeholder {
+        color: rgb(119, 255, 0);
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">Jigar</div>
+
+    <ul>
+      <li data-name="some">Dhosa</li>
+      <li>Pizza</li>
+      <li>Manchurian</li>
+      <li>Aloo paratha</li>
+      <li>Pani puri</li>
+      <li>Pav bhaji</li>
+    </ul>
+
+    <input type="text" name="" id="" placeholder="Enter your name" />
+  </body>
+</html>
