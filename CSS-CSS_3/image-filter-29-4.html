@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .wrapper {
+        width: 300px;
+        margin: 50px auto;
+      }
+      img {
+        height: 300px;
+        width: 300px;
+        border-radius: 8px;
+        border: 1px solid black;
+        /* object-fit: fill; */
+        /* object-fit: contain; */
+        object-fit: cover;
+        transition: all 300ms;
+        /* filter: blur(5px); */
+        /* filter: brightness(50%); */
+      }
+
+      .wrapper:hover img {
+        /* filter: blur(0px); */
+        /* filter: saturate(60%); */
+        /* filter: saturate(150%); */
+        /* filter: brightness(100%); */
+        /* filter: contrast(10%); */
+        /* filter: grayscale(50%); */
+        /* filter: invert(); */
+        /* filter: sepia(); */
+        /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+
+        filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 0.609));
+      }
+
+      .box {
+        height: 200px;
+        width: 200px;
+        background-color: yellowgreen;
+        font-size: 64px;
+        font-weight: 600;
+        /* filter: blur(5px); */
+        /* filter: brightness(80%); */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <img src="https://i.stack.imgur.com/eAepW.png" alt="" />
+
+      <div class="box">Jay</div>
+    </div>
+  </body>
+</html>
