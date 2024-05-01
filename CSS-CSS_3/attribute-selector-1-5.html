@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* selects if given attribute is present */
+      /* div[data-name] {
+        color: yellowgreen;
+      } */
+
+      /* selects if given attribute is has values exactly as mentioned */
+      /* div[data-name='jay'] {
+        color: yellowgreen;
+      } */
+
+      /* selects if given attribute is present as space separated */
+
+      /* div[data-name~='jay'] {
+        color: yellowgreen;
+      } */
+
+      /* selects if given attribute is present as hyphen separated */
+      /* div[data-name|='jay'] {
+        color: yellowgreen;
+      } */
+
+      /* selects if given attribute is starting with mentioned string */
+      /* div[data-name^='jay'] {
+        color: yellowgreen;
+      } */
+
+      /* selects if given attribute is ending with mentioned string */
+      /* div[data-name$='jay'] {
+        color: yellowgreen;
+      } */
+
+      /* selects if given attribute is contains mentioned string */
+      div[data-name*='aym'] {
+        color: yellowgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div>No attribute</div>
+    <div data-name="jay">jay</div>
+    <div data-name="jaymit">jaymit</div>
+    <div data-name="jay mit">jay mit</div>
+    <div data-name="jay-mit">jay-mit</div>
+    <div data-name="jaymeet">jaymeet</div>
+    <div data-name="meetjay">meetjay</div>
+    <div data-name="meet">meet</div>
+    <div data-name="meetdeep">meetdeep</div>
+    <div data-name="jigar">jigar</div>
+  </body>
+</html>
