@@ -18,8 +18,34 @@
   --padding-primary: 0px 100px;
 }
 
-.top-header {
+/* Common classes  */
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-primary-color);
+}
+.sub-title {
+  color: var(--text-secondary-color);
+}
+
+.btn {
+  padding: 5px 15px;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/*  */
+
+header {
   padding: var(--padding-primary);
+}
+
+.top-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -43,4 +69,213 @@
   color: var(--text-secondary-color);
   text-transform: uppercase;
   font-size: 1rem;
+}
+
+.search-bar {
+  height: 50px;
+  width: 400px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+}
+
+.search-bar select,
+.search-bar input {
+  background-color: transparent;
+  border: 0;
+  height: 40px;
+  outline: none;
+}
+
+.search-bar input {
+  flex-grow: 1;
+  position: relative;
+}
+
+.search-bar input::after {
+  content: 'Jay';
+  width: 50px;
+  height: 10px;
+  color: red;
+  position: absolute;
+  top: 100px;
+  left: 0;
+}
+.search-bar span {
+  height: 50px;
+  width: 50px;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -5px;
+  margin-right: -5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.wishlist,
+.cart {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.wishlist i,
+.cart i {
+  font-size: 1.8rem;
+  position: relative;
+}
+.wishlist span .badge,
+.cart span .badge {
+  height: 18px;
+  width: 18px;
+  font-size: 0.8rem;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  position: absolute;
+
+  border: 1px solid white;
+}
+
+.wishlist span .badge {
+  top: -4px;
+  right: -4px;
+}
+.cart span .badge {
+  top: -6px;
+  right: -6px;
+}
+.wishlist span:nth-child(2),
+.cart span:nth-child(2) {
+  font-weight: 600;
+}
+
+.cart span:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+}
+.cart span:nth-child(2) span {
+  color: var(--primary-color);
+}
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-profile img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+.user-profile .username {
+  font-weight: 600;
+}
+
+.top-header + hr {
+  margin: 8px 0px;
+  border: 1px solid rgba(211, 211, 211, 0.636);
+}
+
+/* .bottom-header */
+
+.bottom-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-primary-color);
+}
+
+.bottom-header nav ul {
+  display: flex;
+  gap: 50px;
+}
+.bottom-header li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.bottom-header li:nth-child(1) {
+  color: var(--primary-color);
+}
+.bottom-header .btn {
+  padding: 8px 15px;
+}
+.bottom-header .btn i {
+  font-size: 1.5rem;
+  margin-right: 8px;
+}
+
+.bottom-header .contact {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.bottom-header .contact span:nth-child(1) {
+  color: var(--primary-color);
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+}
+.bottom-header .contact span:nth-child(2) {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* .hero-section */
+.hero-section {
+  padding: var(--padding-primary);
+  background-color: #d0eedf;
+  position: relative;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  margin: 40px 0px;
+}
+
+.hero-section img {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+}
+
+.hero-section .content h2 {
+  font-size: 48px;
+}
+
+.email-input {
+  margin-top: 25px;
+  height: 50px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  padding: 0px 15px;
+  border-radius: 5px;
+  gap: 10px;
+  background-color: white;
+  color: var(--text-secondary-color);
+}
+.email-input .btn {
+  width: fit-content;
+  height: 100%;
+  margin-right: -15px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.email-input input {
+  height: 50px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  flex-grow: 1;
+  font-size: 1.1rem;
 }
