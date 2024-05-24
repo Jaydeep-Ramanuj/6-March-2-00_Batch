@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="C:\Users\admin\Desktop\JAY\HW.css" />
+    <title>HW HTML</title>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Quicksand', sans-serif;
+      }
+
+      :root {
+        --primary-color: #3dba7d;
+        --bg-primary-color: #ffffff;
+        --bg-secondary-color: #d2efe1;
+        --text-primary-color: #283b4e;
+        --text-secondary-color: #838383;
+        --btn-primary-color: #defaec;
+        --btn-secondary-color: #defaec;
+        --padding-primary: 0px 100px;
+      }
+      .btn {
+        background-color: #3dba7d;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.3rem;
+        gap: 3px;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+      }
+
+      /* offer-section */
+      .offers-section {
+        padding: var(--padding-primary);
+        margin-top: 180px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        position: relative;
+      }
+      .offers-section .offer-1 {
+        display: flex;
+        justify-content: space-between;
+        height: 300px;
+        width: 825px;
+        background-color: rgba(255, 105, 180, 0.238);
+        border-radius: 5px;
+      }
+      .offers-section .offer-2 {
+        height: 300px;
+        width: 825px;
+        background-color: rgba(0, 255, 255, 0.271);
+        border-radius: 5px;
+      }
+      .offers-section .offer-1 .offer-info {
+        display: flex;
+        flex-direction: column;
+        margin-top: 100px;
+
+        align-items: center;
+        margin-left: 50px;
+      }
+      .offers-section .offer-1 .offer-info h2 {
+        font-size: 1.8rem;
+        font-weight: 600;
+      }
+      .offers-section .offer-1 .offer-info h4 {
+        font-size: 1.3rem;
+        font-weight: 300;
+      }
+      .offers-section .offer-1 .offer-info button:nth-child(1) {
+        background-color: rgba(255, 68, 0, 0.464);
+        font-size: 0.9rem;
+        font-weight: 600;
+        border: none;
+        color: white;
+        padding: 9px;
+        border-radius: 5px;
+        position: absolute;
+        left: 10%;
+        top: 15%;
+      }
+      .offers-section .offer-1 .offer-info button:nth-child(4) {
+        background-color: var(--primary-color);
+        font-size: 1.3rem;
+        font-weight: 600;
+        border: none;
+        color: white;
+        padding: 18px;
+        border-radius: 5px;
+        position: absolute;
+        left: 10%;
+        top: 75%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+      .offers-section .offer-2 {
+        display: flex;
+        justify-content: space-between;
+        height: 300px;
+        width: 825px;
+        background-color: #11e67f21;
+        border-radius: 5px;
+      }
+      .offers-section .offer-2 .offer-info {
+        display: flex;
+        flex-direction: column;
+        margin-top: 100px;
+
+        align-items: center;
+        margin-left: 50px;
+      }
+      .offers-section .offer-2 .offer-info h2 {
+        font-size: 1.8rem;
+        font-weight: 600;
+      }
+      .offers-section .offer-2 .offer-info h4 {
+        font-size: 1.3rem;
+        font-weight: 300;
+      }
+      .offers-section .offer-2 .offer-info button:nth-child(1) {
+        background-color: var(--primary-color);
+        font-size: 0.9rem;
+        font-weight: 600;
+        border: none;
+        color: white;
+        padding: 9px;
+        border-radius: 5px;
+        position: absolute;
+        left: 54%;
+        top: 15%;
+      }
+      .offers-section .offer-2 .offer-info button:nth-child(4) {
+        background-color: var(--primary-color);
+        font-size: 1.3rem;
+        font-weight: 600;
+        border: none;
+        color: white;
+        padding: 18px;
+        border-radius: 5px;
+        position: absolute;
+        left: 54%;
+        top: 75%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+
+      /* Daily Best Sells  */
+      .daily-sells-section {
+        padding: var(--padding-primary);
+        margin-top: 63px;
+      }
+      .daily-sells-section .title {
+        font-size: 1.8rem;
+        font-weight: 600;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .daily-sells-section .title ul {
+        display: flex;
+        font-size: 1.3rem;
+        font-weight: 500;
+        gap: 27px;
+      }
+
+      .daily-sells-section .title ul li {
+        list-style-type: none;
+      }
+      .daily-sells-section .title ul li:nth-child(1) {
+        color: var(--primary-color);
+        font-weight: 900;
+      }
+      .daily-sells-section .title .expiry-info {
+        background-color: red;
+        border-radius: 9px;
+        width: fit-content;
+        font-size: 1.3rem;
+        font-weight: 500;
+        color: white;
+        padding: 15px;
+      }
+      .daily-sells-section .title .expiry-info span:nth-last-child(3) {
+        color: yellow;
+      }
+      .daily-sells-section .sidebar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 9px;
+      }
+      .daily-sells-section .sidebar i {
+        background-color: rgba(128, 128, 128, 0.129);
+        color: #283b4e;
+        border-radius: 50px;
+        padding: 15px;
+      }
+
+      .daily-sells-section .sells-items {
+        display: flex;
+        justify-content: flex-start;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .daily-sells-section .item-card {
+        position: relative;
+        margin-top: 36px;
+        height: 450px;
+        width: 270px;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+
+        font-size: 1rem;
+        font-weight: 600;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+          rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+      }
+      .daily-sells-section .item-card img {
+        height: 100px;
+        width: 100px;
+        margin: 0px auto;
+      }
+
+      .daily-sells-section .item-card span:nth-child(1) {
+        background-color: gold;
+        padding: 5px;
+        font-weight: 600;
+        position: absolute;
+        left: 0%;
+        top: 0%;
+      }
+
+      .daily-sells-section .item-card h5 {
+        font-weight: 300;
+      }
+      .daily-sells-section .item-card .rating {
+        margin-top: 10px;
+        color: gold;
+      }
+      .daily-sells-section .item-card .rating span,
+      i:nth-child(5) {
+        color: grey;
+      }
+      .daily-sells-section .item-card .name {
+        font-weight: 300;
+      }
+      .daily-sells-section .item-card .name mark {
+        background-color: transparent;
+        font-weight: 600;
+        color: var(--primary-color);
+      }
+      .daily-sells-section .item-card .price {
+        font-weight: 600;
+        color: var(--primary-color);
+      }
+      .daily-sells-section .item-card .price strike {
+        font-weight: 300;
+        color: grey;
+      }
+      .daily-sells-section .item-card .stock {
+        margin-top: 10px;
+        width: 100%;
+        height: 8px;
+        border-radius: 9px;
+        background-color: rgba(128, 128, 128, 0.325);
+      }
+      .daily-sells-section .item-card .stock-range {
+        width: var(--individual-width);
+        height: inherit;
+        border-radius: 9px;
+        background-color: var(--primary-color);
+      }
+      .daily-sells-section .item-card .btn {
+        display: flex;
+        gap: 9px;
+        margin-top: 10px;
+      }
+
+      .daily-sells-section .register-card-back {
+        margin-top: 36px;
+        height: 450px;
+        width: 270px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        background-image: url('https://cdn.vectorstock.com/i/1000x1000/07/04/fruit-icon-set-02-vector-14780704.webp');
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+          rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+      }
+      .daily-sells-section .register-card {
+        margin-top: 0px;
+        height: 450px;
+        width: 270px;
+        padding: 19px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+        background-color: rgba(255, 0, 0, 0.789);
+        /* background-color: rgba(244, 113, 90, 0.879); */
+        /* background-color: rgba(38, 232, 17, 0.786); */
+        /* background-color:rgba(210, 105, 30, 0.781); */
+        /* background-color:rgba(245, 245, 245, 0.905); */
+        /* color: rgb(66, 4, 4); */
+        color: black;
+        font-size: 1.2rem;
+        font-weight: 900;
+
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+          rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+      }
+      .daily-sells-section .register-card h1 {
+        color: white;
+        text-shadow: 3px 2px 2px black;
+
+        margin: 0px auto;
+        font-weight: 900;
+        font-size: 1.8rem;
+      }
+      .daily-sells-section .register-card label {
+        color: white;
+        text-shadow: 2px 1px 1px black;
+        font-weight: 600;
+      }
+      .daily-sells-section .register-card h3 {
+        margin: 0px auto;
+        color: white;
+        text-shadow: 3px 3px 3px black;
+        font-weight: 600;
+        text-align: center;
+      }
+      .daily-sells-section .register-card span {
+        margin-top: -33px;
+        background-color: white;
+        padding: 5px;
+        border-radius: 5px;
+      }
+      .daily-sells-section .register-card span i {
+        color: rgba(0, 0, 0, 0.716);
+        opacity: 0.9;
+      }
+      .daily-sells-section .register-card input {
+        border: none;
+        outline: none;
+        margin: 5px;
+      }
+      .daily-sells-section .register-card .btn {
+        /* background-color: rgba(255, 225, 0, 0.505); */
+        background-color: rgba(240, 157, 157, 0.658);
+        /* background-color: rgba(255, 217, 0, 0.475); */
+        color: white;
+        font-weight: 630;
+        border-radius: 5px;
+        text-shadow: 3px 1px 3px black;
+      }
+
+      /* Trending Items */
+      .box {
+        padding: var(--padding-primary);
+        margin-top: 100px;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .tops-items {
+        height: 500px;
+        width: 250px;
+
+        display: flex;
+        flex-direction: column;
+
+        font-size: 0.8rem;
+      }
+
+      .tops-items .range {
+        height: 6px;
+        width: 100%;
+        background-color: silver;
+        border-radius: 5px;
+      }
+
+      .tops-items .sells-range {
+        height: 6px;
+        width: var(--individual-range-width);
+        background-color: green;
+        border-radius: 5px;
+      }
+
+      .tops-items .img {
+        height: 100px;
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(128, 128, 128, 0.095);
+        border-radius: 9px;
+        padding: 12px;
+      }
+      .tops-items img {
+        height: 81px;
+        width: 81px;
+        mix-blend-mode: color-burn;
+      }
+      .tops-items .items {
+        padding: 5px;
+        margin-top: 10px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 30px;
+        font-size: 1rem;
+      }
+      .tops-items .rating {
+        font-size: 0.9rem;
+        color: gold;
+      }
+      .tops-items .rating span,
+      i:nth-child(5) {
+        color: grey;
+      }
+      .tops-items .price {
+        margin-top: 12px;
+        display: flex;
+        gap: 5px;
+        font-weight: 600;
+        color: green;
+      }
+      .tops-items .price strike {
+        color: grey;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- offers-section -->
+    <div class="offers-section">
+      <div class="offer-1">
+        <div class="offer-info">
+          <button>Free Delivery</button>
+          <h2>Free delivery over 3699$</h2>
+          <h4>
+            Shop $3699 product and get free <br />
+            delivery anyware.
+          </h4>
+          <button>
+            Shop Now
+            <i class="fa-solid fa-angles-right"></i>
+          </button>
+        </div>
+
+        <img src="/images/delivery-boy.png" alt="" />
+      </div>
+      <div class="offer-2">
+        <div class="offer-info">
+          <button>60% off</button>
+          <h2>Organic Foods</h2>
+          <h4>Save upto 60% off <br />on your first order.</h4>
+          <button>
+            Buy Now
+            <i class="fa-solid fa-angles-right"></i>
+          </button>
+        </div>
+
+        <img src="/images/fruit-bg-2.png" alt="" />
+      </div>
+    </div>
+
+    <!-- daily-sells-section -->
+    <div class="daily-sells-section">
+      <div class="title">
+        <h3>Daily Best Sells</h3>
+        <div class="link">
+          <ul>
+            <li>Featured</li>
+            <li>Popular</li>
+            <li>New</li>
+          </ul>
+        </div>
+        <span class="expiry-info">
+          <span><i class="fa-solid fa-clock"></i> Expires In : </span>
+          <span><b>03 :</b></span>
+          <span><b>06 :</b></span>
+          <span>36</span>
+        </span>
+
+        <div class="sidebar">
+          <i class="fa-solid fa-arrow-left"></i>
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </div>
+
+      <div class="sells-items">
+        <div class="item-card">
+          <span>Save 45%</span>
+          <img
+            src="https://img.cdnx.in/312823/1694933833657_SKU-1102_0.jpg?width=600"
+            alt=""
+          />
+          <h5>Coffee</h5>
+          <h2>Coffee</h2>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <span>(4)</span>
+          </div>
+          <span class="name">By <mark>Mr.FOOD</mark></span>
+
+          <div class="price">$360 <strike>$630</strike></div>
+
+          <div class="stock">
+            <div class="stock-range" style="--individual-width: 80%"></div>
+          </div>
+          <span
+            >Sold : <b>80</b><span style="font-weight: 300">/100</span></span
+          >
+
+          <button class="btn">
+            <i class="fa-solid fa-cart-plus"></i> Add to cart
+          </button>
+        </div>
+        <div class="item-card">
+          <span style="background-color: #3dba7d; color: white">Best Deal</span>
+          <img
+            src="https://m.media-amazon.com/images/I/61c2QvL3HeL.jpg"
+            alt=""
+          />
+          <h5>Tea</h5>
+          <h2>Wagh Bakri</h2>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <span>(4)</span>
+          </div>
+          <span class="name">By <mark>Mr.FOOD</mark></span>
+
+          <div class="price">$990 <strike>$1630</strike></div>
+
+          <div class="stock">
+            <div class="stock-range" style="--individual-width: 90%"></div>
+          </div>
+          <span>Sold :<b>90</b><span style="font-weight: 300">/100</span></span>
+
+          <button class="btn">
+            <i class="fa-solid fa-cart-plus"></i> Add to cart
+          </button>
+        </div>
+        <div class="item-card">
+          <span>Save 20%</span>
+          <img
+            src="https://www.verywellfit.com/thmb/d83Yz0AdSvUaOa2-a4lvhNEuN8I=/fit-in/1500x1000/filters:no_upscale():max_bytes(150000):strip_icc()/yogi-tea-green-tea-pure-green-a5171a14dfa04235bb73b6b417cf1865.jpg"
+            alt=""
+          />
+          <h5>Green Tea</h5>
+          <h2>Yogi Green Tea</h2>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <span>(4)</span>
+          </div>
+          <span class="name">By <mark>Mr.FOOD</mark></span>
+
+          <div class="price">$450 <strike>$540</strike></div>
+
+          <div class="stock">
+            <div class="stock-range" style="--individual-width: 70%"></div>
+          </div>
+          <span>Sold :<b>70</b><span style="font-weight: 300">/100</span></span>
+
+          <button class="btn">
+            <i class="fa-solid fa-cart-plus"></i> Add to cart
+          </button>
+        </div>
+        <div class="item-card">
+          <span>Save 50%</span>
+          <img
+            src="https://www.onions-usa.org/wp-content/uploads/2019/11/home-feature-tipsmyths.jpg"
+            alt=""
+          />
+          <h5>Vegitables</h5>
+          <h2>Onion</h2>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <span>(4)</span>
+          </div>
+          <span class="name">By <mark>Mr.FOOD</mark></span>
+
+          <div class="price">$36 <strike>$63</strike></div>
+
+          <div class="stock">
+            <div class="stock-range" style="--individual-width: 50%"></div>
+          </div>
+          <span
+            >Sold : <b>50</b><span style="font-weight: 300">/100</span></span
+          >
+
+          <button class="btn">
+            <i class="fa-solid fa-cart-plus"></i> Add to cart
+          </button>
+        </div>
+
+        <div class="register-card-back">
+          <div class="register-card">
+            <h1>10% OFF</h1>
+            <h3>For new members sign up at the first time</h3>
+
+            <label>Email Address</label>
+            <span
+              ><i class="fa-solid fa-envelope"></i
+              ><input type="email" placeholder="abc@gmail.com"
+            /></span>
+            <label>Password</label>
+            <span
+              ><i class="fa-solid fa-key"></i
+              ><input type="password" placeholder="maximum 9 number"
+            /></span>
+
+            <button class="btn">Register Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- trending-section -->
+    <div class="trending-section">
+      <div class="box">
+        <div class="tops-items">
+          <h1>Top Sells</h1>
+
+          <div class="range">
+            <div
+              class="sells-range"
+              style="--individual-range-width: 90%"
+            ></div>
+          </div>
+
+          <div class="items">
+            <div class="img">
+              <img
+                src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=900/app/images/products/full_screen/pro_487633.jpg?ts=1710347460"
+                alt="img1"
+              />
+            </div>
+            <div class="desc">
+              <h2>Tea Packet</h2>
+              <span class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(4)</span>
+              </span>
+              <div class="price"><span>$360</span> <strike>$630</strike></div>
+            </div>
+          </div>
+
+          <div class="items">
+            <div class="img">
+              <img
+                src="https://www.greenstation.co/cdn/shop/products/veggiee-basket.jpg?v=1545729020"
+                alt="img1"
+              />
+            </div>
+            <div class="desc">
+              <h2>Vegitabel Basket</h2>
+              <span class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(4)</span>
+              </span>
+              <div class="price"><span>$600</span> <strike>$900</strike></div>
+            </div>
+          </div>
+
+          <div class="items">
+            <div class="img">
+              <img
+                src="https://www.urbangroc.com/wp-content/uploads/2021/12/fruit-basket.jpg"
+                alt="img1"
+              />
+            </div>
+            <div class="desc">
+              <h2>Fruits Basket</h2>
+              <span class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(4)</span>
+              </span>
+              <div class="price"><span>$300</span> <strike>$600</strike></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="tops-items">
+          <h1>Top Rated</h1>
+
+          <div class="range">
+            <div
+              class="sells-range"
+              style="--individual-range-width: 60%"
+            ></div>
+          </div>
+
+          <div class="items">
+            <div class="img">
+              <img
+                src="https://fruitboxco.com/cdn/shop/products/image_800x.jpg?v=1607579884"
+                alt="img1"
+              />
+            </div>
+            <div class="desc">
+              <h2>Apple 1kg box</h2>
+              <span class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(4)</span>
+              </span>
+              <div class="price"><span>$9</span> <strike>$18</strike></div>
+            </div>
+          </div>
+
+          <div class="items">
+            <div class="img">
+              <img
+                src="https://i0.wp.com/uzbeksouq.com/wp-content/uploads/2023/07/vegetable-basket.png?fit=600%2C600&ssl=1"
+                alt="img1"
+              />
+            </div>
+            <div class="desc">
+              <h2>Vegitabels baskets</h2>
+              <span class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><br />
+
+                <span>(4)</span>
+              </span>
+              <div class="price"><span>$270</span> <strike>$360</strike></div>
+            </div>
+          </div>
+
+          <div class="items">
+            <div class="img">
+              <img
+                src="https://t3.ftcdn.net/jpg/04/37/73/42/360_F_437734297_yeRoQJUQe18BANIQHUIsdihgnG0OZ8CN.jpg"
+                alt="img1"
+              />
+            </div>
+            <div class="desc">
+              <h2>Before Meal Sup</h2>
+              <span class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(4)</span>
+              </span>
+              <div class="price"><span>$30</span> <strike>$60</strike></div>
+            </div>
+          </div>
+        </div>
+        <!-- 3 -->
+        <div class="tops-items">
+          <h1>Trending Items</h1>
+
+          <div class="range">
+            <div
+              class="sells-range"
+              style="--individual-range-width: 81%"
+            ></div>
+          </div>
+
+          <div class="items">
+            <div class="img">
+              <img
+                src="https://img.freepik.com/premium-photo/vegetable-soup-isolated-white-background_488220-4112.jpg"
+                alt="img1"
+              />
+            </div>
+            <div class="desc">
+              <h2>Vegitabel Sup</h2>
+              <span class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(4)</span>
+              </span>
+              <div class="price"><span>$90</span> <strike>$180</strike></div>
+            </div>
+          </div>
+
+          <div class="items">
+            <div class="img">
+              <img
+                src="https://assets-global.website-files.com/63ed08484c069d0492f5b0bc/654154132f2282b19a2ce1b7_6373b354b501fe5fca1a8fd5_633611cb47a532d1b1fa9e80_green-tea-weight-loss-hero.jpeg"
+                alt="img1"
+              />
+            </div>
+            <div class="desc">
+              <h2>Green Tea</h2>
+              <span class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(4)</span>
+              </span>
+              <div class="price"><span>$36</span> <strike>$63</strike></div>
+            </div>
+          </div>
+
+          <div class="items">
+            <div class="img">
+              <img
+                src="https://static.vecteezy.com/system/resources/previews/028/573/386/non_2x/kids-drawing-cartoon-illustration-hot-coffee-icon-isolated-on-white-background-vector.jpg"
+                alt="img1"
+              />
+            </div>
+            <div class="desc">
+              <h2>Hot Coffee</h2>
+              <span class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(4)</span>
+              </span>
+              <div class="price"><span>$27</span> <strike>$72</strike></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="tops-items">
+          <h1>Popular</h1>
+
+          <div class="range">
+            <div
+              class="sells-range"
+              style="--individual-range-width: 54%"
+            ></div>
+          </div>
+
+          <div class="items">
+            <div class="img">
+              <img
+                src="https://static.vecteezy.com/system/resources/previews/030/738/961/large_2x/fruit-salad-on-white-background-isolated-free-photo.JPG"
+                alt="img1"
+              />
+            </div>
+            <div class="desc">
+              <h2>Fruit Salad</h2>
+              <span class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(4)</span>
+              </span>
+              <div class="price"><span>$60</span> <strike>$90</strike></div>
+            </div>
+          </div>
+
+          <div class="items">
+            <div class="img">
+              <img
+                src="https://img.freepik.com/premium-photo/delicious-orange-juice-bottle-orange-it-isolated-white_392895-139729.jpg"
+                alt="img1"
+              />
+            </div>
+            <div class="desc">
+              <h2>Fruit Juice</h2>
+              <span class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(4)</span>
+              </span>
+              <div class="price"><span>$18</span> <strike>$27</strike></div>
+            </div>
+          </div>
+
+          <div class="items">
+            <div class="img">
+              <img
+                src="https://img.freepik.com/premium-photo/fresh-strawberry-drink-perfect-drink-catalog_718046-1426.jpg?w=740"
+                alt="img1"
+              />
+            </div>
+            <div class="desc">
+              <h2>Cocktail Juice</h2>
+              <span class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(4)</span>
+              </span>
+              <div class="price"><span>$27</span> <strike>$36</strike></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
