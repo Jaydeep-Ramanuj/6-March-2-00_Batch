@@ -835,3 +835,91 @@ i:nth-child(5) {
 .info-item .info h5 {
   color: var(--text-secondary-color);
 }
+
+/* footer */
+
+footer {
+  padding-bottom: 30px;
+}
+.break-line {
+  height: 1px;
+  margin-left: 100px;
+  margin-right: 100px;
+  background-color: var(--text-secondary-color);
+  opacity: 0.3;
+}
+
+.top-footer-section {
+  margin-top: 50px;
+  padding: var(--padding-primary);
+  display: flex;
+  justify-content: space-between;
+}
+.top-footer-section .contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.top-footer-section .contact-details .our-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.top-footer-section .contact-details .our-info img {
+  height: 45px;
+  width: 45px;
+}
+
+.top-footer-section .contact-details .our-name {
+  padding-left: 5px;
+}
+
+.top-footer-section .contact-details .our-info .our-name h3 {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+}
+.top-footer-section .contact-details .our-info .our-name h5 {
+  font-size: 0.9rem;
+  color: var(--text-secondary-color);
+}
+
+.top-footer-section .details ul li {
+  list-style: none;
+  font-size: 0.9rem;
+}
+.top-footer-section .details ul li i {
+  color: var(--primary-color);
+}
+.top-footer-section .details ul {
+  gap: 12px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.top-footer-section .account,
+.useful-links,
+.help-center {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.top-footer-section .account,
+.useful-links,
+.help-center h2 {
+  color: var(--text-primary-color);
+}
+
+.bottom-footer-section {
+  margin-top: 25px;
+  padding: var(--padding-primary);
+  display: flex;
+  justify-content: space-between;
+}
+
+.social {
+  display: flex;
+  gap: 10px;
+}

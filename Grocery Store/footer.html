@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <title>Groceyish</title>
+    <link rel="stylesheet" href="footer-area.css" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Quicksand', sans-serif;
+      }
+
+      :root {
+        --primary-color: #3dba7d;
+        --bg-primary-color: #ffffff;
+        --bg-secondary-color: #d2efe1;
+        --text-primary-color: #283b4e;
+        --text-secondary-color: #838383;
+        --btn-primary-color: #defaec;
+        --btn-secondary-color: #defaec;
+        --padding-primary: 0px 100px;
+      }
+
+      /* FOOTER-PART CSS */
+
+      .break-line {
+        height: 1px;
+        margin-left: 100px;
+        margin-right: 100px;
+        background-color: var(--text-secondary-color);
+        opacity: 0.3;
+      }
+
+      .top-footer-section {
+        margin-top: 50px;
+        padding: var(--padding-primary);
+        display: flex;
+        justify-content: space-between;
+      }
+      .top-footer-section .contact-details {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+      .top-footer-section .contact-details .our-info {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      .top-footer-section .contact-details .our-info img {
+        height: 45px;
+        width: 45px;
+      }
+
+      .top-footer-section .contact-details .our-name {
+        padding-left: 5px;
+      }
+
+      .top-footer-section .contact-details .our-info .our-name h3 {
+        font-size: 1.8rem;
+        color: var(--primary-color);
+      }
+      .top-footer-section .contact-details .our-info .our-name h5 {
+        font-size: 0.9rem;
+        color: var(--text-secondary-color);
+      }
+
+      .top-footer-section .details ul li {
+        list-style: none;
+        font-size: 0.9rem;
+      }
+      .top-footer-section .details ul li i {
+        color: var(--primary-color);
+      }
+      .top-footer-section .details ul {
+        gap: 12px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+      }
+
+      .top-footer-section .account,
+      .useful-links,
+      .help-center {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .top-footer-section .account,
+      .useful-links,
+      .help-center h2 {
+        color: var(--text-primary-color);
+      }
+
+      .bottom-footer-section {
+        margin-top: 25px;
+        padding: var(--padding-primary);
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+    <title>Footer Are</title>
+  </head>
+  <body>
+    <!-- FOOTER PART HTML -->
+    <br />
+    <div class="break-line"></div>
+
+    <footer>
+      <div class="top-footer-section">
+        <div class="contact-details">
+          <div class="our-info">
+            <img src="/images/logo.png" alt="logo" />
+
+            <div class="our-name">
+              <h3>Groceyish</h3>
+              <h5>GROCERY</h5>
+            </div>
+          </div>
+
+          <our class="details">
+            <ul>
+              <li>
+                <i class="fa-solid fa-location-dot"></i>
+                <b>Address :</b> University Road Jalaram Park Rajkot.
+              </li>
+              <li>
+                <i class="fa-solid fa-phone"></i> <b>Call :</b> +91 9030609036
+              </li>
+              <li>
+                <i class="fa-solid fa-envelope"></i> <b>Email :</b>
+                grocery@store.email.com
+              </li>
+              <li>
+                <i class="fa-regular fa-clock"></i> <b>Working hours :</b> 10:00
+                am to 10:00 pm ( Mon to Sat )
+              </li>
+            </ul>
+          </our>
+        </div>
+        <div class="account">
+          <h2>Account</h2>
+          <span>Wishlist</span>
+          <span>Cart</span>
+          <span>Track Order</span>
+          <span>Shipping Details</span>
+        </div>
+        <div class="useful-links">
+          <h2>Useful-Links</h2>
+          <span>About Us</span>
+          <span>Contact Us</span>
+          <span>Hot Deals</span>
+          <span>Promotions</span>
+          <span>New Products</span>
+        </div>
+        <div class="help-center">
+          <h2>Help Center</h2>
+          <spna>Payments</spna>
+          <spna>Refund</spna>
+          <spna>Checkout</spna>
+          <spna>Shipping</spna>
+          <spna>Q&A</spna>
+          <spna>Privacy Policy</spna>
+        </div>
+      </div>
+
+      <br />
+
+      <div class="break-line"></div>
+
+      <div class="bottom-footer-section">
+        <div class="copyright">
+          <p>@2024, All rights reserved</p>
+        </div>
+        <div class="payment">
+          <img src="/images/Payment.png" alt="payment" />
+        </div>
+        <div class="social">
+          <img src="/images/icon-facebook.png" alt="" />
+          <img src="/images/icon-in.png" alt="" />
+          <img src="/images/icon-insta.png" alt="" />
+          <img src="/images/icon-twitter.png" alt="" />
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
