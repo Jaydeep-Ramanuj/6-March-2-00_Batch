@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .loader {
+        width: 300px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: lightgray;
+        border-radius: 12px;
+        margin: 100px auto;
+        padding: 15px;
+      }
+      .bubble {
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background-color: rgba(128, 128, 128, 0.786);
+        animation-name: loader1;
+        animation-duration: 900ms;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      .bubble:nth-child(1) {
+        animation-delay: 300ms;
+      }
+      .bubble:nth-child(2) {
+        animation-delay: 500ms;
+      }
+      .bubble:nth-child(3) {
+        animation-delay: 700ms;
+      }
+      .bubble:nth-child(4) {
+        animation-delay: 900ms;
+      }
+      .bubble:nth-child(5) {
+        animation-delay: 1100ms;
+      }
+
+      @keyframes loader1 {
+        from {
+          opacity: 0.2;
+          transform: scale(1);
+        }
+        to {
+          opacity: 1;
+          transform: scale(3);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader">
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+    </div>
+  </body>
+</html>

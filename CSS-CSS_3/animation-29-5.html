@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .wrapper {
+        margin: 50px 20px;
+        height: 400px;
+        padding: 10px;
+        background-color: lightgrey;
+        display: flex;
+        align-items: center;
+        border-radius: 12px;
+      }
+      .wrapper:hover .ball {
+        /* animation-play-state: paused; */
+        /* animation-play-state: running; */
+      }
+      .ball {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        overflow: hidden;
+        /* background-color: yellowgreen; */
+        /* animation-name: slideBall; */
+        animation-name: moveBall;
+        animation-duration: 3000ms;
+        animation-iteration-count: 2;
+        /* animation-iteration-count: infinite; */
+        animation-delay: 600ms;
+        /* animation-fill-mode: backwards; */
+        /* animation-fill-mode: forwards; */
+        animation-fill-mode: both;
+        /* animation-direction: normal; */
+        animation-direction: alternate;
+        /* animation-direction: reverse; */
+        /* animation-direction: alternate-reverse; */
+        /* animation-timing-function: ease-in-out; */
+      }
+      .ball img {
+        height: 100%;
+        width: 100%;
+      }
+
+      @keyframes slideBall {
+        from {
+          transform: translateX(0px) rotate(0deg);
+        }
+        to {
+          transform: translateX(1500px) rotate(360deg);
+        }
+      }
+
+      @keyframes moveBall {
+        0% {
+          transform: translate(0, 0);
+        }
+        20% {
+          transform: translate(200px, -100px);
+        }
+        40% {
+          transform: translate(1200px, -100px);
+        }
+        60% {
+          transform: translate(1300px, 100px);
+        }
+        80% {
+          transform: translate(500px, 100px);
+        }
+        100% {
+          transform: translate(0, 0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="ball">
+        <img
+          src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjBxd213ZWE4OHY0b3R2ZHc3ZHdhNHVraDBzc3Vva2ZlYXIwOG51ZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yhfTY8JL1wIAE/giphy.webp"
+          alt=""
+        />
+      </div>
+    </div>
+  </body>
+</html>

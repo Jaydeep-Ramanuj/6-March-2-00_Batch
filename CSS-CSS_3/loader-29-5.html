@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        background-color: #24252e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .loader {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        border: 10px solid transparent;
+        border-top: 10px solid lightgray;
+        animation-name: loader3;
+        animation-duration: 2000ms;
+        animation-iteration-count: infinite;
+        position: relative;
+        /* animation-timing-function: linear; */
+      }
+      .inner-loader {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        border: 10px solid transparent;
+        border-top: 10px solid lightgray;
+        animation-name: inner3;
+        animation-duration: 2000ms;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        position: absolute;
+        left: calc(50% - 25px);
+        top: calc(50% - 25px);
+      }
+      @keyframes loader3 {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes inner3 {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(-90deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader">
+      <div class="inner-loader"></div>
+    </div>
+  </body>
+</html>
