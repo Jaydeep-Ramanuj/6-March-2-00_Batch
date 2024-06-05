@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        /* background-color: #24252e; */
+      }
+      .loader {
+        height: 300px;
+        width: 300px;
+        margin: 50px auto;
+        border-radius: 50%;
+        position: relative;
+        transform-origin: 50% 50%;
+      }
+      .line {
+        height: 120px;
+        width: 15px;
+        position: absolute;
+        background-color: black;
+        border-radius: 24px;
+        top: 55%;
+        left: 50%;
+        /* --opacity: 0; */
+        opacity: var(--opacity);
+        /* opacity: 0; */
+
+        transform: rotate(var(--rotate));
+        animation-name: rotate;
+        animation-duration: 900ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-direction: alternate;
+      }
+      @keyframes rotate {
+        0% {
+          opacity: 0;
+        }
+        10% {
+          opacity: 0.1;
+        }
+        20% {
+          opacity: 0.2;
+        }
+        30% {
+          opacity: 0.3;
+        }
+        40% {
+          opacity: 0.4;
+        }
+        50% {
+          opacity: 0.5;
+        }
+        60% {
+          opacity: 0.6;
+        }
+        70% {
+          opacity: 0.7;
+        }
+        80% {
+          opacity: 0.8;
+        }
+        90% {
+          opacity: 0.9;
+        }
+        10% {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader">
+      <div
+        class="line"
+        style="--opacity: 0.0833; --rotate: 30deg; animation-delay: 100ms"
+      ></div>
+      <div
+        class="line"
+        style="--opacity: 0.1666; --rotate: 60deg; animation-delay: 200ms"
+      ></div>
+      <div
+        class="line"
+        style="--opacity: 0.2499; --rotate: 90deg; animation-delay: 300ms"
+      ></div>
+      <div
+        class="line"
+        style="--opacity: 0.3332; --rotate: 120deg; animation-delay: 400ms"
+      ></div>
+      <div
+        class="line"
+        style="--opacity: 0.4165; --rotate: 150deg; animation-delay: 500ms"
+      ></div>
+      <div
+        class="line"
+        style="--opacity: 0.4998; --rotate: 180deg; animation-delay: 600ms"
+      ></div>
+      <div
+        class="line"
+        style="--opacity: 0.5831; --rotate: 210deg; animation-delay: 700ms"
+      ></div>
+      <div
+        class="line"
+        style="--opacity: 0.6664; --rotate: 240deg; animation-delay: 800ms"
+      ></div>
+      <div
+        class="line"
+        style="--opacity: 0.7697; --rotate: 270deg; animation-delay: 900ms"
+      ></div>
+      <div
+        class="line"
+        style="--opacity: 0.833; --rotate: 300deg; animation-delay: 1000ms"
+      ></div>
+      <div
+        class="line"
+        style="--opacity: 0.9183; --rotate: 330deg; animation-delay: 1100ms"
+      ></div>
+      <div
+        class="line"
+        style="--opacity: 1; --rotate: 360deg; animation-delay: 1200ms"
+      ></div>
+    </div>
+
+    <div class="item1"></div>
+    <div class="item2"></div>
+    <div class="item3"></div>
+    <div class="item4"></div>
+    <div class="item5"></div>
+    <div class="item6"></div>
+    <div class="item7"></div>
+    <div class="item8"></div>
+    <div class="item9"></div>
+    <div class="item10"></div>
+  </body>
+</html>

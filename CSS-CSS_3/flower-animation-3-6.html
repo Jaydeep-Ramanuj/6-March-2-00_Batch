@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      :root {
+        --duration: 1200ms;
+      }
+      .flower {
+        width: 500px;
+        height: 500px;
+        /* border: 1px solid; */
+        margin: 50px auto;
+        position: relative;
+      }
+      .pallets {
+        height: 250px;
+        width: 250px;
+        /* background-image: linear-gradient(pink, hotpink); */
+        /* background-image: linear-gradient(
+          rgb(234, 154, 62),
+          rgba(165, 42, 42, 0.721)
+        ); */
+        border-radius: 0% 100% 29% 71% / 0% 66% 34% 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transition: transform 1200ms;
+        transform-origin: 0% 0%;
+        z-index: 3;
+        animation-name: colors, move;
+        animation-duration: 1200ms, 1200ms;
+        animation-delay: 1000ms, 1000ms;
+        animation-fill-mode: forwards, forwards;
+        animation-timing-function: linear, linear;
+      }
+
+      /* .flower:hover .pallets:nth-child(1) {
+        transform: rotate(45deg);
+        animation-name: colors;
+        animation-duration: var(--duration);
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+      }
+      .flower:hover .pallets:nth-child(2) {
+        transform: rotate(90deg);
+        animation-name: colors;
+        animation-duration: var(--duration);
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+      }
+      .flower:hover .pallets:nth-child(3) {
+        transform: rotate(135deg);
+        animation-name: colors;
+        animation-duration: var(--duration);
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+      }
+      .flower:hover .pallets:nth-child(4) {
+        transform: rotate(180deg);
+        animation-name: colors;
+        animation-duration: var(--duration);
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+      }
+      .flower:hover .pallets:nth-child(5) {
+        transform: rotate(225deg);
+        animation-name: colors;
+        animation-duration: var(--duration);
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+      }
+      .flower:hover .pallets:nth-child(6) {
+        transform: rotate(270deg);
+        animation-name: colors;
+        animation-duration: var(--duration);
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+      }
+      .flower:hover .pallets:nth-child(7) {
+        transform: rotate(315deg);
+        animation-name: colors;
+        animation-duration: var(--duration);
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+      }
+      .flower:hover .pallets:nth-child(8) {
+        transform: rotate(360deg);
+        animation-name: colors;
+        animation-duration: var(--duration);
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+      } */
+
+      @keyframes colors {
+        /* 0% {
+          background-image: linear-gradient(
+            rgba(131, 196, 131, 0.482),
+            rgba(36, 190, 36, 0.847)
+          );
+        } */
+        0% {
+          background-image: linear-gradient(pink, rgba(165, 42, 42, 0.28));
+        }
+        /* 66% {
+          background-image: linear-gradient(
+            rgb(213, 190, 34),
+            rgba(165, 42, 42, 0.477)
+          );
+        } */
+        100% {
+          background-image: linear-gradient(pink, rgba(165, 42, 42, 0.721));
+        }
+      }
+
+      .stick {
+        height: 500px;
+        width: 20px;
+        background-image: linear-gradient(rgba(78, 218, 78, 0.637), green);
+        position: absolute;
+        /* top: 50%; */
+        left: calc(50% - 10px);
+        border-radius: 24px;
+        opacity: 0;
+        animation-name: stick;
+        animation-duration: 500ms;
+        animation-iteration-count: 1;
+        animation-delay: 500ms;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+      }
+
+      @keyframes stick {
+        0% {
+          opacity: 1;
+          transform: translateY(200%);
+          /* top: 200%; */
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(50%);
+          /* top: 50%; */
+        }
+      }
+
+      @keyframes move {
+        to {
+          transform: var(--rotate);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flower">
+      <div class="pallets" style="--rotate: rotate(45deg)"></div>
+      <div class="pallets" style="--rotate: rotate(90deg)"></div>
+      <div class="pallets" style="--rotate: rotate(135deg)"></div>
+      <div class="pallets" style="--rotate: rotate(180deg)"></div>
+      <div class="pallets" style="--rotate: rotate(225deg)"></div>
+      <div class="pallets" style="--rotate: rotate(270deg)"></div>
+      <div class="pallets" style="--rotate: rotate(315deg)"></div>
+      <div class="pallets" style="--rotate: rotate(360deg)"></div>
+
+      <div class="stick"></div>
+    </div>
+  </body>
+</html>
