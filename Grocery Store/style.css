@@ -70,6 +70,15 @@ header {
   text-transform: uppercase;
   font-size: 1rem;
 }
+.header-wrapper {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#toggle {
+  display: none;
+}
 
 .search-bar {
   height: 50px;
@@ -255,13 +264,14 @@ header {
 .email-input {
   margin-top: 25px;
   height: 50px;
-  width: 400px;
+  /* width: 400px; */
   display: flex;
   align-items: center;
   padding: 0px 15px;
   border-radius: 5px;
   gap: 10px;
   background-color: white;
+  flex-wrap: wrap;
   color: var(--text-secondary-color);
 }
 .email-input .btn {
@@ -288,6 +298,10 @@ header {
   margin: 30px 0;
 }
 
+#category-section-select,
+#featured-section-select {
+  display: none;
+}
 .category-section-top,
 .featured-section-top {
   display: flex;
@@ -414,14 +428,18 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 .offers-section .offer-1,
 .offers-section .offer-2 {
   display: flex;
   justify-content: space-between;
-  height: 250px;
-  min-width: 500px;
+  flex-wrap: wrap-reverse;
+  /* height: 250px; */
+  /* min-width: 500px; */
   border-radius: 5px;
+  flex-grow: 1;
+  max-width: 800px;
 }
 .offers-section .offer-1 {
   background-color: #fcf7e4;
@@ -500,6 +518,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  row-gap: 10px;
+  flex-wrap: wrap;
 }
 .daily-sells-section .title ul {
   display: flex;
@@ -785,8 +805,9 @@ i:nth-child(5) {
   padding: var(--padding-primary);
   display: flex;
   align-items: center;
+  flex-wrap: row-reverse;
   justify-content: space-around;
-  height: 600px;
+  /* height: 600px; */
   background-color: #d0eedf;
 }
 
@@ -816,6 +837,8 @@ i:nth-child(5) {
   margin: 50px auto;
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+  row-gap: 15px;
 }
 
 .info-item {
@@ -853,6 +876,8 @@ footer {
   margin-top: 50px;
   padding: var(--padding-primary);
   display: flex;
+  row-gap: 15px;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 .top-footer-section .contact-details {
@@ -916,6 +941,8 @@ footer {
   margin-top: 25px;
   padding: var(--padding-primary);
   display: flex;
+  flex-wrap: wrap;
+  row-gap: 15px;
   justify-content: space-between;
 }
 

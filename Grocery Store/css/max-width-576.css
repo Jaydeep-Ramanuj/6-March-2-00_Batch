@@ -1,0 +1,83 @@
+@media screen and (max-width: 576px) {
+  :root {
+    --padding-primary: 20px;
+    --margin-top: 30px;
+  }
+  header {
+    /* padding: 20px; */
+  }
+  .header-wrapper,
+  .bottom-header {
+    display: none;
+  }
+
+  .hero-section img {
+    height: 150px;
+  }
+
+  .category-section {
+    justify-content: space-between;
+  }
+  .category-section .category-links,
+  .featured-section .featured-links,
+  .daily-sells-section .link ul {
+    display: none;
+  }
+  #category-section-select,
+  #featured-section-select,
+  #daily-sells-select {
+    display: inline;
+  }
+  .category-section .category-list,
+  .featured-section .featured-list,
+  .daily-sells-section .sells-items,
+  .trending-section .box {
+    overflow-x: auto;
+  }
+
+  .daily-sells-section .item-card {
+    min-width: 200px;
+  }
+
+  .app-section {
+  }
+  .app-section img {
+    height: 150px;
+  }
+  .offers-section,
+  .trending-section .box {
+    margin-top: var(--margin-top);
+  }
+  .offers-section .offer-1 img,
+  .offers-section .offer-2 img {
+    height: 100px;
+  }
+  .offers-section .offer-1 .offer-info,
+  .offers-section .offer-2 .offer-info {
+    padding: 10px;
+  }
+  .offers-section .offer-1 .offer-info h4 {
+    text-align: start;
+  }
+
+  .info-section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .info-section .info-item {
+    gap: 20px;
+  }
+
+  .daily-sells-section .wrapper {
+    width: 100%;
+  }
+  .daily-sells-section .top-bar .wrapper .expiry-info {
+    font-size: 1rem;
+  }
+  .daily-sells-section .sidebar {
+    display: none;
+  }
+  footer .top-footer-section {
+    margin-top: 20px;
+  }
+}
