@@ -1,0 +1,17 @@
+@media screen and (min-width: 992px) {
+  :root {
+    --padding-primary: 50px;
+    --margin-top: 30px;
+  }
+
+  .top-header .wishlist span:nth-child(2),
+  .top-header .cart span:nth-child(2),
+  .top-header .user-profile .username {
+    display: initial;
+  }
+
+  .bottom-header ul li:nth-child(3),
+  .bottom-header ul li:nth-child(4) {
+    display: initial;
+  }
+}

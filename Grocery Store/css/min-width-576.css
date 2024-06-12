@@ -1,0 +1,35 @@
+@media screen and (min-width: 576px) {
+  :root {
+    --padding-primary: 20px;
+    --margin-top: 30px;
+  }
+
+  .header-wrapper,
+  .bottom-header {
+    display: none;
+  }
+
+  .hero-section img {
+    opacity: 0.3;
+  }
+  .offers-section {
+    margin-top: 50px;
+  }
+  .offers-section .offer-1 img {
+    height: 200px;
+  }
+  .app-section .content {
+    width: 40%;
+  }
+  .app-section img {
+    height: 300px;
+  }
+
+  .daily-sells-section .sidebar {
+    display: none;
+  }
+
+  .daily-sells-section .item-card {
+    min-width: 200px;
+  }
+}

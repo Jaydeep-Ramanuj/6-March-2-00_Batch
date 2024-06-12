@@ -28,12 +28,12 @@
   #daily-sells-select {
     display: inline;
   }
-  .category-section .category-list,
+  /* .category-section .category-list,
   .featured-section .featured-list,
   .daily-sells-section .sells-items,
   .trending-section .box {
     overflow-x: auto;
-  }
+  } */
 
   .daily-sells-section .item-card {
     min-width: 200px;

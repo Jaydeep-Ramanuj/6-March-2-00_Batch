@@ -248,6 +248,7 @@ header {
   display: flex;
   align-items: center;
   margin: 40px 0px;
+  isolation: isolate;
 }
 
 .hero-section img {
@@ -255,6 +256,7 @@ header {
   height: 100%;
   top: 0;
   right: 0;
+  z-index: -1;
 }
 
 .hero-section .content h2 {
@@ -439,7 +441,7 @@ header {
   /* min-width: 500px; */
   border-radius: 5px;
   flex-grow: 1;
-  max-width: 800px;
+  max-width: 600px;
 }
 .offers-section .offer-1 {
   background-color: #fcf7e4;
@@ -494,6 +496,13 @@ header {
   align-items: center;
   align-self: flex-start;
   gap: 20px;
+}
+
+.category-section .category-list,
+.featured-section .featured-list,
+.daily-sells-section .sells-items,
+.trending-section .box {
+  overflow-x: auto;
 }
 
 /* Daily Best Sells  */
