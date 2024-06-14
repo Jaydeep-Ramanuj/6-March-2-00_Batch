@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .parent {
+        /* width: 500px; */
+        width: 100%;
+        height: 500px;
+        background-color: bisque;
+        margin: 50px auto;
+        display: grid;
+        /* grid-template-columns:300px 100px 300px; */
+        /* grid-template-columns: 200px 100px 200px; */
+        /* grid-template-columns: 100px 100px 100px 100px 100px; */
+        /* grid-template-columns: repeat(10, 100px); */
+        grid-template-columns: repeat(auto-fit, 100px);
+        grid-template-rows: 100px 200px 100px 50px 50px;
+      }
+
+      .child {
+        /* height: 50px;
+        width: 50px; */
+        /* background-color: tomato; */
+        border: 1px solid black;
+        background-color: yellowgreen;
+      }
+
+      .child:nth-child(1) {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        background-color: tomato;
+      }
+      .child:nth-child(13) {
+        grid-row-start: 3;
+        grid-row-end: 5;
+        grid-column-start: 4;
+        grid-column-end: 5;
+        background-color: turquoise;
+      }
+      .child:nth-child(10) {
+        grid-row-start: 3;
+        grid-row-end: 5;
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+        background-color: violet;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+    </div>
+  </body>
+</html>
