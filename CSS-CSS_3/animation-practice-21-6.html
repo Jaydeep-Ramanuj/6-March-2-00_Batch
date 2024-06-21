@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper {
+        height: 300px;
+        width: 300px;
+        border-radius: 12px;
+        margin: 150px auto;
+        position: relative;
+      }
+
+      .card {
+        height: 100%;
+        width: 100%;
+        border-radius: 8px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all 600ms;
+        transform-origin: 100% 0%;
+      }
+      .card:nth-child(1) {
+        background-color: #d2c5f6;
+      }
+      .card:nth-child(2) {
+        background-color: #b7a8ec;
+      }
+      .card:nth-child(3) {
+        background-color: #8569d9;
+      }
+      .card:nth-child(4) {
+        background-color: #5f3fb3;
+      }
+
+      .wrapper:hover .card:nth-child(4) {
+        transform: rotate(45deg);
+      }
+      .wrapper:hover .card:nth-child(3) {
+        transform: rotate(34deg);
+      }
+      .wrapper:hover .card:nth-child(2) {
+        transform: rotate(23deg);
+      }
+      .wrapper:hover .card:nth-child(1) {
+        transform: rotate(12deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+    </div>
+  </body>
+</html>
