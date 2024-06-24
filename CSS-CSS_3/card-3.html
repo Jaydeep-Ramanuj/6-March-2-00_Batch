@@ -17,6 +17,9 @@
         box-sizing: border-box;
         font-family: 'Poppins', sans-serif;
       }
+      body {
+        background-size: cover;
+      }
       .card {
         max-width: 300px;
         margin: 100px auto;
@@ -132,5 +135,21 @@
         </div>
       </div>
     </div>
+
+    <script>
+      let card = document.getElementsByClassName('card')[0];
+      card.addEventListener('mouseover', () => {
+        document.body.style.backgroundColor = '#24252e';
+        document.body.setAttribute(
+          'background',
+          //   'https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmRhODVxeGhzNHA4eDU2MnNyMDZiODR4M2Z6eTF4Z2x3ZGJqa200MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/TgygPXqxrx6PjwPymq/giphy.webp'
+          'https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTE1NjZ6bzE0aGFsYmNiemtqZWUwZDFweW5ubHowdTN2Y3I5cm41NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/MittlQxzZoEec/giphy.webp'
+        );
+      });
+      card.addEventListener('mouseleave', () => {
+        document.body.style.backgroundColor = '#ffffff';
+        document.body.removeAttribute('background');
+      });
+    </script>
   </body>
 </html>
