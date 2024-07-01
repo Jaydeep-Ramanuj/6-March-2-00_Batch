@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log(name);
+      // var
+
+      // Limitations of Var
+
+      // Can be re-declared with same variable name
+      // It is function or global scope
+      // We can update its value
+
+      name = 'jay';
+      var name = 'jigar';
+      var name = 'jay'; // Valid
+
+      //  let
+
+      // Can't be re-declared with same name
+      // It is block scope
+      // We can update its value
+
+      let num;
+      //   let num = 20; // Error
+      num = 10;
+
+      // const
+
+      // Can't be re-declared with same name
+      // It is block scope
+      // We can't update its value
+      // We have to initialize it in same statement of declaration
+
+      //   const pi; // Error
+      const pi = 3.14;
+      //   pi = 3.19; // Error
+
+      var f_name;
+      function foo() {
+        var f_name = 'j';
+        let my_num = 10;
+        console.log(f_name);
+        console.log(my_num);
+      }
+
+      foo();
+
+      console.log(f_name); // Valid, can access var variable outside function
+      //   console.log(my_num); // Error, can't access let variables outside function
+    </script>
+  </body>
+</html>
