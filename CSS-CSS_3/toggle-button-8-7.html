@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .toggle-container {
+        max-width: 300px;
+        padding: 8px;
+        border-radius: 24px;
+        background-color: grey;
+        font-size: 32px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        font-weight: 600;
+        display: flex;
+        position: relative;
+        margin: 200px auto;
+        isolation: isolate;
+      }
+
+      label {
+        flex: 1;
+        text-align: center;
+      }
+      input {
+        display: none;
+      }
+      #on,
+      #off {
+        flex: 1;
+        text-align: center;
+      }
+      .slider {
+        width: calc(50% - 8px);
+        height: calc(100% - 16px);
+        background-color: whitesmoke;
+        border-radius: 24px;
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        z-index: -1;
+        transition: all 300ms;
+      }
+      #on-btn:checked ~ .slider {
+        left: 8px;
+      }
+      #on-btn:checked + label #on {
+        color: grey;
+      }
+      #off-btn:checked ~ .slider {
+        left: 50%;
+      }
+      #off-btn:checked + label #off {
+        color: grey;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toggle-container">
+      <input type="radio" name="btn" id="on-btn" checked />
+      <label for="on-btn">
+        <span id="on">ON</span>
+      </label>
+      <input type="radio" name="btn" id="off-btn" />
+      <label for="off-btn">
+        <span id="off">OFF </span>
+      </label>
+      <div class="slider"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .book {
+        height: 400px;
+        width: 300px;
+        margin: 200px auto;
+        border-top-right-radius: 24px;
+        border-bottom-right-radius: 24px;
+        position: relative;
+      }
+      .page {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-top-right-radius: 24px;
+        border-bottom-right-radius: 24px;
+        transition: all 600ms;
+        transform-origin: 0% 0%;
+        transition-delay: var(--delay);
+      }
+      .page:nth-child(1) {
+        background-color: tomato;
+      }
+      .page:nth-child(2) {
+        background-color: yellowgreen;
+      }
+      .page:nth-child(3) {
+        background-color: turquoise;
+      }
+
+      .book:hover .page:nth-child(1) {
+        transform: rotateY(170deg);
+      }
+      .book:hover .page:nth-child(2) {
+        transform: rotateY(175deg);
+      }
+      .book:hover .page:nth-child(3) {
+        transform: rotateY(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="book">
+      <div class="page" style="--delay: 0ms"></div>
+      <div class="page" style="--delay: 200ms"></div>
+      <div class="page" style="--delay: 400ms"></div>
+    </div>
+  </body>
+</html>
