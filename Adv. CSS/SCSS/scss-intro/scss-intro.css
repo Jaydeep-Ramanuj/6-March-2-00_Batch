@@ -1,0 +1,109 @@
+.wrapper {
+  padding: 30px;
+  border-radius: 12px;
+}
+.wrapper .box {
+  height: 200px;
+  width: 200px;
+  border-radius: 8px;
+  font-size: 32px;
+  font-weight: 600;
+  color: white;
+  margin: 20px;
+}
+.wrapper .box1 {
+  background-color: red;
+  display: flex;
+  justify-content: end;
+  align-items: start;
+  transition: all 300ms;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.wrapper .box1:hover {
+  transform: translate(50px, -10px) scale(1.2);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.wrapper .box2 {
+  background-color: rgba(50, 205, 55, 0.597);
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  transition: all 300ms;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.wrapper .box2:hover {
+  transform: translate(-30px, -30px) scale(0.8);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.wrapper .box3 {
+  background-color: #24252e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 300ms;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.wrapper .box3:hover {
+  transform: translate(5px, 30px);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+button:nth-child(2) {
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: tomato;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  transition: all 300ms;
+}
+button:nth-child(2):hover {
+  background-color: #c71e00;
+  transform: scale(0.95);
+}
+
+button:nth-child(3) {
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: skyblue;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  transition: all 300ms;
+}
+button:nth-child(3):hover {
+  background-color: #239ed0;
+  transform: scale(0.95);
+}
+
+button:nth-child(4) {
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: teal;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  transition: all 300ms;
+}
+button:nth-child(4):hover {
+  background-color: #000101;
+  transform: scale(0.95);
+}
+
+button:nth-child(5) {
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: brown;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  transition: all 300ms;
+}
+button:nth-child(5):hover {
+  background-color: #3f1010;
+  transform: scale(0.95);
+}/*# sourceMappingURL=scss-intro.css.map */

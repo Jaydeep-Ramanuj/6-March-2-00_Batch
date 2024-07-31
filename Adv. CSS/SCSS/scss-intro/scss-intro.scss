@@ -1,0 +1,83 @@
+$box1-bg-color: red;
+$box2-bg-color: rgba(50, 205, 55, 0.597);
+$box3-bg-color: #24252e;
+
+@mixin customFlex($jc: start, $ai: start) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+@mixin hoverEffect($x-offset: 0px, $y-offset: 0px, $scale: 1) {
+  transition: all 300ms;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  &:hover {
+    @if ($scale!=1) {
+      transform: translate($x-offset, $y-offset) scale($scale);
+    } @else {
+      transform: translate($x-offset, $y-offset);
+    }
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+      rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  }
+}
+
+@mixin bs-btn($color: #3549d9) {
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: $color;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  transition: all 300ms;
+  &:hover {
+    background-color: darken($color: $color, $amount: 25);
+    transform: scale(0.95);
+  }
+}
+
+.wrapper {
+  padding: 30px;
+  border-radius: 12px;
+
+  .box {
+    height: 200px;
+    width: 200px;
+    border-radius: 8px;
+    font-size: 32px;
+    font-weight: 600;
+    color: white;
+    margin: 20px;
+  }
+
+  .box1 {
+    background-color: $box1-bg-color;
+    @include customFlex($jc: end);
+    @include hoverEffect(50px, -10px, 1.2);
+  }
+  .box2 {
+    background-color: $box2-bg-color;
+    @include customFlex(end, end);
+    @include hoverEffect(-30px, -30px, 0.8);
+  }
+  .box3 {
+    background-color: $box3-bg-color;
+    @include customFlex(center, center);
+    @include hoverEffect(5px, 30px);
+  }
+}
+
+button:nth-child(2) {
+  @include bs-btn(tomato);
+}
+button:nth-child(3) {
+  @include bs-btn(skyblue);
+}
+button:nth-child(4) {
+  @include bs-btn(teal);
+}
+button:nth-child(5) {
+  @include bs-btn(brown);
+}
