@@ -1,0 +1,27 @@
+// @use 'sass:colors';
+
+$colors: red, blue, green, yellow, pink;
+
+@each $color in $colors {
+  @for $i from 1 to 10 {
+    .bg-#{$color}-#{$i*100} {
+      background-color: scale-color($color, $lightness: (100% - ($i * 10%)));
+    }
+  }
+}
+
+.card {
+  height: 300px;
+  width: 100px;
+}
+
+@for $i from 1 to 20 {
+  .h-#{$i*5} {
+    height: $i * 5%;
+  }
+}
+@for $i from 1 to 20 {
+  .w-#{$i*5} {
+    width: $i * 5%;
+  }
+}

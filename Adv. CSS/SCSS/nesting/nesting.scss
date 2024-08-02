@@ -1,0 +1,43 @@
+.card {
+  .top-bar {
+    .logo {
+      background-color: red;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    .cart {
+      font-size: 18px;
+    }
+  }
+  .content {
+    h2 {
+      color: blue;
+    }
+    h4 {
+      color: pink;
+    }
+    .socials {
+      .icon {
+        border-radius: 50%;
+        &:hover {
+          transform: translateY(-5px);
+        }
+      }
+    }
+  }
+
+  .bottom-bar {
+    .profile {
+      .avatar {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+      }
+      .last-active {
+        font-size: 14px;
+        color: lightgray;
+      }
+    }
+  }
+}

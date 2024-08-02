@@ -1,0 +1,44 @@
+$card-bg-color: red;
+$inner-card-bg-color: rgba(255, 0, 0, 0.483);
+
+$card-padding: 20px;
+
+@debug $card-padding;
+
+$inner-card-padding: $card-padding;
+$floating-card-padding: $card-padding * 10;
+
+@debug $floating-card-padding;
+
+// @error $floating-card-padding;
+
+$card-width: 700px;
+$inner-card-width: $card-width - 200px;
+$floating-card-width: $inner-card-width - 50px;
+
+$common-height: 50px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.card {
+  height: $common-height;
+  width: $card-width;
+  padding: 3px;
+  background-color: tomato;
+
+  .inner-card {
+    height: $common-height;
+    width: $inner-card-width;
+    padding: 3px;
+    background-color: yellowgreen;
+  }
+  .floating-card {
+    height: $common-height;
+    width: $floating-card-width;
+    padding: 3px;
+    background-color: teal;
+  }
+}

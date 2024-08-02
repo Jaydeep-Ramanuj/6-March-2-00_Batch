@@ -1,0 +1,30 @@
+.card .top-bar .logo {
+  background-color: red;
+}
+.card .top-bar .logo:hover {
+  transform: scale(1.1);
+}
+.card .top-bar .cart {
+  font-size: 18px;
+}
+.card .content h2 {
+  color: blue;
+}
+.card .content h4 {
+  color: pink;
+}
+.card .content .socials .icon {
+  border-radius: 50%;
+}
+.card .content .socials .icon:hover {
+  transform: translateY(-5px);
+}
+.card .bottom-bar .profile .avatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.card .bottom-bar .profile .last-active {
+  font-size: 14px;
+  color: lightgray;
+}/*# sourceMappingURL=nesting.css.map */
