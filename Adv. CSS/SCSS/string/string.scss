@@ -1,0 +1,42 @@
+@use 'sass:string';
+
+$temp: text;
+$str: 'This iS dEmo strIng';
+li {
+  padding: 3px;
+}
+
+li:nth-child(1)::before {
+  content: quote($temp);
+}
+li:nth-child(2)::before {
+  content: unquote($str);
+}
+li:nth-child(3)::before {
+  @debug str-index($str, 'demo');
+  content: str-index($str, 'demo');
+}
+li:nth-child(4)::before {
+  @debug str-length($str);
+  content: str-length($str);
+}
+li:nth-child(5)::before {
+  @debug str-slice($str, 7, 11);
+  content: str-slice($str, 7, 11);
+}
+li:nth-child(6)::before {
+  @debug string.split($str, ' ');
+  content: string.split($str, ' ');
+}
+li:nth-child(7)::before {
+  @debug string.to-upper-case($str);
+  content: string.to-upper-case($str);
+}
+li:nth-child(8)::before {
+  @debug string.to-lower-case($str);
+  content: string.to-lower-case($str);
+}
+li:nth-child(9)::before {
+  @debug string.unique-id();
+  content: quote(string.unique-id());
+}

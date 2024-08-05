@@ -1,0 +1,43 @@
+@use 'sass:color';
+
+$my-color: blue;
+
+li {
+  padding: 3px;
+}
+li:nth-child(1) {
+  background-color: color.adjust($my-color, $red: -30);
+}
+li:nth-child(2) {
+  background-color: color.adjust($my-color, $alpha: -0.4);
+}
+li:nth-child(3) {
+  background-color: color.adjust($my-color, $hue: 90deg);
+}
+li:nth-child(4) {
+  @debug color.alpha($my-color);
+}
+li:nth-child(5) {
+  @debug color.change($my-color, $red: 0.6);
+}
+li:nth-child(6) {
+  background-color: color.complement($my-color);
+}
+li:nth-child(7) {
+  background-color: darken($my-color, 10%);
+}
+li:nth-child(8) {
+  background-color: desaturate($my-color, 80%);
+}
+li:nth-child(9) {
+  background-color: grayscale($my-color);
+}
+li:nth-child(10) {
+  background-color: invert($my-color, 30%);
+}
+li:nth-child(11) {
+  background-color: mix($my-color, red);
+}
+li:nth-child(12) {
+  background-color: mix($my-color, red);
+}
