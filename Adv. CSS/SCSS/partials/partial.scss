@@ -1,0 +1,27 @@
+@use 'utils/variables';
+@use 'utils/effects';
+@use 'utils/properties';
+
+body {
+  background-color: variables.$bg-primary-color;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  margin-top: variables.$section-top;
+  @include effects.hoverEffect();
+  @include properties.cani(slideUp);
+}
+
+@keyframes slide {
+  to {
+    transform: translateX(300px);
+  }
+}
+@keyframes slideUp {
+  to {
+    transform: translateY(-300px);
+  }
+}

@@ -1,0 +1,33 @@
+body {
+  background-color: #24252e;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  margin-top: 50px;
+  transition: all 300ms;
+  animation-name: slideUp;
+  animation-duration: 300ms;
+  animation-timing-function: ease;
+  animation-iteration-count: 3;
+  animation-delay: 0ms;
+  animation-direction: normal;
+  animation-fill-mode: backwards;
+}
+.box:hover {
+  transform: translateY(-10px);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+@keyframes slide {
+  to {
+    transform: translateX(300px);
+  }
+}
+@keyframes slideUp {
+  to {
+    transform: translateY(-300px);
+  }
+}/*# sourceMappingURL=partial.css.map */

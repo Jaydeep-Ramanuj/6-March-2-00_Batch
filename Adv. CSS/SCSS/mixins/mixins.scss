@@ -1,0 +1,27 @@
+@mixin xcenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin customFlex($jc: start, $ai: start) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+.box {
+  height: 300px;
+  width: 300px;
+  border-radius: 8px;
+  background-color: yellowgreen;
+  //   @include customFlex(end, center);
+  @include xcenter();
+
+  .mini-box {
+    height: 50px;
+    width: 50px;
+    background-color: tomato;
+    border-radius: 5px;
+  }
+}

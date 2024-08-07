@@ -1,0 +1,17 @@
+@mixin cani(
+  $name,
+  $duration: 300ms,
+  $timing-function: ease,
+  $count: 3,
+  $delay: 0ms,
+  $direction: normal,
+  $fill: backwards
+) {
+  animation-name: $name;
+  animation-duration: $duration;
+  animation-timing-function: $timing-function;
+  animation-iteration-count: $count;
+  animation-delay: $delay;
+  animation-direction: $direction;
+  animation-fill-mode: $fill;
+}

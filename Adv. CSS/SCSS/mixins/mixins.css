@@ -1,0 +1,15 @@
+.box {
+  height: 300px;
+  width: 300px;
+  border-radius: 8px;
+  background-color: yellowgreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box .mini-box {
+  height: 50px;
+  width: 50px;
+  background-color: tomato;
+  border-radius: 5px;
+}/*# sourceMappingURL=mixins.css.map */

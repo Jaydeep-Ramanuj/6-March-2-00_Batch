@@ -1,0 +1,43 @@
+$width: 700px;
+
+// Arithmetic
+$width_2: $width + 200px;
+$width_3: $width - 200px;
+$width_4: $width * 200;
+$width_5: $width / 200px;
+$width_6: $width % 200px;
+
+@debug $width;
+@debug $width_2;
+@debug $width_3;
+@debug $width_4;
+@debug $width_5;
+@debug $width_6;
+
+// relational
+@debug $width > $width_2;
+@debug $width < $width_2;
+
+@debug $width<=700px;
+@debug $width>=700px;
+
+// equalities
+@debug $width==500;
+@debug $width!=500;
+
+// logical
+
+@debug 500==200 and $width>300px;
+@debug 500==500 and $width>300px;
+
+@debug 500==200 or $width>300px;
+@debug 500==200 or $width>900px;
+
+@debug not(500==200);
+
+// AND => It gives true if all conditions are true
+// OR, it gives true if any condition is true
+// NOT, it gives true if false, gives false if true
+.box {
+  height: 100px;
+}
