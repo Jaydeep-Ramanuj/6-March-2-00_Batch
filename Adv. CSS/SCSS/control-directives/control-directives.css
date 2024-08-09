@@ -1,0 +1,435 @@
+.h-center {
+  margin: 50px auto;
+}
+
+.slow {
+  transition: all 300ms;
+}
+
+.box:hover {
+  transform: translate(20px, -100px);
+}
+
+.bg-red-100 {
+  background-color: #ffe6e6;
+}
+
+.bg-red-200 {
+  background-color: #ffcccc;
+}
+
+.bg-red-300 {
+  background-color: #ffb3b3;
+}
+
+.bg-red-400 {
+  background-color: #ff9999;
+}
+
+.bg-red-500 {
+  background-color: #ff8080;
+}
+
+.bg-red-600 {
+  background-color: #ff6666;
+}
+
+.bg-red-700 {
+  background-color: #ff4d4d;
+}
+
+.bg-red-800 {
+  background-color: #ff3333;
+}
+
+.bg-red-900 {
+  background-color: #ff1a1a;
+}
+
+.bg-blue-100 {
+  background-color: #e6e6ff;
+}
+
+.bg-blue-200 {
+  background-color: #ccccff;
+}
+
+.bg-blue-300 {
+  background-color: #b3b3ff;
+}
+
+.bg-blue-400 {
+  background-color: #9999ff;
+}
+
+.bg-blue-500 {
+  background-color: #8080ff;
+}
+
+.bg-blue-600 {
+  background-color: #6666ff;
+}
+
+.bg-blue-700 {
+  background-color: #4d4dff;
+}
+
+.bg-blue-800 {
+  background-color: #3333ff;
+}
+
+.bg-blue-900 {
+  background-color: #1a1aff;
+}
+
+.bg-green-100 {
+  background-color: #d9ffd9;
+}
+
+.bg-green-200 {
+  background-color: #b3ffb3;
+}
+
+.bg-green-300 {
+  background-color: #8cff8c;
+}
+
+.bg-green-400 {
+  background-color: #66ff66;
+}
+
+.bg-green-500 {
+  background-color: #40ff40;
+}
+
+.bg-green-600 {
+  background-color: #1aff1a;
+}
+
+.bg-green-700 {
+  background-color: #00f300;
+}
+
+.bg-green-800 {
+  background-color: #00cc00;
+}
+
+.bg-green-900 {
+  background-color: #00a600;
+}
+
+.bg-yellow-100 {
+  background-color: #ffffe6;
+}
+
+.bg-yellow-200 {
+  background-color: #ffffcc;
+}
+
+.bg-yellow-300 {
+  background-color: #ffffb3;
+}
+
+.bg-yellow-400 {
+  background-color: #ffff99;
+}
+
+.bg-yellow-500 {
+  background-color: #ffff80;
+}
+
+.bg-yellow-600 {
+  background-color: #ffff66;
+}
+
+.bg-yellow-700 {
+  background-color: #ffff4d;
+}
+
+.bg-yellow-800 {
+  background-color: #ffff33;
+}
+
+.bg-yellow-900 {
+  background-color: #ffff1a;
+}
+
+.bg-pink-100 {
+  background-color: #fff9fa;
+}
+
+.bg-pink-200 {
+  background-color: #fff2f5;
+}
+
+.bg-pink-300 {
+  background-color: #ffecef;
+}
+
+.bg-pink-400 {
+  background-color: #ffe6ea;
+}
+
+.bg-pink-500 {
+  background-color: #ffe0e5;
+}
+
+.bg-pink-600 {
+  background-color: #ffd9e0;
+}
+
+.bg-pink-700 {
+  background-color: #ffd3db;
+}
+
+.bg-pink-800 {
+  background-color: #ffcdd5;
+}
+
+.bg-pink-900 {
+  background-color: #ffc6d0;
+}
+
+.br-2 {
+  border-radius: 2px;
+}
+
+.br-4 {
+  border-radius: 4px;
+}
+
+.br-6 {
+  border-radius: 6px;
+}
+
+.br-8 {
+  border-radius: 8px;
+}
+
+.br-10 {
+  border-radius: 10px;
+}
+
+.br-12 {
+  border-radius: 12px;
+}
+
+.br-14 {
+  border-radius: 14px;
+}
+
+.br-16 {
+  border-radius: 16px;
+}
+
+.br-18 {
+  border-radius: 18px;
+}
+
+.br-20 {
+  border-radius: 20px;
+}
+
+.br-22 {
+  border-radius: 22px;
+}
+
+.br-24 {
+  border-radius: 24px;
+}
+
+.br-26 {
+  border-radius: 26px;
+}
+
+.br-28 {
+  border-radius: 28px;
+}
+
+.br-30 {
+  border-radius: 30px;
+}
+
+.br-32 {
+  border-radius: 32px;
+}
+
+.br-34 {
+  border-radius: 34px;
+}
+
+.br-36 {
+  border-radius: 36px;
+}
+
+.br-38 {
+  border-radius: 38px;
+}
+
+.br-40 {
+  border-radius: 40px;
+}
+
+.br-42 {
+  border-radius: 42px;
+}
+
+.br-44 {
+  border-radius: 44px;
+}
+
+.br-46 {
+  border-radius: 46px;
+}
+
+.w-50 {
+  width: 50px;
+}
+
+.w-100 {
+  width: 100px;
+}
+
+.w-150 {
+  width: 150px;
+}
+
+.w-200 {
+  width: 200px;
+}
+
+.w-250 {
+  width: 250px;
+}
+
+.w-300 {
+  width: 300px;
+}
+
+.w-350 {
+  width: 350px;
+}
+
+.w-400 {
+  width: 400px;
+}
+
+.w-450 {
+  width: 450px;
+}
+
+.w-500 {
+  width: 500px;
+}
+
+.w-550 {
+  width: 550px;
+}
+
+.w-600 {
+  width: 600px;
+}
+
+.w-650 {
+  width: 650px;
+}
+
+.w-700 {
+  width: 700px;
+}
+
+.w-750 {
+  width: 750px;
+}
+
+.w-800 {
+  width: 800px;
+}
+
+.w-850 {
+  width: 850px;
+}
+
+.w-900 {
+  width: 900px;
+}
+
+.w-950 {
+  width: 950px;
+}
+
+.h-50 {
+  height: 50px;
+}
+
+.h-100 {
+  height: 100px;
+}
+
+.h-150 {
+  height: 150px;
+}
+
+.h-200 {
+  height: 200px;
+}
+
+.h-250 {
+  height: 250px;
+}
+
+.h-300 {
+  height: 300px;
+}
+
+.h-350 {
+  height: 350px;
+}
+
+.h-400 {
+  height: 400px;
+}
+
+.h-450 {
+  height: 450px;
+}
+
+.h-500 {
+  height: 500px;
+}
+
+.h-550 {
+  height: 550px;
+}
+
+.h-600 {
+  height: 600px;
+}
+
+.h-650 {
+  height: 650px;
+}
+
+.h-700 {
+  height: 700px;
+}
+
+.h-750 {
+  height: 750px;
+}
+
+.h-800 {
+  height: 800px;
+}
+
+.h-850 {
+  height: 850px;
+}
+
+.h-900 {
+  height: 900px;
+}
+
+.h-950 {
+  height: 950px;
+}/*# sourceMappingURL=control-directives.css.map */

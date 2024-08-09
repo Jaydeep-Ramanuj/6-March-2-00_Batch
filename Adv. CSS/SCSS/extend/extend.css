@@ -1,0 +1,30 @@
+.box, .box1, .box2, .box3, .box4 {
+  height: 300px;
+  width: 300px;
+  background-color: yellowgreen;
+}
+
+.box1, .box2, .box3, .box4 {
+  border-radius: 12px;
+  background-color: tomato;
+}
+
+.box2, .box3, .box4 {
+  background-color: teal;
+  border: 3px solid black;
+}
+
+.box3, .box4 {
+  transition: all 300ms;
+  background-color: seagreen;
+}
+.box3:hover, .box4:hover {
+  transform: translateY(-15px);
+}
+
+.box4 {
+  background-color: springgreen;
+}
+.box4:hover {
+  background-color: turquoise;
+}/*# sourceMappingURL=extend.css.map */

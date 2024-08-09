@@ -1,0 +1,88 @@
+@mixin transform($type, $val) {
+  @if ($type==translate or $type==translateX or $type==translateY) {
+    @if ($type==translate) {
+      transform: translate($val);
+    }
+    @if ($type==translateX) {
+      transform: translateX($val);
+    }
+    @if ($type==translateY) {
+      transform: translateY($val);
+    }
+  }
+  @if ($type==rotate or $type==rotateX or $type==rotateY) {
+    @if ($type==rotate) {
+      transform: rotate($val);
+    }
+    @if ($type==rotateX) {
+      transform: rotateX($val);
+    }
+    @if ($type==rotateY) {
+      transform: rotateY($val);
+    }
+  }
+}
+
+@mixin slide($type, $val_1: 10px, $val_2: 10px) {
+  @if ($type== 'up') {
+    transform: translateY(-$val_1);
+  } @else if($type== 'down') {
+    transform: translateY($val_1);
+  } @else if($type== 'left') {
+    transform: translateX(-$val_1);
+  } @else if($type== 'right') {
+    transform: translateX($val_1);
+  } @else if($type== 'tr') {
+    transform: translate($val_1, -$val_2);
+  } @else if($type== 'tl') {
+    transform: translate(-$val_1, -$val_2);
+  } @else if($type== 'br') {
+    transform: translate($val_1, $val_2);
+  } @else if($type== 'bl') {
+    transform: translate(-$val_1, $val_2);
+  } @else {
+  }
+}
+
+.h-center {
+  margin: 50px auto;
+}
+.slow {
+  transition: all 300ms;
+}
+@mixin slow($prop: all, $duration: 300ms) {
+  transition: $prop $duration;
+}
+.box {
+  //   @include slow();
+  &:hover {
+    @include slide(tr, 20px, 100px);
+  }
+}
+
+$colors: red, blue, green, yellow, pink;
+
+@each $color in $colors {
+  @for $i from 1 to 10 {
+    .bg-#{$color}-#{$i*100} {
+      background-color: scale-color($color, $lightness: (100% - ($i * 10%)));
+    }
+  }
+}
+
+@for $i from 1 to 24 {
+  .br-#{$i*2} {
+    border-radius: $i * 2px;
+  }
+}
+
+@for $i from 1 to 20 {
+  .w-#{$i*50} {
+    width: $i * 50px;
+  }
+}
+@for $i from 1 to 20 {
+  .h-#{$i*50} {
+    height: $i * 50px;
+  }
+}

@@ -1,0 +1,33 @@
+.box {
+  height: 300px;
+  width: 300px;
+  background-color: yellowgreen;
+}
+
+.box1 {
+  @extend .box;
+  border-radius: 12px;
+  background-color: tomato;
+}
+
+.box2 {
+  @extend .box1;
+  background-color: teal;
+  border: 3px solid black;
+}
+
+.box3 {
+  @extend .box2;
+  transition: all 300ms;
+  background-color: seagreen;
+  &:hover {
+    transform: translateY(-15px);
+  }
+}
+.box4 {
+  @extend .box3;
+  background-color: springgreen;
+  &:hover {
+    background-color: turquoise;
+  }
+}
