@@ -1,0 +1,17 @@
+@mixin fcenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  height: 300px;
+  width: 300px;
+  background-color: tomato;
+  border-radius: 12px;
+  margin: 50px auto;
+  @include fcenter();
+  color: white;
+  font-size: 32px;
+  font-weight: 600;
+}

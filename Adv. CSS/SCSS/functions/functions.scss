@@ -1,0 +1,15 @@
+$width: 700px;
+
+$counter: 1;
+
+@function count() {
+  $counter: $counter + 1;
+}
+@function getWidth() {
+  @debug getwidth();
+  @return ($width * 2) - 200px;
+}
+
+.box {
+  width: getWidth();
+}

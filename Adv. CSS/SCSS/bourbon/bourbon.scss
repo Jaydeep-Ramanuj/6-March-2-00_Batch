@@ -1,0 +1,24 @@
+@import 'bourbon/core/bourbon';
+
+.box {
+  @include size(100px, 300px);
+  background-color: tomato;
+  border-radius: 12px;
+  margin: 50px auto;
+
+  @include border-color(red blue brown);
+  cursor: pointer;
+  @include value-prefixer(cursor, grab, ('webkit', 'moz'));
+  //   @include value-prefixer(cursor, grab, ('webkit', 'moz'));
+}
+
+.triangle {
+  @include triangle(down-right, 2em, 2em, brown);
+}
+
+#{$all-text-inputs-invalid} {
+  background-color: red;
+}
+#{$all-text-inputs-focus} {
+  outline-color: grey;
+}

@@ -1,0 +1,60 @@
+.box {
+  width: 100px;
+  height: 300px;
+  background-color: tomato;
+  border-radius: 12px;
+  margin: 50px auto;
+  border-color: red blue brown;
+  cursor: pointer;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab;
+}
+
+.triangle {
+  border-style: solid;
+  height: 0;
+  width: 0;
+  border-color: transparent transparent brown;
+  border-width: 0 0 2em 2em;
+}
+
+[type='color']:invalid,
+[type='date']:invalid,
+[type='datetime']:invalid,
+[type='datetime-local']:invalid,
+[type='email']:invalid,
+[type='month']:invalid,
+[type='number']:invalid,
+[type='password']:invalid,
+[type='search']:invalid,
+[type='tel']:invalid,
+[type='text']:invalid,
+[type='time']:invalid,
+[type='url']:invalid,
+[type='week']:invalid,
+input:not([type]):invalid,
+textarea:invalid {
+  background-color: red;
+}
+
+[type='color']:focus,
+[type='date']:focus,
+[type='datetime']:focus,
+[type='datetime-local']:focus,
+[type='email']:focus,
+[type='month']:focus,
+[type='number']:focus,
+[type='password']:focus,
+[type='search']:focus,
+[type='tel']:focus,
+[type='text']:focus,
+[type='time']:focus,
+[type='url']:focus,
+[type='week']:focus,
+input:not([type]):focus,
+textarea:focus {
+  outline-color: grey;
+}
+
+/*# sourceMappingURL=bourbon.css.map */
