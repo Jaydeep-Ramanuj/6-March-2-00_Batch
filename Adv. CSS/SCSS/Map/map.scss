@@ -1,0 +1,24 @@
+@use 'sass:map';
+
+$bg-colors: (
+  'primary': #3dba7d,
+  'secondary': #d2efe1,
+  'third': #f1ede4,
+);
+
+$bora: (
+  'xs': 3px,
+  'sm': 6px,
+  'md': 8px,
+  'lg': 12,
+  'xl': 24px,
+  'xxl': 48px,
+);
+.box {
+  height: 300px;
+  width: 300px;
+  margin: 50px auto;
+  //   background-color: tomato;
+  background-color: map.get($bg-colors, 'primary');
+  border-radius: map.get($bora, 'xl');
+}

@@ -1,0 +1,12 @@
+@use 'sass:list';
+$colors: red, blue, pink, brown;
+
+@debug $colors;
+@debug list.nth($colors, 3);
+@debug list.append($colors, yellow);
+@debug list.index($colors, brown);
+
+.box {
+  height: 100px;
+  background-color: tomato;
+}
