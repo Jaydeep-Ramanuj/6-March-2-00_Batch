@@ -1,0 +1,98 @@
+// Variables
+
+@bg-box: #24252e;
+@bg-inner-box: #baaec0;
+
+// operators
+
+@box-width: 700px;
+@inner-box-width: @box-width - 200px;
+
+@box-bora: 12px;
+@inner-box-bora:@box-bora * 2px;
+
+// escaping
+
+@max600: ~'(max-width:600px)';
+
+// --primary-color: #3dba7d;
+// --bg-primary-color: #ffffff;
+// --bg-secondary-color: #d2efe1;
+// --text-primary-color: #283b4e;
+
+// Map
+
+.colors() {
+  bg-primary: #ffffff;
+  bg-secondary: #d2efe1;
+  bg-third: #91a3ae;
+}
+
+// mixin
+
+// namespace
+
+.effect {
+  .hover-effect(@slide:-10px) {
+    transition: all 300ms;
+    &:hover {
+      transform: scale(1.03) translateY(@slide);
+    }
+  }
+  .focus-effect() {
+    transition: all 300ms;
+    &:focus {
+      transform: translateY(-3px);
+    }
+  }
+}
+
+// .animation{
+//   .slide{}
+//   .rotate()
+//   .scale()
+//   .jump()
+
+// }
+
+// nesting
+
+.box {
+  height: 300px;
+  margin: 150px auto;
+  width: @box-width;
+  // background-color: @bg-box;
+  background-color: .colors[bg-secondary];
+  border-radius: @box-bora;
+  .effect.hover-effect(50px);
+  .effect.focus-effect();
+  // .animation.jump();
+  // at rule media
+
+  @media (max-width: 500px) {
+    background-color: yellowgreen;
+  }
+  @media (max-width: 900px) {
+    height: 600px;
+    border-radius: 100px;
+  }
+  @media @max600 {
+    height: 30px;
+    border-radius: 50%;
+  }
+  .inner-box {
+    height: 100px;
+    width: @inner-box-width;
+    background-color: @bg-inner-box;
+    border-radius: @inner-box-bora;
+
+    // function
+
+    &:hover {
+      // background-color: saturate(@bg-inner-box, 15%);
+      // background-color: spin(lighten(@bg-inner-box, 15%), 8);
+      background-color: spin(lighten(@bg-inner-box, 15%), 30);
+      // background-color: spin(@bg-inner-box, 30);
+    }
+  }
+}

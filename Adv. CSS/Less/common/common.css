@@ -2,12 +2,15 @@
   height: 300px;
   margin: 150px auto;
   width: 700px;
-  background-color: #24252e;
+  background-color: #d2efe1;
   border-radius: 12px;
   transition: all 300ms;
 }
 .box:hover {
   transform: scale(1.03) translateY(50px);
+}
+.box:focus {
+  transform: translateY(-3px);
 }
 @media (max-width: 500px) {
   .box {
@@ -20,9 +23,18 @@
     border-radius: 100px;
   }
 }
+@media (max-width:600px) {
+  .box {
+    height: 30px;
+    border-radius: 50%;
+  }
+}
 .box .inner-box {
   height: 100px;
   width: 500px;
   background-color: #baaec0;
   border-radius: 24px;
+}
+.box .inner-box:hover {
+  background-color: #e1d9e0;
 }
