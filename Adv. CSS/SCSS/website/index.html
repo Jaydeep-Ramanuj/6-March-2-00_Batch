@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <title>Groceyish</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/max-width-576.css" />
+    <link rel="stylesheet" href="css/min-width-576.css" />
+    <link rel="stylesheet" href="css/min-width-768.css" />
+    <link rel="stylesheet" href="css/min-width-992.css" />
+    <link rel="stylesheet" href="css/min-width-1100.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="top-header">
+        <div class="logo">
+          <img src="images/svgexport-6 1.png" alt="" />
+          <div class="content">
+            <div class="title">Groceyish</div>
+            <div class="sub-title">Grocery</div>
+          </div>
+        </div>
+        <label for="toggle"><i class="fa-solid fa-bars"></i></label>
+        <input type="checkbox" name="" id="toggle" />
+        <div class="header-wrapper">
+          <div class="search-bar">
+            <select name="" id="">
+              <option value="">All Categories</option>
+              <option value="">Fruits</option>
+              <option value="">Vegetables</option>
+              <option value="">Seasonal</option>
+              <option value="">Healthy</option>
+            </select>
+            <input type="text" placeholder="Search for Items..." />
+            <span>
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+          </div>
+          <div class="wishlist">
+            <span>
+              <i class="fa-regular fa-heart">
+                <div class="badge">4</div>
+              </i>
+            </span>
+            <span> Wishlist </span>
+          </div>
+          <div class="cart">
+            <span>
+              <i class="fa-solid fa-cart-shopping">
+                <div class="badge">4</div>
+              </i>
+            </span>
+            <span class="cart-info"> My cart <span>$21</span> </span>
+          </div>
+          <div class="user-profile">
+            <img
+              src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_640,q_50/lsci/db/PICTURES/CMS/316600/316605.png"
+              alt=""
+            />
+            <div class="username">Jay Dholakiya</div>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+      <div class="bottom-header">
+        <div class="btn">
+          <i class="fa-solid fa-bars"></i> Browse All Categories
+        </div>
+        <nav>
+          <ul>
+            <li><span class="material-symbols-outlined"> home </span> Home</li>
+            <li>
+              <span class="material-symbols-outlined">
+                local_fire_department
+              </span>
+              Hot deals
+            </li>
+            <li>
+              <span class="material-symbols-outlined"> percent </span>
+              Promotions
+            </li>
+            <li>
+              <span class="material-symbols-outlined"> campaign </span> New
+              Products
+            </li>
+          </ul>
+        </nav>
+        <div class="contact">
+          <span
+            ><span class="material-symbols-outlined"> call </span>
+            1233-7777</span
+          >
+          <span>24/7 support center</span>
+        </div>
+      </div>
+    </header>
+    <!-- Main -->
+    <main>
+      <!-- hero-section -->
+      <div class="hero-section">
+        <div class="content">
+          <h2 class="title">Don't miss our daily <br />amazing deals.</h2>
+          <h4 class="sub-title">Save up to 60% off on your first order</h4>
+          <div class="email-input">
+            <i class="fa-regular fa-paper-plane"></i>
+            <input type="text" placeholder="Enter your email address" />
+            <span class="btn">Subscribe</span>
+          </div>
+        </div>
+        <img src="images/Hreo-img.png" alt="" />
+      </div>
+
+      <!-- category-section -->
+      <div class="category-section">
+        <div class="category-section-top">
+          <h2>Explore Categories</h2>
+          <select name="" id="category-section-select">
+            <option value="">All</option>
+            <option value="">Vegetables</option>
+            <option value="">Fruits</option>
+            <option value="">Coffee and tea</option>
+            <option value="">Flowers</option>
+          </select>
+          <ul class="category-links">
+            <li>All</li>
+            <li>Vegetables</li>
+            <li>Fruits</li>
+            <li>Coffee and tea</li>
+            <li>Flowers</li>
+          </ul>
+        </div>
+        <div class="category-list">
+          <div class="category-card" style="--category-bg-color: #fceee8">
+            <img src="images/image 3.png" alt="" />
+            <h4>Peach</h4>
+            <h5>20 items</h5>
+          </div>
+          <div class="category-card" style="--category-bg-color: #fef0fe">
+            <img src="images/image 4.png" alt="" />
+            <h4>Vegetable</h4>
+            <h5>220 items</h5>
+          </div>
+          <div class="category-card" style="--category-bg-color: #effce1">
+            <img src="images/image 5.png" alt="" />
+            <h4>Strawberry</h4>
+            <h5>10 items</h5>
+          </div>
+          <div class="category-card" style="--category-bg-color: #fceee8">
+            <img src="images/image 6.png" alt="" />
+            <h4>Apple</h4>
+            <h5>40 items</h5>
+          </div>
+          <div class="category-card" style="--category-bg-color: #eafeea">
+            <img src="images/image 7.png" alt="" />
+            <h4>Orange</h4>
+            <h5>23 items</h5>
+          </div>
+          <div class="category-card" style="--category-bg-color: #fdfce9">
+            <img src="images/image 8.png" alt="" />
+            <h4>Potato</h4>
+            <h5>3 items</h5>
+          </div>
+          <div class="category-card" style="--category-bg-color: #dcf8ea">
+            <img src="images/image 9.png" alt="" />
+            <h4>Carrot</h4>
+            <h5>9 items</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- featured-section -->
+      <div class="featured-section">
+        <div class="featured-section-top">
+          <h2>Featured Products</h2>
+          <select name="" id="featured-section-select">
+            <option value="">All</option>
+            <option value="">Vegetables</option>
+            <option value="">Fruits</option>
+            <option value="">Coffee and tea</option>
+            <option value="">Flowers</option>
+          </select>
+          <ul class="featured-links">
+            <li>All</li>
+            <li>Vegetables</li>
+            <li>Fruits</li>
+            <li>Coffee and tea</li>
+            <li>Flowers</li>
+          </ul>
+        </div>
+        <div class="featured-list">
+          <div class="featured-product-card">
+            <img src="images/Rectangle 19-1.png" alt="" />
+            <h5>Vegetables</h5>
+            <h3>Redish 500g</h3>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <span>(4)</span>
+            </div>
+            <h5>By<span>Mr.food</span></h5>
+            <div class="card-footer">
+              <span class="price">
+                $2<span><strike>$3.99</strike></span>
+              </span>
+              <span class="cart-btn"
+                ><i class="fa-solid fa-cart-shopping"></i> Add</span
+              >
+            </div>
+          </div>
+          <div class="featured-product-card">
+            <img src="images/Rectangle 19-1.png" alt="" />
+            <h5>Vegetables</h5>
+            <h3>Redish 500g</h3>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <span>(4)</span>
+            </div>
+            <h5>By<span>Mr.food</span></h5>
+            <div class="card-footer">
+              <span class="price">
+                $2<span><strike>$3.99</strike></span>
+              </span>
+              <span class="cart-btn"
+                ><i class="fa-solid fa-cart-shopping"></i> Add</span
+              >
+            </div>
+          </div>
+          <div class="featured-product-card">
+            <img src="images/Rectangle 19-1.png" alt="" />
+            <h5>Vegetables</h5>
+            <h3>Redish 500g</h3>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <span>(4)</span>
+            </div>
+            <h5>By<span>Mr.food</span></h5>
+            <div class="card-footer">
+              <span class="price">
+                $2<span><strike>$3.99</strike></span>
+              </span>
+              <span class="cart-btn"
+                ><i class="fa-solid fa-cart-shopping"></i> Add</span
+              >
+            </div>
+          </div>
+          <div class="featured-product-card">
+            <img src="images/Rectangle 19-1.png" alt="" />
+            <h5>Vegetables</h5>
+            <h3>Redish 500g</h3>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <span>(4)</span>
+            </div>
+            <h5>By<span>Mr.food</span></h5>
+            <div class="card-footer">
+              <span class="price">
+                $2<span><strike>$3.99</strike></span>
+              </span>
+              <span class="cart-btn"
+                ><i class="fa-solid fa-cart-shopping"></i> Add</span
+              >
+            </div>
+          </div>
+          <div class="featured-product-card">
+            <img src="images/Rectangle 19-1.png" alt="" />
+            <h5>Vegetables</h5>
+            <h3>Redish 500g</h3>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <span>(4)</span>
+            </div>
+            <h5>By<span>Mr.food</span></h5>
+            <div class="card-footer">
+              <span class="price">
+                $2<span><strike>$3.99</strike></span>
+              </span>
+              <span class="cart-btn"
+                ><i class="fa-solid fa-cart-shopping"></i> Add</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- offers-section
+      <div class="offers-section"></div>
+
+      <!-- daily-sells-section -->
+      <!-- <div class="daily-sells-section"></div> -->
+
+      <!-- trending-section -->
+      <!-- <div class="trending-section"></div>  -->
+
+      <!-- offers-section -->
+      <div class="offers-section">
+        <div class="offer-1">
+          <div class="offer-info">
+            <button>Free Delivery</button>
+            <h2>Free delivery over 3699$</h2>
+            <h4>Shop $3699 product and get free delivery anyware.</h4>
+            <button>
+              Shop Now
+              <i class="fa-solid fa-angles-right"></i>
+            </button>
+          </div>
+          <img src="images/Offer1-img.png" alt="" />
+        </div>
+        <div class="offer-2">
+          <div class="offer-info">
+            <button>60% off</button>
+            <h2>Organic Foods</h2>
+            <h4>Save upto 60% off <br />on your first order.</h4>
+            <button>
+              Buy Now
+              <i class="fa-solid fa-angles-right"></i>
+            </button>
+          </div>
+
+          <img src="images/Offer2-img.png" alt="" />
+        </div>
+      </div>
+
+      <!-- daily-sells-section -->
+      <div class="daily-sells-section">
+        <div class="top-bar">
+          <div class="wrapper">
+            <div class="title">
+              <h3>Daily Best Sells</h3>
+              <div class="link">
+                <select name="" id="daily-sells-select">
+                  <option value="">Featured</option>
+                  <option value="">Popular</option>
+                  <option value="">New</option>
+                </select>
+                <ul>
+                  <li>Featured</li>
+                  <li>Popular</li>
+                  <li>New</li>
+                </ul>
+              </div>
+              <span class="expiry-info">
+                <span><i class="fa-solid fa-clock"></i> Expires In : </span>
+                <span><b>03 :</b></span>
+                <span><b>06 :</b></span>
+                <span>36</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="sidebar">
+            <i class="fa-solid fa-arrow-left"></i>
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </div>
+
+        <div class="sells-items">
+          <div class="item-card">
+            <span>Save 45%</span>
+            <img
+              src="https://img.cdnx.in/312823/1694933833657_SKU-1102_0.jpg?width=600"
+              alt=""
+            />
+            <h5>Coffee</h5>
+            <h2>Coffee</h2>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <span>(4)</span>
+            </div>
+            <span class="name">By <mark>Mr.FOOD</mark></span>
+
+            <div class="price">$360 <strike>$630</strike></div>
+
+            <div class="stock">
+              <div class="stock-range" style="--individual-width: 80%"></div>
+            </div>
+            <span
+              >Sold : <b>80</b><span style="font-weight: 300">/100</span></span
+            >
+
+            <div class="btn">
+              <i class="fa-solid fa-cart-plus"></i> Add to cart
+            </div>
+          </div>
+          <div class="item-card">
+            <span style="background-color: #3dba7d; color: white"
+              >Best Deal</span
+            >
+            <img
+              src="https://m.media-amazon.com/images/I/61c2QvL3HeL.jpg"
+              alt=""
+            />
+            <h5>Tea</h5>
+            <h2>Wagh Bakri</h2>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <span>(4)</span>
+            </div>
+            <span class="name">By <mark>Mr.FOOD</mark></span>
+
+            <div class="price">$990 <strike>$1630</strike></div>
+
+            <div class="stock">
+              <div class="stock-range" style="--individual-width: 90%"></div>
+            </div>
+            <span
+              >Sold :<b>90</b><span style="font-weight: 300">/100</span></span
+            >
+
+            <div class="btn">
+              <i class="fa-solid fa-cart-plus"></i> Add to cart
+            </div>
+          </div>
+          <div class="item-card">
+            <span>Save 20%</span>
+            <img
+              src="https://www.verywellfit.com/thmb/d83Yz0AdSvUaOa2-a4lvhNEuN8I=/fit-in/1500x1000/filters:no_upscale():max_bytes(150000):strip_icc()/yogi-tea-green-tea-pure-green-a5171a14dfa04235bb73b6b417cf1865.jpg"
+              alt=""
+            />
+            <h5>Green Tea</h5>
+            <h2>Yogi Green Tea</h2>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <span>(4)</span>
+            </div>
+            <span class="name">By <mark>Mr.FOOD</mark></span>
+
+            <div class="price">$450 <strike>$540</strike></div>
+
+            <div class="stock">
+              <div class="stock-range" style="--individual-width: 70%"></div>
+            </div>
+            <span
+              >Sold :<b>70</b><span style="font-weight: 300">/100</span></span
+            >
+
+            <div class="btn">
+              <i class="fa-solid fa-cart-plus"></i> Add to cart
+            </div>
+          </div>
+          <div class="item-card">
+            <span>Save 50%</span>
+            <img
+              src="https://www.onions-usa.org/wp-content/uploads/2019/11/home-feature-tipsmyths.jpg"
+              alt=""
+            />
+            <h5>Vegitables</h5>
+            <h2>Onion</h2>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <span>(4)</span>
+            </div>
+            <span class="name">By <mark>Mr.FOOD</mark></span>
+
+            <div class="price">$36 <strike>$63</strike></div>
+
+            <div class="stock">
+              <div class="stock-range" style="--individual-width: 50%"></div>
+            </div>
+            <span
+              >Sold : <b>50</b><span style="font-weight: 300">/100</span></span
+            >
+
+            <div class="btn">
+              <i class="fa-solid fa-cart-plus"></i> Add to cart
+            </div>
+          </div>
+
+          <div class="register-card-back">
+            <div class="register-card">
+              <h1>10% OFF</h1>
+              <h3>For new members sign up at the first time</h3>
+
+              <label>Email Address</label>
+              <span
+                ><i class="fa-solid fa-envelope"></i
+                ><input type="email" placeholder="abc@gmail.com"
+              /></span>
+              <label>Password</label>
+              <span
+                ><i class="fa-solid fa-key"></i
+                ><input type="password" placeholder="maximum 9 number"
+              /></span>
+
+              <div class="btn">Register Now</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- trending-section -->
+      <div class="trending-section">
+        <div class="box">
+          <div class="tops-items">
+            <h1>Top Sells</h1>
+
+            <div class="range">
+              <div
+                class="sells-range"
+                style="--individual-range-width: 90%"
+              ></div>
+            </div>
+
+            <div class="items">
+              <div class="img">
+                <img
+                  src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=900/app/images/products/full_screen/pro_487633.jpg?ts=1710347460"
+                  alt="img1"
+                />
+              </div>
+              <div class="desc">
+                <h2>Tea Packet</h2>
+                <span class="rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(4)</span>
+                </span>
+                <div class="price"><span>$360</span> <strike>$630</strike></div>
+              </div>
+            </div>
+
+            <div class="items">
+              <div class="img">
+                <img
+                  src="https://www.greenstation.co/cdn/shop/products/veggiee-basket.jpg?v=1545729020"
+                  alt="img1"
+                />
+              </div>
+              <div class="desc">
+                <h2>Vegitabel Basket</h2>
+                <span class="rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(4)</span>
+                </span>
+                <div class="price"><span>$600</span> <strike>$900</strike></div>
+              </div>
+            </div>
+
+            <div class="items">
+              <div class="img">
+                <img
+                  src="https://www.urbangroc.com/wp-content/uploads/2021/12/fruit-basket.jpg"
+                  alt="img1"
+                />
+              </div>
+              <div class="desc">
+                <h2>Fruits Basket</h2>
+                <span class="rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(4)</span>
+                </span>
+                <div class="price"><span>$300</span> <strike>$600</strike></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="tops-items">
+            <h1>Top Rated</h1>
+
+            <div class="range">
+              <div
+                class="sells-range"
+                style="--individual-range-width: 60%"
+              ></div>
+            </div>
+
+            <div class="items">
+              <div class="img">
+                <img
+                  src="https://fruitboxco.com/cdn/shop/products/image_800x.jpg?v=1607579884"
+                  alt="img1"
+                />
+              </div>
+              <div class="desc">
+                <h2>Apple 1kg box</h2>
+                <span class="rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(4)</span>
+                </span>
+                <div class="price"><span>$9</span> <strike>$18</strike></div>
+              </div>
+            </div>
+
+            <div class="items">
+              <div class="img">
+                <img
+                  src="https://i0.wp.com/uzbeksouq.com/wp-content/uploads/2023/07/vegetable-basket.png?fit=600%2C600&ssl=1"
+                  alt="img1"
+                />
+              </div>
+              <div class="desc">
+                <h2>Vegitabels baskets</h2>
+                <span class="rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+
+                  <span>(4)</span>
+                </span>
+                <div class="price"><span>$270</span> <strike>$360</strike></div>
+              </div>
+            </div>
+
+            <div class="items">
+              <div class="img">
+                <img
+                  src="https://t3.ftcdn.net/jpg/04/37/73/42/360_F_437734297_yeRoQJUQe18BANIQHUIsdihgnG0OZ8CN.jpg"
+                  alt="img1"
+                />
+              </div>
+              <div class="desc">
+                <h2>Before Meal Sup</h2>
+                <span class="rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(4)</span>
+                </span>
+                <div class="price"><span>$30</span> <strike>$60</strike></div>
+              </div>
+            </div>
+          </div>
+          <!-- 3 -->
+          <div class="tops-items">
+            <h1>Trending Items</h1>
+
+            <div class="range">
+              <div
+                class="sells-range"
+                style="--individual-range-width: 81%"
+              ></div>
+            </div>
+
+            <div class="items">
+              <div class="img">
+                <img
+                  src="https://img.freepik.com/premium-photo/vegetable-soup-isolated-white-background_488220-4112.jpg"
+                  alt="img1"
+                />
+              </div>
+              <div class="desc">
+                <h2>Vegitabel Sup</h2>
+                <span class="rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(4)</span>
+                </span>
+                <div class="price"><span>$90</span> <strike>$180</strike></div>
+              </div>
+            </div>
+
+            <div class="items">
+              <div class="img">
+                <img
+                  src="https://assets-global.website-files.com/63ed08484c069d0492f5b0bc/654154132f2282b19a2ce1b7_6373b354b501fe5fca1a8fd5_633611cb47a532d1b1fa9e80_green-tea-weight-loss-hero.jpeg"
+                  alt="img1"
+                />
+              </div>
+              <div class="desc">
+                <h2>Green Tea</h2>
+                <span class="rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(4)</span>
+                </span>
+                <div class="price"><span>$36</span> <strike>$63</strike></div>
+              </div>
+            </div>
+
+            <div class="items">
+              <div class="img">
+                <img
+                  src="https://static.vecteezy.com/system/resources/previews/028/573/386/non_2x/kids-drawing-cartoon-illustration-hot-coffee-icon-isolated-on-white-background-vector.jpg"
+                  alt="img1"
+                />
+              </div>
+              <div class="desc">
+                <h2>Hot Coffee</h2>
+                <span class="rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(4)</span>
+                </span>
+                <div class="price"><span>$27</span> <strike>$72</strike></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4 -->
+          <div class="tops-items">
+            <h1>Popular</h1>
+
+            <div class="range">
+              <div
+                class="sells-range"
+                style="--individual-range-width: 54%"
+              ></div>
+            </div>
+
+            <div class="items">
+              <div class="img">
+                <img
+                  src="https://static.vecteezy.com/system/resources/previews/030/738/961/large_2x/fruit-salad-on-white-background-isolated-free-photo.JPG"
+                  alt="img1"
+                />
+              </div>
+              <div class="desc">
+                <h2>Fruit Salad</h2>
+                <span class="rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(4)</span>
+                </span>
+                <div class="price"><span>$60</span> <strike>$90</strike></div>
+              </div>
+            </div>
+
+            <div class="items">
+              <div class="img">
+                <img
+                  src="https://img.freepik.com/premium-photo/delicious-orange-juice-bottle-orange-it-isolated-white_392895-139729.jpg"
+                  alt="img1"
+                />
+              </div>
+              <div class="desc">
+                <h2>Fruit Juice</h2>
+                <span class="rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(4)</span>
+                </span>
+                <div class="price"><span>$18</span> <strike>$27</strike></div>
+              </div>
+            </div>
+
+            <div class="items">
+              <div class="img">
+                <img
+                  src="https://img.freepik.com/premium-photo/fresh-strawberry-drink-perfect-drink-catalog_718046-1426.jpg?w=740"
+                  alt="img1"
+                />
+              </div>
+              <div class="desc">
+                <h2>Cocktail Juice</h2>
+                <span class="rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>(4)</span>
+                </span>
+                <div class="price"><span>$27</span> <strike>$36</strike></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- app-section -->
+      <div class="app-section">
+        <div class="content">
+          <h1>Shop Faster With Groceyish App</h1>
+          <h5>Available on both IOS & Android</h5>
+        </div>
+        <img src="images/App.png" alt="" />
+      </div>
+
+      <!-- info-section -->
+      <div class="info-section">
+        <div class="info-item">
+          <img src="images/tag.png" alt="" />
+          <div class="info">
+            <h3>Best Price and Deals</h3>
+            <p>Don't miss out daily amazing deals and prices</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <img src="images/car.png" alt="" />
+          <div class="info">
+            <h3>Best Price and Deals</h3>
+            <p>Don't miss out daily amazing deals and prices</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <img src="images/Group.png" alt="" />
+          <div class="info">
+            <h3>Best Price and Deals</h3>
+            <p>Don't miss out daily amazing deals and prices</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <br />
+    <div class="break-line"></div>
+
+    <footer>
+      <div class="top-footer-section">
+        <div class="contact-details">
+          <div class="our-info">
+            <img src="images/money.png" alt="logo" />
+
+            <div class="our-name">
+              <h3>Groceyish</h3>
+              <h5>GROCERY</h5>
+            </div>
+          </div>
+
+          <our class="details">
+            <ul>
+              <li>
+                <i class="fa-solid fa-location-dot"></i>
+                <b>Address :</b> University Road Jalaram Park Rajkot.
+              </li>
+              <li>
+                <i class="fa-solid fa-phone"></i> <b>Call :</b> +91 9030609036
+              </li>
+              <li>
+                <i class="fa-solid fa-envelope"></i> <b>Email :</b>
+                grocery@store.email.com
+              </li>
+              <li>
+                <i class="fa-regular fa-clock"></i> <b>Working hours :</b> 10:00
+                am to 10:00 pm ( Mon to Sat )
+              </li>
+            </ul>
+          </our>
+        </div>
+        <div class="account">
+          <h2>Account</h2>
+          <span>Wishlist</span>
+          <span>Cart</span>
+          <span>Track Order</span>
+          <span>Shipping Details</span>
+        </div>
+        <div class="useful-links">
+          <h2>Useful-Links</h2>
+          <span>About Us</span>
+          <span>Contact Us</span>
+          <span>Hot Deals</span>
+          <span>Promotions</span>
+          <span>New Products</span>
+        </div>
+        <div class="help-center">
+          <h2>Help Center</h2>
+          <spna>Payments</spna>
+          <spna>Refund</spna>
+          <spna>Checkout</spna>
+          <spna>Shipping</spna>
+          <spna>Q&A</spna>
+          <spna>Privacy Policy</spna>
+        </div>
+      </div>
+
+      <br />
+
+      <div class="break-line"></div>
+
+      <div class="bottom-footer-section">
+        <div class="copyright">
+          <p>@2024, All rights reserved</p>
+        </div>
+        <div class="payment">
+          <img src="images/Payment.png" alt="payment" />
+        </div>
+        <div class="social">
+          <img src="images/Group 21.png" alt="" />
+          <img src="images/Group 20.png" alt="" />
+          <img src="images/Group 18.png" alt="" />
+          <img src="images/Group 19.png" alt="" />
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

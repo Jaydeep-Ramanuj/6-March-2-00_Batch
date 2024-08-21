@@ -1,0 +1,754 @@
+@use 'utills/mixins';
+
+@use 'sass:map';
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+$primary-color: #3dba7d;
+$bg-primary-color: #ffffff;
+$bg-secondary-color: #d2efe1;
+$text-primary-color: #283b4e;
+$text-secondary-color: #838383;
+$btn-primary-color: #defaec;
+$btn-secondary-color: #defaec;
+$padding-primary: 0px 100px;
+
+// Mixin
+
+@mixin center($jc: center, $ai: center, $dir: row) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+// Map
+
+$height: (
+  '1': 100px,
+  '2': 200px,
+  '3': 300px,
+  '4': 400px,
+  '5': 500px,
+);
+
+$width: (
+  '1': 100px,
+  '2': 200px,
+  '3': 300px,
+  '4': 400px,
+  '5': 500px,
+);
+
+$padding: (
+  '1': 20px,
+  '2': 40px,
+  '3': 60px,
+  '4': 80px,
+  '5': 100px,
+);
+
+$margin: (
+  '1': 20px,
+  '2': 40px,
+  '3': 60px,
+  '4': 80px,
+  '5': 100px,
+);
+
+$br: (
+  '1': 3px,
+  '2': 6px,
+  '3': 90px,
+  '4': 12px,
+  '5': 15px,
+);
+
+$font-size: (
+  '1': 1rem,
+  '2': 2rem,
+  '3': 3rem,
+);
+$font-weight: (
+  '1': 300,
+  '2': 600,
+  '3': 900,
+);
+
+// Common Class
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: $text-primary-color;
+}
+.sub-title {
+  color: $text-secondary-color;
+}
+
+.btn {
+  padding: 5px 15px;
+  background-color: $primary-color;
+  border-radius: 5px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+//   Header
+header {
+  margin-top: 10px;
+  padding: $padding-primary;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+
+  .top-header {
+    padding: $padding-primary;
+    @include center(space-between, center);
+    border-radius: map.get($margin, '1');
+
+    .logo {
+      display: flex;
+
+      .content {
+        margin-left: map.get($map: $margin, $key: '1') - 15px;
+      }
+      .title {
+        color: $primary-color;
+        font-size: map.get($map: $font-size, $key: '1') + 0.2rem;
+        font-weight: map.get($map: $font-weight, $key: '1');
+      }
+
+      .sub-title {
+        color: $text-secondary-color;
+        text-transform: uppercase;
+        font-size: map.get($map: $font-size, $key: '1');
+      }
+    }
+    .header-wrapper {
+      width: 90%;
+      @include center(space-between, center);
+    }
+    #toggle {
+      display: none;
+    }
+
+    .search-bar {
+      height: map.get($map: $height, $key: '1') - 50px;
+      width: map.get($map: $width, $key: '4');
+      background-color: #f1f1f1;
+      border-radius: map.get($map: $br, $key: '2') - 1px;
+      padding: map.get($map: $padding, $key: '1') - 15px;
+      @include center();
+      select,
+      input {
+        background-color: transparent;
+        border: 0;
+        height: map.get($map: $height, $key: '1') - 60px;
+        outline: none;
+      }
+
+      input {
+        flex-grow: 1;
+        position: relative;
+        &::after {
+          content: 'Jay';
+          width: map.get($map: $width, $key: '1') - 50px;
+          height: map.get($map: $height, $key: '1') - 90px;
+          color: red;
+          position: absolute;
+          top: 100px;
+          left: 0;
+        }
+      }
+
+      span {
+        height: map.get($map: $height, $key: '1') - 50px;
+        width: map.get($map: $width, $key: '1') - 50px;
+        background-color: $primary-color;
+        @include center();
+        margin-top: -5px;
+        margin-right: -5px;
+        border-top-right-radius: map.get($map: $br, $key: '2') - 1px;
+        border-bottom-right-radius: map.get($map: $br, $key: '2') - 1px;
+      }
+    }
+
+    .wishlist,
+    .cart {
+      @include center(center, center);
+      gap: 10px;
+
+      i {
+        font-size: map.get($map: $font-size, $key: '2') - 0.2rem;
+        position: relative;
+      }
+
+      span .badge {
+        height: map.get($map: $height, $key: '1') - 82px;
+        width: map.get($map: $width, $key: '1') - 82px;
+        font-size: map.get($map: $font-size, $key: '1') - 0.2rem;
+        color: white;
+        border-radius: 50%;
+        @include center(center, center);
+        background-color: #3dba7d;
+        position: absolute;
+        border: 1px solid white;
+      }
+
+      span:nth-child(2) {
+        font-weight: map.get($map: $font-weight, $key: '2');
+      }
+
+      .cart:nth-child(2) {
+        @include center();
+        flex-direction: column;
+
+        span {
+          color: $primary-color;
+        }
+      }
+    }
+    .wishlist span .badge {
+      top: -4px;
+      right: -4px;
+    }
+    .cart span .badge {
+      top: -6px;
+      right: -6px;
+    }
+    .user-profile {
+      @include center();
+      gap: 10px;
+
+      img {
+        height: map.get($map: $height, $key: '1') - 60px;
+        width: map.get($map: $width, $key: '1') - 60px;
+        border-radius: 50%;
+        border: 1px solid black;
+      }
+
+      .username {
+        font-weight: map.get($map: $font-weight, $key: '2');
+      }
+    }
+    .top-bar + hr {
+      margin: 8px 0px;
+      border: 1px solid rgba(211, 211, 211, 0.636);
+    }
+  }
+
+  // bottom Header
+  .bottom-header {
+    @include center(space-between, center);
+    color: $text-primary-color;
+
+    nav ul {
+      @include center();
+      gap: 50px;
+    }
+
+    li {
+      list-style-type: none;
+      @include center();
+      font-weight: map.get($map: $font-weight, $key: '2');
+
+      &:nth-child(1) {
+        color: $primary-color;
+      }
+    }
+
+    .btn {
+      padding: 8px 15px;
+
+      i {
+        font-size: map.get($map: $font-size, $key: '2') - 0.5rem;
+        margin-right: 8px;
+      }
+    }
+
+    .contact {
+      @include center();
+      gap: 8px;
+
+      span:nth-child(1) {
+        color: $primary-color;
+        display: inline-flex;
+        align-items: center;
+        font-weight: map.get($map: $font-weight, $key: '2');
+      }
+
+      span:nth-child(2) {
+        font-size: map.get($map: $font-size, $key: '1') - 0.1rem;
+        font-weight: map.get($map: $font-weight, $key: '2');
+      }
+    }
+  }
+}
+
+// Hero Section
+.hero-section {
+  padding: $padding-primary;
+  background-color: #d0eedf;
+  position: relative;
+  height: map.get($map: $height, $key: '4');
+  @include center(start);
+  margin: 40px 0px;
+
+  img {
+    position: absolute;
+    height: 100%;
+    top: 0%;
+    right: 0%;
+  }
+
+  .content {
+    h2 {
+      font-size: 48px;
+    }
+    .email-input {
+      margin-top: 25px;
+      height: map.get($map: $height, $key: '1') - 50px;
+      width: map.get($map: $width, $key: '4');
+      @include center();
+      padding: 0px 15px;
+      border-radius: map.get($map: $br, $key: '2') - 1px;
+      gap: 10px;
+      background-color: white;
+      color: $text-secondary-color;
+
+      .btn {
+        width: fit-content;
+        height: 100%;
+        margin-right: -15px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+
+      input {
+        height: map.get($map: $height, $key: '1') - 50px;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        flex-grow: 1;
+        font-size: map.get($map: $font-size, $key: '1') + 0.1rem;
+      }
+    }
+  }
+}
+
+// Category Section
+
+.category-section,
+.featured-section {
+  padding: $padding-primary;
+  margin: 30px 0;
+
+  .category-section-top,
+  .featured-section-top {
+    @include center(space-between, center);
+  }
+
+  #category-section-select,
+  #featured-section-select {
+    @media (min-width: 576px) {
+      display: none;
+    }
+  }
+
+  .category-links,
+  .featured-links {
+    @include center(center, center);
+    gap: 20px;
+
+    li {
+      list-style-type: none;
+      font-weight: map.get($map: $font-weight, $key: '2');
+    }
+  }
+
+  .category-links li:nth-child(1) {
+    color: $primary-color;
+  }
+  .featured-links li:nth-child(2) {
+    color: $primary-color;
+  }
+
+  .category-list,
+  .featured-list {
+    margin-top: 20px;
+    @include center(space-around, center);
+  }
+
+  .category-card {
+    width: fit-content;
+    border-radius: map.get($map: $br, $key: '3') - 1px;
+    padding: map.get($map: $padding, $key: '1') - 5px;
+    @include center($dir: column);
+    background-color: inherit;
+    img {
+      height: map.get($map: $height, $key: '1') - 10px;
+      width: map.get($map: $width, $key: '1') - 10px;
+    }
+    h3 {
+      color: $text-primary-color;
+    }
+    h5 {
+      color: $text-secondary-color;
+    }
+  }
+}
+
+// featured Section
+
+.featured-section {
+  .featured-product-card {
+    width: fit-content;
+    border-radius: map.get($map: $br, $key: '2') - 1px;
+    padding: map.get($map: $padding, $key: '1') - 10px;
+    @include center(space-around, flex-start, column);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: $text-secondary-color;
+    img {
+      margin: 0 auto;
+      width: map.get($map: $width, $key: '1') + 50px;
+    }
+    h3 {
+      margin-top: 3px;
+      color: $text-primary-color;
+    }
+
+    .rating {
+      margin-top: 5px;
+      color: gold;
+      @include center(center, center);
+      gap: 5px;
+      font-size: map.get($map: $font-size, $key: '1') - 0.2rem;
+      i:nth-child(5) {
+        color: lightgrey;
+      }
+
+      span {
+        margin-top: 3px;
+        color: $text-secondary-color;
+      }
+
+      h5 span {
+        margin-left: 3px;
+        color: green;
+      }
+    }
+    .card-footer {
+      margin-top: 5px;
+      @include center(center, center);
+      gap: 30px;
+
+      span {
+        color: green;
+        font-weight: map.get($map: $font-weight, $key: '2');
+        font-size: map.get($map: $font-size, $key: '1') + 0.1rem;
+      }
+      strike {
+        color: $text-secondary-color;
+        font-size: map.get($map: $font-size, $key: '1') + 0.1rem;
+        margin-left: 3px;
+      }
+      .cart-btn {
+        padding: 5px 15px;
+        border-radius: map.get($map: $br, $key: '2') - 1px;
+        width: fit-content;
+        background-color: #dcf8ea;
+      }
+    }
+  }
+}
+
+.offers-section {
+  padding: $padding-primary;
+  margin-top: 100px;
+  @include center(space-between, center);
+
+  .offer-1,
+  .offer-2 {
+    @include center(space-between, center);
+    height: map.get($map: $height, $key: '1') + 150px;
+    width: map.get($map: $width, $key: '1') + 400px;
+    border-radius: map.get($map: $br, $key: '2') - 1px;
+
+    .offer-info {
+      @include center();
+      flex-direction: column;
+      gap: 8px;
+      padding-left: 30px;
+      padding-top: 20px;
+
+      h2 {
+        font-size: map.get($map: $font-size, $key: '1') + 0.6rem;
+        font-weight: map.get($map: $font-weight, $key: '2');
+      }
+      h4 {
+        font-size: map.get($map: $font-size, $key: '1') + 0.1rem;
+        font-weight: map.get($map: $font-weight, $key: '1');
+      }
+
+      button:nth-child(1) {
+        background-color: rgba(255, 68, 0, 0.464);
+        font-size: map.get($map: $font-size, $key: '1') - 0.1rem;
+        font-weight: map.get($map: $font-weight, $key: '2');
+        border: none;
+        color: white;
+        padding: map.get($map: $padding, $key: '1') - 10px;
+
+        border-radius: map.get($map: $br, $key: '2') - 1px;
+        text-align: start;
+        align-self: flex-start;
+      }
+      button:nth-child(4) {
+        background-color: $primary-color;
+        font-size: map.get($map: $font-size, $key: '1') + 0.3rem;
+        font-weight: map.get($map: $font-weight, $key: '2');
+        border: none;
+        padding: 12px 18px;
+        border-radius: map.get($map: $br, $key: '2') - 1px;
+        margin-top: 20px;
+        @include center();
+        align-self: flex-start;
+        gap: 20px;
+      }
+    }
+  }
+
+  .offer-1 {
+    background-color: #fcf7e4;
+  }
+  .offer-2 {
+    background-color: #cfeadb;
+  }
+}
+// Daily Sells
+
+.daily-sells-section {
+  padding: $padding-primary;
+  margin-top: 63px;
+
+  .top-bar {
+    @include center(space-between, center);
+
+    .wrapper {
+      width: 100%;
+      @include center(space-between);
+      gap: 30px;
+
+      .title {
+        font-size: map.get($map: $font-size, $key: '1') + 0.8rem;
+        font-weight: map.get($map: $font-weight, $key: '2');
+        width: 100%;
+        @include center(space-between, center);
+
+        .link {
+          #daily-sells-select {
+            @media (min-width: 576px) {
+              display: none;
+            }
+          }
+          ul {
+            display: flex;
+            font-size: map.get($map: $font-size, $key: '1') + 0.3rem;
+            font-weight: map.get($map: $font-weight, $key: '2') - 100;
+            gap: 27px;
+
+            li {
+              list-style-type: none;
+              &:nth-child(1) {
+                color: $primary-color;
+                font-weight: map.get($map: $font-weight, $key: '3');
+              }
+            }
+          }
+        }
+        .expiry-info {
+          background-color: red;
+          border-radius: map.get($map: $br, $key: '2') - 1px;
+          width: fit-content;
+          font-size: map.get($map: $font-size, $key: '1') + 0.3rem;
+          font-weight: map.get($map: $font-weight, $key: '2') - 100;
+          color: white;
+          padding: map.get($map: $padding, $key: '1') - 10px;
+
+          span:nth-last-child(1) {
+            background-color: transparent;
+          }
+          span:nth-last-child(3) {
+            color: yellow;
+          }
+        }
+      }
+    }
+    .sidebar {
+      @include center();
+      gap: 9px;
+
+      i {
+        background-color: rgba(128, 128, 128, 0.129);
+        color: #283b4e;
+        border-radius: 50px;
+        padding: 15px;
+      }
+      @media (min-width: 576px) {
+        display: none;
+      }
+    }
+  }
+  .sells-items {
+    @include center(flex-start, center);
+    gap: 10px;
+
+    .item-card {
+      position: relative;
+      margin-top: 36px;
+      height: 450px;
+      width: 270px;
+      padding: 15px;
+      @include center();
+      flex-direction: column;
+      gap: 10px;
+      font-size: map.get($map: $font-size, $key: '1');
+      font-weight: map.get($map: $font-weight, $key: '2');
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
+      img {
+        height: 100px;
+        width: 100px;
+        margin: 0px auto;
+      }
+
+      span:nth-child(1) {
+        background-color: gold;
+        padding: map.get($map: $padding, $key: '1') - 10px;
+        font-weight: map.get($map: $font-weight, $key: '2');
+        position: absolute;
+        left: 0%;
+        top: 0%;
+      }
+
+      h5 {
+        font-weight: map.get($map: $font-weight, $key: '1');
+      }
+      .rating {
+        margin-top: 10x;
+        color: gold;
+
+        span,
+        i:nth-child(5) {
+          color: grey;
+        }
+      }
+      .name {
+        font-weight: map.get($map: $font-weight, $key: '1');
+
+        mark {
+          background-color: transparent;
+          font-weight: map.get($map: $font-weight, $key: '2');
+          color: $primary-color;
+        }
+      }
+
+      .price {
+        font-weight: map.get($map: $font-weight, $key: '2');
+        color: $primary-color;
+
+        strike {
+          font-weight: map.get($map: $font-weight, $key: '1');
+          color: grey;
+        }
+      }
+      .stock {
+        margin-top: 10px;
+        width: 100%;
+        height: 8px;
+        border-radius: map.get($map: $br, $key: '3');
+        background-color: rgba(128, 128, 128, 0.325);
+      }
+      .stock-range {
+        height: inherit;
+        border-radius: inherit;
+        background-color: $primary-color;
+      }
+      .btn {
+        @include center();
+        gap: 9px;
+        margin-top: 10px;
+      }
+    }
+  }
+  .register-card-back {
+    margin-top: 36px;
+    height: 450px;
+    width: 270px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-image: url('https://cdn.vectorstock.com/i/1000x1000/07/04/fruit-icon-set-02-vector-14780704.webp');
+
+    .register-card {
+      margin-top: 0px;
+      height: 450px;
+      width: 270px;
+      padding: 19px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+      background-color: #fbf7e7;
+      color: black;
+      font-size: map.get($map: $font-size, $key: '1') + 0.2rem;
+      font-weight: map.get($map: $font-weight, $key: '3');
+
+      h1 {
+        margin: 0px auto;
+        font-weight: map.get($map: $font-weight, $key: '3');
+        font-size: map.get($map: $font-size, $key: '1') + 0.8rem;
+      }
+      label {
+        font-weight: map.get($map: $font-weight, $key: '2');
+      }
+      h3 {
+        // margin: 0px auto;
+
+        font-weight: map.get($map: $font-weight, $key: '2');
+        text-align: center;
+      }
+      span {
+        margin-top: -33px;
+        background-color: white;
+        padding: 5px;
+        border-radius: 5px;
+      }
+      span i {
+        color: rgba(0, 0, 0, 0.716);
+        opacity: 0.9;
+      }
+      input {
+        border: none;
+        outline: none;
+        margin: 5px;
+      }
+      .btn {
+        background-color: rgba(240, 157, 157, 0.658);
+
+        color: white;
+        font-weight: map.get($map: $font-weight, $key: '3') + 50px;
+        border-radius: 5px;
+        text-shadow: 3px 1px 3px black;
+      }
+    }
+  }
+}

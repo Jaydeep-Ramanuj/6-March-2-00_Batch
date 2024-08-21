@@ -1,0 +1,11 @@
+@mixin xcenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin xFlex($jc: start, $ai: start) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+}
