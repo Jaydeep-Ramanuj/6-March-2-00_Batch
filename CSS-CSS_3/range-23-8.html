@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="range" name="" id="" step="10" />
+    <button></button>
+    <script>
+      let range = document.getElementsByTagName('input')[0];
+      let btn = document.getElementsByTagName('button')[0];
+
+      console.log(range);
+
+      range.addEventListener('input', () => {
+        console.log(range.value);
+        btn.innerText = range.value;
+      });
+    </script>
+  </body>
+</html>

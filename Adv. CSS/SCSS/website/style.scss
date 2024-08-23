@@ -508,6 +508,7 @@ header {
         border-radius: map.get($map: $br, $key: '2') - 1px;
         text-align: start;
         align-self: flex-start;
+        @include mixins.hover-effect($primary-color);
       }
       button:nth-child(4) {
         background-color: $primary-color;
@@ -520,6 +521,7 @@ header {
         @include center();
         align-self: flex-start;
         gap: 20px;
+        @include mixins.hover-effect($primary-color);
       }
     }
   }
@@ -685,6 +687,7 @@ header {
         @include center();
         gap: 9px;
         margin-top: 10px;
+        @include mixins.hover-effect($primary-color);
       }
     }
   }
@@ -749,6 +752,223 @@ header {
         border-radius: 5px;
         text-shadow: 3px 1px 3px black;
       }
+    }
+  }
+}
+
+.trending-section {
+  .box {
+    padding: $padding-primary;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    .tops-items {
+      height: 500px;
+      width: 250px;
+
+      display: flex;
+      flex-direction: column;
+
+      font-size: 0.8rem;
+      .range {
+        height: 6px;
+        width: 100%;
+        background-color: silver;
+        border-radius: 5px;
+      }
+      .sells-range {
+        height: 6px;
+        width: var(--individual-range-width);
+        background-color: green;
+        border-radius: 5px;
+      }
+
+      .img {
+        height: 100px;
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(128, 128, 128, 0.095);
+        border-radius: 9px;
+        padding: 12px;
+      }
+      img {
+        height: 81px;
+        width: 81px;
+        mix-blend-mode: color-burn;
+      }
+      .items {
+        padding: 5px;
+        margin-top: 10px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+
+        @include mixins.item-hover-effect() /* font-size: 1rem; */;
+      }
+      .rating {
+        font-size: 0.9rem;
+        color: gold;
+
+        span,
+        i:nth-child(5) {
+          color: rgba(128, 128, 128, 0.659);
+        }
+      }
+      .price {
+        margin-top: 12px;
+        display: flex;
+        gap: 5px;
+        font-weight: 600;
+        color: green;
+        strike {
+          color: grey;
+        }
+      }
+      h1 {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+/* .app-section */
+
+.app-section {
+  padding: $padding-primary;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 600px;
+  background-color: #d0eedf;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+  .content {
+    margin-left: 50px;
+    width: 30%;
+  }
+  h1 {
+    color: $text-primary-color;
+    font-size: 2.5rem;
+  }
+  h5 {
+    margin-top: 5px;
+    color: $text-secondary-color;
+  }
+}
+
+/* .info-section */
+
+.info-section {
+  padding: $padding-primary;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-evenly;
+
+  .info-item {
+    display: flex;
+    width: 300px;
+  }
+
+  img {
+    height: 100%;
+  }
+  .info {
+    margin-left: 10px;
+    h3 {
+      color: $text-primary-color;
+    }
+    h5 {
+      color: $text-secondary-color;
+    }
+  }
+}
+
+/* Footer-section */
+
+.break-line {
+  height: 1px;
+  margin-left: 100px;
+  margin-right: 100px;
+  background-color: $text-secondary-color;
+  opacity: 0.3;
+}
+
+.top-footer-section {
+  margin-top: 50px;
+  padding: $padding-primary;
+  display: flex;
+  justify-content: space-between;
+
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    .our-info {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      img {
+        height: 45px;
+        width: 45px;
+      }
+    }
+    .our-name {
+      padding-left: 5px;
+      h3 {
+        font-size: 1.8rem;
+        color: $primary-color;
+      }
+      h5 {
+        font-size: 0.9rem;
+        color: $text-secondary-color;
+      }
+    }
+  }
+  .details ul li {
+    list-style: none;
+    font-size: 0.9rem;
+  }
+  .details ul li i {
+    color: $primary-color;
+  }
+  .details ul {
+    gap: 12px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .account,
+  .useful-links,
+  .help-center {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .account,
+  .useful-links,
+  .help-center h2 {
+    color: $text-primary-color;
+  }
+}
+
+.bottom-footer-section {
+  margin-top: 25px;
+  padding: $padding-primary;
+  display: flex;
+  justify-content: space-between;
+
+  .social {
+    img {
+      @include mixins.img-effect();
     }
   }
 }
