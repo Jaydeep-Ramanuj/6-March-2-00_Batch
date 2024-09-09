@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div
+      class="credit-card max-w-[400px] mx-auto mt-72 shadow-2xl p-4 rounded-md text-slate-800 relative group"
+    >
+      <div class="card-details">
+        <form action="">
+          <div class="input">
+            <label for="number" class="text-xs">Card Number</label>
+            <input
+              class="w-full border p-1 rounded-md"
+              type="text"
+              name=""
+              id="number"
+              placeholder="1234 4567 8901 3456"
+            />
+          </div>
+          <div class="input mt-4">
+            <label for="name" class="text-xs">Card Holder</label>
+            <input
+              type="text"
+              class="w-full border p-1 rounded-md"
+              name=""
+              id="name"
+              placeholder="Darshana Malam"
+            />
+          </div>
+
+          <div class="exp-cvv flex justify-between mt-4">
+            <div class="input">
+              <label for="exp" class="text-xs">Expiration Date</label>
+              <select class="border p-1 rounded-md" name="" id="exp">
+                <option value="" selected>4</option>
+                <option value="">5</option>
+                <option value="">6</option>
+                <option value="">7</option>
+              </select>
+            </div>
+            <div class="input">
+              <select name="" id="" class="border p-1 rounded-md">
+                <option value="" selected>2024</option>
+                <option value="">2025</option>
+                <option value="">2026</option>
+                <option value="">2027</option>
+              </select>
+            </div>
+            <div class="input">
+              <label for="cvv" class="text-xs">CVV</label>
+              <input
+                type="text"
+                name=""
+                id="cvv"
+                placeholder="123"
+                class="border p-1 rounded-md max-w-[60px]"
+              />
+            </div>
+          </div>
+          <a
+            href="#"
+            class="block bg-blue-600 text-center w-full text-white rounded-md py-1.5 mt-4"
+            >Submit</a
+          >
+        </form>
+      </div>
+      <div
+        class="floating-card w-[92%] h-[90%] flex flex-col justify-between p-4 bg-[url(https://images.pexels.com/photos/1997484/pexels-photo-1997484.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)] rounded-md transition-all duration-500 bg-cover absolute top-[5%] left-[4%] isolate text-white before:content-[' '] before:h-full before:w-full before:absolute before:top-0 before:left-0 before:bg-gray-900/[0.4] before:-z-10 before:rounded-md group-hover:-top-[90%]"
+      >
+        <div class="top-bar flex items-center justify-between">
+          <img
+            class="w-20 h-14"
+            src="images/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA3L2pvYjEwNjgtZWxlbWVudC1jaGlwLTAyLWw1dDJxc243LmpwZw-removebg-preview.png"
+            alt=""
+          />
+          <img
+            class="w-28 h-8"
+            src="https://www.freepnglogos.com/uploads/visa-card-logo-9.png"
+            alt=""
+          />
+        </div>
+        <div class="card-number text-2xl font-semibold text-center">
+          <span>1234</span>
+          <span>****</span>
+          <span>****</span>
+          <span>9687</span>
+        </div>
+        <div class="bottom-bar flex justify-between">
+          <div class="card-holder">
+            <h5>Card Holder</h5>
+            <h3>PaisaPaisa.com</h3>
+          </div>
+          <div class="card-expiry">
+            <h5>Expires</h5>
+            <h3>04/32</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
