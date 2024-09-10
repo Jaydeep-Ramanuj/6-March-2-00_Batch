@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            width: {
+              100: '100px',
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- <style>
+      @layer components {
+        .btn {
+          @apply bg-red-400 py-1 px-4 text-white text-center rounded-md;
+        }
+      }
+    </style> -->
+  </head>
+  <body>
+    <div
+      class="box text-3xl font-thin underline decoration-red-300 decoration-double"
+    >
+      Box
+    </div>
+
+    <div
+      class="box h-48 w-48 rounded-md mx-auto mt-24 transition-all duration-300 hover:scale-125 hover:scale-x-[1.55] hover:[transform:rotateX(35deg) translate-x-2.5] [background-color:red] hover:translate-x-2.5"
+    ></div>
+    <div
+      class="box h-48 w-48 rounded-md mx-auto mt-24 bg-purple-300 transition-all duration-300 hover:translate-x-20 hover:scale-125 hover:skew-x-6"
+    ></div>
+    <div
+      class="box h-48 w-48 rounded-md mx-auto mt-24 bg-amber-300 transition-all duration-300 hover:rotate-[35deg] origin-left"
+    ></div>
+
+    <div class="h-24 w-24 bg-orange-600 mx-auto my-24 animate-bounce"></div>
+
+    <button class="bg-red-400 py-1 px-4 text-white text-center rounded-md">
+      Hi
+    </button>
+
+    <button class="btn">Button 2</button>
+  </body>
+</html>
