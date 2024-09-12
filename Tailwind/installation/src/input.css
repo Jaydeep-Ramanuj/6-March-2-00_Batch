@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply py-3 px-5 bg-red-500 text-white w-fit rounded-md;
+  }
+
+  .card {
+    @apply p-3 rounded-md border;
+  }
+}
