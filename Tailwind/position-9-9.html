@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        darkMode: 'selector',
+      };
+    </script>
   </head>
   <body>
     <div
-      class="credit-card max-w-[400px] mx-auto mt-72 shadow-2xl p-4 rounded-md text-slate-800 relative group"
+      class="credit-card max-w-[400px] mx-auto mt-72 shadow-2xl p-4 rounded-md text-slate-800 relative group dark:bg-[#24252e]"
     >
       <div class="card-details">
         <form action="">
