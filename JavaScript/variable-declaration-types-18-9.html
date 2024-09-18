@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   var age = 10;
+
+      //   age = 10;
+      //   age = 20;
+      //   age = undefined;
+
+      //   var age = 20;
+      //   console.log(age);
+
+      //   let num;
+      //   num = 10;
+      //   num = 20;
+
+      //   const pi = 3.14;
+      //   //   pi = 2.14;
+
+      //   console.log(pi);
+
+      //   let n1 = 1;
+      //   let n2 = 2;
+
+      //   console.log('Before func');
+      //   console.log(n1);
+      //   console.log(n2);
+
+      var n1, n2;
+      function func(num1, num2) {
+        n1 = num1;
+        n2 = num2;
+        console.log('Inside func');
+
+        console.log(n1);
+        console.log(n2);
+
+        return num1 + num2;
+      }
+      func(10, 20);
+      console.log('Outside func');
+      console.log(n1);
+      console.log(n2);
+    </script>
+  </body>
+</html>
