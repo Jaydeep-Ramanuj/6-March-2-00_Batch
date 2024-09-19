@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      num1 = 10;
+      num2 = 20;
+
+      // assignment
+      num1 = 10;
+
+      //   num1 = num1 + 10;
+      //   console.log('num1 = num1 + 10:', num1);
+
+      //   num1 += 10;
+      console.log('num1 += 10: ', num1);
+      console.log('num1 -= 10: ', (num1 -= 10));
+      console.log('num1 *= 10: ', (num1 *= 10));
+      console.log('num1 /= 10: ', (num1 /= 10));
+
+      //   Arithmetic
+      console.log('num1 + num2 = ', num1 + num2);
+      console.log('num1 - num2 = ', num1 - num2);
+      console.log('num1 * num2 = ', num1 * num2);
+      console.log('num1 / num2 = ', num1 / num2);
+      console.log('num1 % num2 = ', num1 % num2);
+
+      console.log('---');
+
+      // relational / comparison
+
+      console.log('num1 < num2: ', num1 < num2);
+      console.log('num1 > num2: ', num1 > num2);
+      console.log('num1 >= num2: ', num1 >= num2);
+      console.log('num1 <= num2: ', num1 <= num2);
+
+      // equality operator(==), it check value of both operands and if they are same it gives true else false
+
+      console.log('num1 == num2: ', num1 == num2);
+
+      // Not equality
+      console.log('num1!=num2: ', num1 != num2);
+
+      num2 = '10';
+
+      //strict equality operator(==), it check value as well as data type of both operands and if they are same (in value as well as type) it gives true else false
+      console.log('num1 === num2: ', num1 === num2);
+
+      //   logical
+
+      // AND (&&), it gives true if both conditions are true
+
+      // T T => T
+      // T F => F
+      // F T => F
+      // F F => F
+
+      // OR (||), it gives true if any of the conditions are true
+
+      // T T => T
+      // T F => T
+      // F T => T
+      // F F => F
+
+      // NOT (!), it gives true if false, if false it gives true
+
+      // T => F
+      // F => T
+
+      condition1 = 10 < 20;
+      condition2 = 5 > 20;
+
+      console.log('condition1 && condition2:', condition1 && condition2);
+      console.log('condition1 && condition2:', condition1 || condition2);
+      console.log('condition1 && condition2:', !condition2);
+    </script>
+  </body>
+</html>
