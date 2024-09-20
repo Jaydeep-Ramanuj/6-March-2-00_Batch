@@ -28,6 +28,7 @@
       console.log('num1 * num2 = ', num1 * num2);
       console.log('num1 / num2 = ', num1 / num2);
       console.log('num1 % num2 = ', num1 % num2);
+      console.log('num1 ** num2 = ', num1 ** 4);
 
       console.log('---');
 
@@ -49,6 +50,8 @@
 
       //strict equality operator(==), it check value as well as data type of both operands and if they are same (in value as well as type) it gives true else false
       console.log('num1 === num2: ', num1 === num2);
+
+      console.log('num1 !== num2: ', num1 !== num2);
 
       //   logical
 
@@ -77,6 +80,53 @@
       console.log('condition1 && condition2:', condition1 && condition2);
       console.log('condition1 && condition2:', condition1 || condition2);
       console.log('condition1 && condition2:', !condition2);
+
+      // increment /  decrement
+
+      num1 = 10;
+      // num1 += 1;
+      console.log(num1);
+
+      // // post, it first use its values then increment happens
+
+      // // num1++; // increment
+      // console.log(num1);
+      // num1--; // decrement
+      // console.log(num1);
+
+      // pre, it first do increment then its value will be used
+
+      console.log(++num1);
+      console.log(num1);
+
+      // --num1; // decrement
+      // console.log(num1);
+
+      num1 = 10;
+      num2 = 2;
+      num1 < num2 ? console.log('num1 is LT') : console.log('num2 is LT');
+
+      some = 'some';
+      bool = true;
+      n = null;
+      console.log(typeof num1);
+      console.log(typeof some);
+      console.log(typeof bool);
+      console.log(typeof n);
+
+      function sum() {
+        return num1 + num2;
+      }
+      arr = [10, 2, 30];
+
+      console.log(typeof sum);
+      console.dir(arr);
+
+      if (num1 < num2) {
+        console.log('num1 is LT');
+      } else {
+        console.log('num2 is LT');
+      }
     </script>
   </body>
 </html>
