@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box"></div>
+
+    <script>
+      box = document.querySelector('.box');
+
+      //   box.style.height = '100px';
+      //   box.style.width = '100px';
+      //   box.style.backgroundColor = 'tomato';
+      //   box.style.border = '1px solid black';
+      //   box.style.borderRadius = '12px';
+      //   box.style.margin = '50px auto';
+
+      btnStyle1 =
+        'width:100px; height:100px; background-color:yellowgreen; border:1px solid black; border-radius:12px; margin:50px auto';
+
+      btnStyle2 =
+        'width:300px; height:300px; background-color:yellowgreen; border:1px solid black; border-radius:24px; margin:50px auto';
+
+      color = 'pink';
+      bora = '48px';
+      border = '1px solid red';
+      width = '500px';
+      height = '300px';
+      margin = '100px';
+
+      btnStyle3 = `width:${width}; height:${height}; background-color:${color}; border:${border}; border-radius:${bora}; margin:${margin}`;
+      box.style.cssText = btnStyle3;
+    </script>
+  </body>
+</html>

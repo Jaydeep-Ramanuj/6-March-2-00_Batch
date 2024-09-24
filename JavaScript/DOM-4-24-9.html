@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <input type="number" name="height" id="" placeholder="Enter height" />
+      <input type="number" name="width" id="" placeholder="Enter width" />
+      <input
+        type="number"
+        name="bora"
+        id=""
+        placeholder="Enter border radius"
+      />
+
+      <input type="text" name="margin" id="" placeholder="Enter margin" />
+      <input type="text" name="border" id="" placeholder="Enter border" />
+      <label for="color">Choose color: </label>
+      <input type="color" name="color" id="color" />
+
+      <button>Create box</button>
+    </form>
+    <div class="box"></div>
+    <script>
+      height = document.getElementsByName('height')[0];
+      width = document.getElementsByName('width')[0];
+      bora = document.getElementsByName('bora')[0];
+      color = document.getElementsByName('color')[0];
+      margin = document.getElementsByName('margin')[0];
+      border = document.getElementsByName('border')[0];
+      btn = document.getElementsByTagName('button')[0];
+
+      box = document.getElementsByClassName('box')[0];
+      console.log(height.value);
+
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        box.style.cssText = `width:${width.value}px; height:${height.value}px; background-color:${color.value}; border:${border.value}; border-radius:${bora.value}px; margin:${margin.value}`;
+      });
+
+      //   color = 'pink';
+      //   bora = '48px';
+      //   border = '1px solid red';
+      //   width = '500px';
+      //   height = '300px';
+      //   margin = '100px';
+
+      //   btnStyle3 = `width:${width}; height:${height}; background-color:${color}; border:${border}; border-radius:${bora}; margin:${margin}`;
+      //   box.style.cssText = btnStyle3;
+    </script>
+  </body>
+</html>

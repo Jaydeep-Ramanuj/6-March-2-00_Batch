@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        transition: all 300ms;
+      }
+
+      .colors {
+        padding: 20px;
+        border-radius: 12px;
+        background-color: rgba(211, 211, 211, 0.462);
+        width: fit-content;
+      }
+
+      .color {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        margin-top: 20px;
+        cursor: pointer;
+        transition: all 300ms;
+      }
+
+      .color:hover {
+        scale: 0.9;
+      }
+
+      .color:nth-child(1) {
+        background-color: tomato;
+      }
+      .color:nth-child(2) {
+        background-color: yellowgreen;
+      }
+      .color:nth-child(3) {
+        background-color: teal;
+      }
+      .color:nth-child(4) {
+        background-color: violet;
+      }
+      .color:nth-child(5) {
+        background-color: turquoise;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="colors">
+      <div class="color"></div>
+      <div class="color"></div>
+      <div class="color"></div>
+      <div class="color"></div>
+      <div class="color"></div>
+    </div>
+
+    <script>
+      colors = document.getElementsByClassName('color');
+
+      colors[0].addEventListener('click', () => {
+        // document.body.style.backgroundColor = 'tomato';
+        document.body.style.backgroundColor = getComputedStyle(
+          colors[0]
+        ).backgroundColor;
+      });
+      colors[1].addEventListener('click', () => {
+        // document.body.style.backgroundColor = 'yellowgreen';
+        document.body.style.backgroundColor = getComputedStyle(
+          colors[1]
+        ).backgroundColor;
+      });
+      colors[2].addEventListener('click', () => {
+        // document.body.style.backgroundColor = 'teal';
+        document.body.style.backgroundColor = getComputedStyle(
+          colors[2]
+        ).backgroundColor;
+      });
+      colors[3].addEventListener('click', () => {
+        // document.body.style.backgroundColor = 'violet';
+        document.body.style.backgroundColor = getComputedStyle(
+          colors[3]
+        ).backgroundColor;
+      });
+      colors[4].addEventListener('click', () => {
+        // document.body.style.backgroundColor = 'turquoise';
+        document.body.style.backgroundColor = getComputedStyle(
+          colors[4]
+        ).backgroundColor;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box1 {
+        color: red;
+      }
+      .box2 {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <p>This is p tag</p>
+
+    <div class="parent">
+      Parent
+      <div class="child">Child</div>
+    </div>
+
+    <div class="box1"><i>This is box 1</i></div>
+
+    <div class="box2"></div>
+
+    <div class="card-container"></div>
+    <script>
+      pEle = document.getElementsByTagName('p')[0];
+
+      console.log(pEle.innerText);
+
+      pEle.innerText = 'This is new text';
+
+      parentEle = document.getElementsByClassName('parent')[0];
+      console.log(parentEle.innerText);
+
+      console.log(parentEle.innerHTML);
+
+      parentEle.innerHTML = '<b>This is new HTML line</b>';
+
+      box1 = document.getElementsByClassName('box1')[0];
+      box2 = document.getElementsByClassName('box2')[0];
+
+      //   box2.innerText = box1.innerText;
+      box2.innerHTML = box1.innerHTML;
+      box1.innerHTML = '';
+
+      box1.textContent = 'some';
+
+      cardContainer = document.getElementsByClassName('card-container')[0];
+
+      cardContainer.innerHTML = `<div class="card">
+        <div class="hp">HP39</div>
+        <img src="images/pikachu-transparent-32576.png" alt="" />
+        <div class="info">
+          <h2>Pickachu</h2>
+          <a class="fire" href="">fire</a>
+          <div class="numbers">
+            <div class="number">
+              <b>52</b>
+              <br />
+              <p>Attack</p>
+            </div>
+            <div class="number">
+              <b>43</b>
+              <br />
+              <p>Defense</p>
+            </div>
+            <div class="number">
+              <b>65</b>
+              <br />
+              <p>Speed</p>
+            </div>
+          </div>
+        </div>
+      </div>`;
+    </script>
+  </body>
+</html>
