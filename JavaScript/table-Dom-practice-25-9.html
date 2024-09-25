@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <input type="text" name="name" id="" placeholder="Name" />
+      <input type="text" name="city" id="" placeholder="City" />
+
+      <button>Submit</button>
+    </form>
+    <table border="1">
+      <tr>
+        <th>Name</th>
+        <th>City</th>
+      </tr>
+      <tr>
+        <td class="data1"></td>
+        <td class="data2"></td>
+      </tr>
+    </table>
+
+    <script>
+      const name = document.getElementsByName('name')[0];
+      const city = document.getElementsByName('city')[0];
+      const data1 = document.getElementsByClassName('data1')[0];
+      const data2 = document.getElementsByClassName('data2')[0];
+      const submitBtn = document.querySelector('button');
+
+      submitBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        console.log(name.value);
+        console.log(city.value);
+
+        data1.innerText = name.value;
+        data2.innerText = city.value;
+      });
+    </script>
+  </body>
+</html>

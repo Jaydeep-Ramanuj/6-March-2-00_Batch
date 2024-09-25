@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- comment -->
+    <div class="parent">
+      <div class="child">
+        child1
+        <div class="sub-child">sub-child1</div>
+        <div class="sub-child" id="some">sub-child2</div>
+        This is some random thing
+        <div class="sub-child">sub-child3</div>
+      </div>
+      <div class="child">
+        child2
+        <div class="sub-child">sub-child1</div>
+        <div class="sub-child">sub-child2</div>
+        <div class="sub-child">sub-child3</div>
+      </div>
+      <div class="child">
+        child3
+        <div class="sub-child">sub-child1</div>
+        <div class="sub-child">sub-child2</div>
+        <div class="sub-child">sub-child3</div>
+      </div>
+    </div>
+
+    <script>
+      const parent = document.getElementsByClassName('parent')[0];
+
+      console.log(parent.children);
+
+      console.log(parent.firstElementChild);
+      console.log(parent.lastElementChild);
+
+      console.log(parent.children[0].nextElementSibling);
+
+      //   console.log(parent.children[1]);
+
+      console.log(
+        document.getElementById('some').parentElement.parentElement
+          .parentElement.parentElement
+      );
+
+      console.log(document.getElementById('some').previousElementSibling);
+      console.log(document.getElementById('some').nextElementSibling);
+      console.log(document.getElementById('some').nextSibling);
+
+      console.log(parent.childElementCount);
+      console.log(parent.children.length);
+
+      document.write(parent.children.length);
+      document.write('Hey this is some thing');
+      document.write(parent.children[0]);
+    </script>
+  </body>
+</html>

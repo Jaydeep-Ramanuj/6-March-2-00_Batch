@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="some" data-name="jay">This is some thing</div>
+
+    <img src="" alt="Image not loading" />
+
+    <script>
+      const some = document.querySelector('.some');
+      const img = document.querySelector('img');
+
+      console.log(some.getAttribute('class'));
+      console.log(some.getAttribute('data-name'));
+
+      console.log(img.getAttribute('alt'));
+
+      img.setAttribute(
+        'src',
+        'https://images.pexels.com/photos/2325447/pexels-photo-2325447.jpeg?auto=compress&cs=tinysrgb&w=600'
+      );
+
+      img.removeAttribute('alt');
+    </script>
+  </body>
+</html>
