@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .new {
+        color: red;
+      }
+
+      .temp {
+        border: 1px solid red;
+      }
+      .toggle {
+        font-size: 32px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="some thing else temp">Something is written here</div>
+    <button>Click here</button>
+    <script>
+      const some = document.querySelector('.some');
+
+      // to get class names, as a string
+      console.log(some.className);
+      //   classes = some.className.split(' ');
+      //   console.log(classes);
+
+      // to get class names, as DOMTokenList
+      console.log(some.classList);
+      console.log(some.classList[2]);
+
+      document.querySelector('button').onclick = () => {
+        // to add class
+        some.classList.add('new');
+
+        // to remove class
+        some.classList.remove('temp');
+
+        // to toggle class
+        // some.classList.toggle('toggle');
+
+        // to check if class exists
+        if (some.classList.contains('toggle')) {
+          some.classList.remove('toggle');
+        } else {
+          some.classList.add('toggle');
+        }
+
+        // to add multiple classes at once
+        some.classList.add('a1', 'a2', 'a3');
+      };
+
+      // to remove multiple classes at once
+      some.classList.remove('thing', 'some', 'a3');
+    </script>
+  </body>
+</html>
