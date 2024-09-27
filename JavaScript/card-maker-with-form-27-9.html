@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+      }
+      body {
+        background-size: cover;
+        background-position: center;
+      }
+      .card {
+        max-width: 300px;
+        margin: 100px auto;
+        margin-top: 150px;
+        position: relative;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        /* overflow: hidden; */
+        border-radius: 12px;
+        border: 5px solid transparent;
+        transition: all 300ms;
+        isolation: isolate;
+      }
+
+      .card:hover {
+        background-color: #24252e;
+        color: whitesmoke;
+        border-color: rgba(255, 217, 0, 0.733);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+          rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        transform: translateY(-5px);
+      }
+
+      .card:hover .hp {
+        color: #24252e;
+      }
+      .card img {
+        display: block;
+        height: 200px;
+        width: calc(100% - 40px);
+        margin: 0 auto;
+        position: relative;
+        transition: all 300ms;
+        left: 20px;
+      }
+
+      .card:hover img {
+        /* height: 300px; */
+        transform: scale(1.5) translateY(-50px);
+        filter: drop-shadow(5px 5px 15px rgba(255, 217, 0, 0.502));
+
+        /* top: -150px; */
+      }
+      .card:hover .bg {
+        top: 60%;
+        left: 50px;
+      }
+      .bg {
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        background-color: #ec9824;
+        position: absolute;
+        top: -150px;
+        z-index: -1;
+        transition: all 300ms;
+      }
+
+      .hp {
+        padding: 5px 15px;
+        background-color: whitesmoke;
+        border-radius: 12px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+
+      .info {
+        text-align: center;
+      }
+      .fire {
+        width: fit-content;
+        display: block;
+        margin: 0 auto;
+        margin-top: 10px;
+        padding: 5px 15px;
+        text-decoration: none;
+        color: white;
+        border-radius: 24px;
+        background-color: #ec9824;
+      }
+      .numbers {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <input type="text" name="name" placeholder="Enter Pockamon name" />
+      <input type="text" name="code" placeholder="Enter Pockamon code" />
+      <input type="text" name="desc" placeholder="Enter Pockamon desc" />
+
+      <input type="text" name="img" id="" placeholder="Enter image URL" />
+      <input
+        type="number"
+        name="attack"
+        id=""
+        placeholder="Enter attack value"
+      />
+      <input
+        type="number"
+        name="defense"
+        placeholder="Enter attack
+      defense"
+      />
+      <input
+        type="number"
+        name="speed"
+        id=""
+        placeholder="Enter attack speed"
+      />
+
+      <button>Create Pockamon card</button>
+    </form>
+
+    <script>
+      const name = document.getElementsByName('name')[0];
+      const code = document.getElementsByName('code')[0];
+      const desc = document.getElementsByName('desc')[0];
+
+      const img = document.getElementsByName('img')[0];
+
+      const attack = document.getElementsByName('attack')[0];
+      const defense = document.getElementsByName('defense')[0];
+      const speed = document.getElementsByName('speed')[0];
+
+      const createCardBtn = document.getElementsByTagName('button')[0];
+
+      const cardEle = document.createElement('div');
+      cardEle.classList.add('card');
+
+      createCardBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        cardHTML = `
+      <div class="hp">${code.value}</div>
+      <img src="${img.value}" alt="" />
+      <div class="info">
+        <h2>${name.value}</h2>
+        <a class="fire" href="">${desc.value}</a>
+        <div class="numbers">
+          <div class="number">
+            <b>${attack.value}</b>
+            <br />
+            <p>Attack</p>
+          </div>
+          <div class="number">
+            <b>${defense.value}</b>
+            <br />
+            <p>Defense</p>
+          </div>
+          <div class="number">
+            <b>${speed.value}</b>
+            <br />
+            <p>Speed</p>
+          </div>
+        </div>
+      </div>`;
+
+        cardEle.innerHTML = cardHTML;
+
+        document.body.append(cardEle);
+      });
+    </script>
+  </body>
+</html>

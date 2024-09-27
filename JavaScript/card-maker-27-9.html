@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+      }
+      body {
+        background-size: cover;
+        background-position: center;
+      }
+      .card {
+        max-width: 300px;
+        margin: 100px auto;
+        margin-top: 150px;
+        position: relative;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        /* overflow: hidden; */
+        border-radius: 12px;
+        border: 5px solid transparent;
+        transition: all 300ms;
+        isolation: isolate;
+      }
+
+      .card:hover {
+        background-color: #24252e;
+        color: whitesmoke;
+        border-color: rgba(255, 217, 0, 0.733);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+          rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        transform: translateY(-5px);
+      }
+
+      .card:hover .hp {
+        color: #24252e;
+      }
+      .card img {
+        display: block;
+        height: 200px;
+        margin: 0 auto;
+        position: relative;
+        transition: all 300ms;
+        left: 20px;
+      }
+
+      .card:hover img {
+        /* height: 300px; */
+        transform: scale(1.5) translateY(-50px);
+        filter: drop-shadow(5px 5px 15px rgba(255, 217, 0, 0.502));
+
+        /* top: -150px; */
+      }
+      .card:hover .bg {
+        top: 60%;
+        left: 50px;
+      }
+      .bg {
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        background-color: #ec9824;
+        position: absolute;
+        top: -150px;
+        z-index: -1;
+        transition: all 300ms;
+      }
+
+      .hp {
+        padding: 5px 15px;
+        background-color: whitesmoke;
+        border-radius: 12px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+
+      .info {
+        text-align: center;
+      }
+      .fire {
+        width: fit-content;
+        display: block;
+        margin: 0 auto;
+        margin-top: 10px;
+        padding: 5px 15px;
+        text-decoration: none;
+        color: white;
+        border-radius: 24px;
+        background-color: #ec9824;
+      }
+      .numbers {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      const cardEle = document.createElement('div');
+      //   const hpEle = document.createElement('div');
+      //   const infoEle = document.createElement('div');
+      //   const numbersEle = document.createElement('div');
+      //   const number1Ele = document.createElement('div');
+      //   const number2Ele = document.createElement('div');
+      //   const number3Ele = document.createElement('div');
+      //   const imgEle = document.createElement('img');
+      //   const h2Ele = document.createElement('h2');
+      //   const aEle = document.createElement('a');
+      //   const b1Ele = document.createElement('b');
+      //   const b2Ele = document.createElement('b');
+      //   const b3Ele = document.createElement('b');
+      //   const p1Ele = document.createElement('p');
+      //   const p2Ele = document.createElement('p');
+      //   const p3Ele = document.createElement('p');
+      //   const br1Ele = document.createElement('br');
+      //   const br2Ele = document.createElement('br');
+      //   const br3Ele = document.createElement('br');
+
+      cardEle.classList.add('card');
+      //   hpEle.classList.add('hp');
+      //   infoEle.classList.add('info');
+      //   numbersEle.classList.add('numbers');
+      //   number1Ele.classList.add('number');
+      //   number2Ele.classList.add('number');
+      //   number3Ele.classList.add('number');
+
+      //   b1Ele.innerText = '52';
+      //   b2Ele.innerText = '43';
+      //   b3Ele.innerText = '65';
+
+      //   p1Ele.innerText = 'Attack';
+      //   p2Ele.innerText = 'Defense';
+      //   p3Ele.innerText = 'Speed';
+
+      //   h2Ele.innerText = 'Pickachu';
+      //   aEle.innerText = 'fire';
+      //   hpEle.innerText = 'HP39';
+      //   aEle.classList.add('fire');
+
+      //   imgEle.setAttribute('src', 'images/pikachu-transparent-32576.png');
+
+      //   number1Ele.append(b1Ele, br1Ele, p1Ele);
+      //   number2Ele.append(b2Ele, br2Ele, p2Ele);
+      //   number3Ele.append(b3Ele, br3Ele, p3Ele);
+
+      //   numbersEle.append(number1Ele, number2Ele, number3Ele);
+
+      //   infoEle.append(h2Ele, aEle, numbersEle);
+
+      //   cardEle.append(hpEle, imgEle, infoEle);
+
+      cardHTML = `
+      <div class="hp">HP39</div>
+      <img src="images/pikachu-transparent-32576.png" alt="" />
+      <div class="info">
+        <h2>Pickachu</h2>
+        <a class="fire" href="">fire</a>
+        <div class="numbers">
+          <div class="number">
+            <b>52</b>
+            <br />
+            <p>Attack</p>
+          </div>
+          <div class="number">
+            <b>43</b>
+            <br />
+            <p>Defense</p>
+          </div>
+          <div class="number">
+            <b>65</b>
+            <br />
+            <p>Speed</p>
+          </div>
+        </div>
+      </div>`;
+      cardEle.innerHTML = cardHTML;
+
+      console.log(cardEle);
+
+      document.body.append(cardEle);
+    </script>
+  </body>
+</html>
