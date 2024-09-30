@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        transition: all 300ms;
+      }
+
+      .box {
+        height: 300px;
+        width: 300px;
+        background-color: tomato;
+        border-radius: 12px;
+        margin: 50px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="box"></div> -->
+
+    <script>
+      document.body.addEventListener('keydown', (e) => {
+        // console.log(e);
+
+        let isShiftKeyPressed = e.shiftKey ? true : false;
+        let isCtrlKeyPressed = e.ctrlKey ? true : false;
+        let isZKeyPressed = e.key == 'Z' ? true : false;
+
+        // if (isCtrlKeyPressed && isShiftKeyPressed && isZKeyPressed) {
+        //   console.log(true);
+        // }
+
+        if (e.shiftKey && e.ctrlKey && e.key == 'Z') {
+          console.log(true);
+          document.body.style.backgroundColor = '#24252e';
+        }
+        if (e.ctrlKey && e.key == 's') {
+          e.preventDefault();
+          console.log(e);
+
+          document.body.style.backgroundColor = '#e25600';
+        }
+      });
+
+      //   document.querySelector('.box').addEventListener('mouseover', (e) => {
+      //     console.log(e);
+      //   });
+    </script>
+  </body>
+</html>

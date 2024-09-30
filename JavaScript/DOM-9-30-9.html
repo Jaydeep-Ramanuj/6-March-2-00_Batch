@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- <style>
+      .box {
+        height: 300px;
+        width: 300px;
+        background-color: tomato;
+        border-radius: 12px;
+        margin: 50px auto;
+      }
+    </style> -->
+  </head>
+  <body>
+    <button class="click">Click</button>
+    <button class="dblclick">dblclick</button>
+
+    <button class="mouseover">mouseover</button>
+    <button class="mouseenter">mouseenter</button>
+    <button class="mouseleave">mouseleave</button>
+
+    <!-- <button class="keypress">keypress</button> -->
+
+    <script>
+      document.querySelector('.click').addEventListener('click', () => {
+        console.log('Btn clicked');
+      });
+      document.querySelector('.dblclick').addEventListener('dblclick', () => {
+        console.log('Btn double clicked');
+      });
+      document.querySelector('.mouseover').addEventListener('mouseover', () => {
+        console.log('Btn mouseover');
+      });
+      document
+        .querySelector('.mouseenter')
+        .addEventListener('mouseenter', () => {
+          console.log('Btn enter');
+        });
+      document
+        .querySelector('.mouseleave')
+        .addEventListener('mouseleave', () => {
+          console.log('Btn leave');
+        });
+      document
+        .querySelector('.mouseleave')
+        .addEventListener('mouseleave', (e) => {
+          console.log('Btn leave');
+          console.log(e);
+        });
+
+      document.body.addEventListener('keypress', (event) => {
+        console.log('Some key pressed');
+        console.log(event.charCode);
+        console.log(event.code);
+        console.log(event.key);
+
+        console.log(event);
+        console.log(event.ctrlKey);
+      });
+
+      document.querySelector('.mouseenter').onmouseenter = () => {
+        console.log('Mouse entered printed via onmouseenter ');
+      };
+    </script>
+  </body>
+</html>
