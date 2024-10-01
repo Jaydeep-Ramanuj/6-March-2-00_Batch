@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        background-color: #24252e;
+      }
+
+      .keyboard {
+        margin: 100px auto;
+        width: 60%;
+        height: 300px;
+        align-items: center;
+        align-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        background-color: red;
+      }
+      .key {
+        height: 50px;
+        width: 50px;
+        background-color: whitesmoke;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 5px 5px blue;
+        transition: all 300ms;
+      }
+
+      /* .key:active {
+      } */
+
+      .key-active {
+        transform: translate(5px, 5px);
+        box-shadow: 0px 0px blue;
+      }
+      input {
+        display: block;
+        margin: 0 auto;
+        border-radius: 12px;
+        width: 50%;
+        font-size: 24px;
+        padding: 8px;
+        background-color: transparent;
+        border: 1px solid grey;
+        color: lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="keyboard">
+      <div class="key">A</div>
+      <div class="key">B</div>
+      <div class="key">C</div>
+      <div class="key">D</div>
+      <div class="key">E</div>
+      <div class="key">F</div>
+      <div class="key">G</div>
+      <div class="key">H</div>
+      <div class="key">I</div>
+      <div class="key">J</div>
+      <div class="key">K</div>
+      <div class="key">L</div>
+      <div class="key">M</div>
+      <div class="key">N</div>
+      <div class="key">O</div>
+      <div class="key">P</div>
+      <div class="key">Q</div>
+      <div class="key">R</div>
+      <div class="key">S</div>
+      <div class="key">T</div>
+      <div class="key">U</div>
+      <div class="key">V</div>
+      <div class="key">W</div>
+      <div class="key">X</div>
+      <div class="key">Y</div>
+      <div class="key">Z</div>
+    </div>
+
+    <form action="">
+      <input type="text" name="input" id="" placeholder="Write here " />
+    </form>
+
+    <script>
+      input = document.querySelector('input');
+      keys = document.querySelectorAll('.key');
+      keyboard = document.querySelector('.keyboard');
+
+      input.addEventListener('input', () => {
+        // console.log(input.value);
+        // keyPress(input.value);
+        // keyPress(input.value.slice(-1));
+
+        for (let i = 0; i < keys.length; i++) {
+          if (keys[i].innerText == input.value.slice(-1).toUpperCase()) {
+            // console.log(keys[i]);
+
+            keyPress(keys[i]);
+          }
+        }
+      });
+
+      keyboard.addEventListener('click', (e) => {
+        // console.log(e.target);
+        // console.log('Parent Clicked');
+        // keyPress(e.target);
+        // keyPress();
+      });
+
+      //   keys[0].addEventListener('click', () => keyPress(keys[0].innerText));
+
+      function keyPress(key) {
+        key.classList.add('key-active');
+        setTimeout(() => {
+          key.classList.remove('key-active');
+        }, 600);
+      }
+    </script>
+  </body>
+</html>

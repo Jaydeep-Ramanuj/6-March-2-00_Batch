@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        height: 300px;
+        width: 300px;
+        background-color: tomato;
+        border-radius: 12px;
+        margin: 50px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .child {
+        height: 200px;
+        width: 200px;
+        background-color: teal;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .sub-child {
+        height: 100px;
+        width: 100px;
+        background-color: yellowgreen;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">
+        <div class="sub-child">
+          <button>Click here</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.querySelector('button').addEventListener(
+        'click',
+        (e) => {
+          e.stopPropagation();
+          console.log('Btn clicked');
+        },
+        true
+      );
+      document.querySelector('.parent').addEventListener(
+        'click',
+        () => {
+          console.log('Parent Clicked');
+        },
+        true
+      );
+      document.querySelector('.child').addEventListener(
+        'click',
+        () => {
+          console.log('Child Clicked');
+        },
+        true
+      );
+      document.querySelector('.sub-child').addEventListener(
+        'click',
+        () => {
+          console.log('Sub-Child Clicked');
+        },
+        true
+      );
+      document.body.addEventListener(
+        'click',
+        () => {
+          console.log('Body Clicked');
+        },
+        true
+      );
+      document.querySelector('html').addEventListener(
+        'click',
+        () => {
+          console.log('HTML Clicked');
+        },
+        true
+      );
+    </script>
+  </body>
+</html>
