@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let personArray = ['jay', 'Gujrat', 'WD', 'Rajkot', 23, 65];
+
+      console.log(personArray[2]);
+
+      function doPlay() {
+        console.log('Playing');
+      }
+
+      personObject = {
+        name: {
+          salutation: 'Mr.',
+          f_name: 'Jay',
+          m_name: 'Rajan bhai',
+          surname: 'shah',
+        },
+        state: 'Gujrat',
+        course: 'WD',
+        city: 'Rajkot',
+        isIndian: true,
+        age: 23,
+        marks: [65, 78, 98, 48, 68],
+        play: doPlay,
+      };
+
+      personObject.marks[0] = 89;
+
+      console.log(personObject);
+      console.log(personObject.city);
+      console.log(personObject.name.f_name);
+      console.log(personObject.play());
+
+      console.log(console);
+      console.log('Hello');
+      console.error('Hello');
+      console.table(personObject);
+
+      console.dir(document);
+
+      numbers = [10, 20, 30, 40, 50];
+      numbers.reverse();
+      console.dir(numbers);
+
+      function printThis(str) {
+        console.log(str + ' -This is special function');
+      }
+
+      console.printThis = printThis;
+
+      console.printThis('Jay');
+      console.log(console);
+
+      console.log(personObject);
+
+      console.log(personObject['marks']);
+    </script>
+  </body>
+</html>
