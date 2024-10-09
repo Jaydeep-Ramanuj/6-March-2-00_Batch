@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      day = 'sun';
+      if (day == 'sun') {
+        console.log('Sunday');
+      } else {
+        if (day == 'holiday') {
+          console.log('Holiday');
+        } else {
+          console.log('Lecture');
+        }
+      }
+
+      let age = 2;
+      status = 'S';
+      let ticketPrice = 100;
+
+      //   if (age < 8) {
+      //     if (age <= 3) {
+      //       console.log('Free Ticket: 0');
+      //     } else {
+      //       console.log('Half Price:', ticketPrice / 2);
+      //     }
+      //   } else {
+      //     if (status == 'F') {
+      //       console.log('Full Ticket price - 10rs: ', ticketPrice - 10);
+      //     } else if (status == 'S') {
+      //       console.log('Full Ticket price - 15rs: ', ticketPrice - 15);
+      //     } else if (status == 'M') {
+      //       console.log('Full Ticket price + 100rs: ', ticketPrice + 100);
+      //     } else {
+      //       console.log('Full Ticket: ', ticketPrice);
+      //     }
+      //   }
+
+      if (age < 8) {
+        if (age <= 3) console.log('Free Ticket: 0');
+        else console.log('Half Price:', ticketPrice / 2);
+      } else {
+        if (status == 'F')
+          console.log('Full Ticket price - 10rs: ', ticketPrice - 10);
+        else if (status == 'S')
+          console.log('Full Ticket price - 15rs: ', ticketPrice - 15);
+        else if (status == 'M')
+          console.log('Full Ticket price + 100rs: ', ticketPrice + 100);
+        else console.log('Full Ticket: ', ticketPrice);
+      }
+    </script>
+  </body>
+</html>

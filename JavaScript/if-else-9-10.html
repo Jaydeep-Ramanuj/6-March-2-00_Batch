@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      a = 3;
+
+      if (a == 10) {
+        console.log('A is 10');
+        console.log('do this');
+      }
+
+      if (a > 10) console.log('A is GT 10');
+
+      a > 20 && console.log('A is GT 20');
+
+      // 1 1 => 1
+      // 1 0 => 0
+      // 0 1 => 0
+      // 0 0 => 0
+
+      day = 'monday';
+      //   if (day == 'sunday') {
+      //     console.log('Holiday');
+      //   } else {
+      //     console.log('Lecture');
+      //   }
+
+      //   day == 'sunday' ? console.log('Holiday') : console.log('Lecture');
+      console.log(day == 'sunday' ? 'Holiday' : 'Lecture');
+
+      a < 5 || console.log('A is GT 5');
+
+      console.log(true && 5 && 'some' && 'thing');
+      console.log(true && 0 && 'some');
+      console.log(true && false && 'some');
+      console.log(false && false && 'some');
+
+      console.log(false || (true && 'some'));
+      console.log(true || (true && 'some'));
+    </script>
+  </body>
+</html>
