@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <input type="text" name="rows" id="" placeholder="Enter number of rows" />
+      <input type="text" name="cols" id="" placeholder="Enter number of cols" />
+      <button>Generate</button>
+    </form>
+
+    <script>
+      const btn = document.querySelector('button');
+      const rows = document.getElementsByName('rows')[0];
+      const cols = document.getElementsByName('cols')[0];
+
+      newTable = document.createElement('table');
+      newTable.setAttribute('border', '1');
+
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        let rowsCount = parseInt(rows.value);
+        let colsCount = parseInt(cols.value);
+
+        console.log(rowsCount);
+        console.log(colsCount);
+
+        for (let rows = 1; rows <= rowsCount; rows++) {
+          newTR = document.createElement('tr');
+          for (let cols = 1; cols <= colsCount; cols++) {
+            if (rows == 1) {
+              newTH = document.createElement('th');
+              newTR.append(newTH);
+            } else {
+              newTD = document.createElement('td');
+              newTR.append(newTD);
+            }
+          }
+          newTable.append(newTR);
+        }
+      });
+
+      document.body.append(newTable);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>Start</button>
+    <button>Stop</button>
+    <script>
+      // while loop
+
+      //   //   initialization
+      //   while (condition) {
+      //     // code here
+      //     // increment / decrement
+      //   }
+
+      // let result = 0;
+      // let counter = 1;
+      // while (counter <= 10) {
+      //   result += counter;
+      //   counter++;
+      // }
+      // console.log(result);
+
+      // do...while loop
+
+      // initialization;
+      // do {
+      //   code;
+      //   increment / decrement;
+      // } while (condition);
+
+      // let result = 0;
+      // let counter = 11;
+      // do {
+      //   result += counter;
+      //   counter++;
+      // } while (counter <= 10);
+      // console.log(result);
+
+      let isServerRunning = true;
+      time = new Date();
+      console.log(isServerRunning);
+
+      // setTimeout(() => {
+      //   isServerRunning = false;
+      //   console.log(isServerRunning);
+      // }, 5000);
+
+      document
+        .getElementsByTagName('button')[0]
+        .addEventListener('click', async () => {
+          while (isServerRunning == true) {
+            console.log('Hello', time.getTime());
+          }
+        });
+
+      document
+        .getElementsByTagName('button')[1]
+        .addEventListener('click', async () => {
+          console.log('some');
+          isServerRunning = false;
+          console.log(isServerRunning);
+        });
+    </script>
+  </body>
+</html>
