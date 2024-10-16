@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   A
+      //   BC
+      //   DEF
+      //   GHIJ
+      //   KLMNO
+
+      let characterArray = 'ABCDEFGHIJKLMNOPQTRSTUVWXYZ';
+
+      //   let str = '';
+      //   let counter = 0;
+      //   for (let i = 0; i < 5; i++) {
+      //     for (let j = 0; j <= i; j++) {
+      //       str = str + characterArray[counter];
+      //       counter++;
+      //     }
+      //     str = str + '\n';
+      //   }
+
+      //   console.log(str);
+
+      //   console.log('YASH'.toLowerCase());
+
+      //   A
+      //   bc
+      //   DEF
+      //   ghij
+      //   KLMNO
+
+      // let str = '';
+      // let counter = 0;
+      // let flag = true;
+      // for (let i = 0; i < 5; i++) {
+      //   if (flag == true) {
+      //     for (let j = 0; j <= i; j++) {
+      //       str = str + characterArray[counter];
+      //       counter++;
+      //       flag = false;
+      //     }
+      //   } else {
+      //     for (let j = 0; j <= i; j++) {
+      //       str = str + characterArray[counter].toLowerCase();
+      //       counter++;
+      //     }
+      //     flag = true;
+      //   }
+      //   str = str + '\n';
+      // }
+
+      // console.log(str);
+
+      let str = '';
+      let counter = 0;
+      let flag = true;
+      for (let i = 0; i < 5; i++) {
+        for (let j = 0; j <= i; j++) {
+          str =
+            str +
+            (flag == true
+              ? characterArray[counter]
+              : characterArray[counter].toLocaleLowerCase());
+          counter++;
+        }
+        flag = !flag;
+
+        str = str + '\n';
+      }
+
+      console.log(str);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // *
+      // ***
+      // *****
+      // *******
+      // *********
+
+      // for (let i = 0; i < 9; i += 2) {
+      //   for (let j = 0; j <= i; j++) {
+      //     str = str + '*';
+      //   }
+      //   str += '\n';
+      // }
+
+      // console.log(str);
+
+      //     *
+      //    ***
+      //   *****
+      //  *******
+      // *********
+
+      // 0000*
+      // 000***
+      // 00*****
+      // 0*******
+      // *********
+
+      // let counter = 0;
+
+      // for (let i = 0; i < 9; i += 2) {
+      //   for (let j = 4; j > counter; j--) {
+      //     str += ' ';
+      //   }
+      //   for (let k = 0; k <= i; k++) {
+      //     str += '*';
+      //   }
+      //   str += '\n';
+      //   counter++;
+      // }
+      // console.log(str);
+
+      //     *
+      //    ***
+      //   *****
+      //  *******
+      // *********
+
+      let str = '';
+      for (let i = 0; i < 5; i++) {
+        for (let k = 4; k > i; k--) {
+          str += ' ';
+        }
+        for (let j = 0; j <= i + i; j++) {
+          str += '*';
+        }
+        str += '\n';
+      }
+      console.log(str);
+    </script>
+  </body>
+</html>
