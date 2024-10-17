@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // function definition
+
+      //   function function_name(parameter_1, parameter_2,... ) {
+      //     // code
+      //   }
+
+      // function call
+      //   function_name(argument_1, argument_2,.. );
+
+      function printGreetings(name = 'Shriman') {
+        console.log('Nasmste,' + name);
+        console.log('Jay shree Krishna');
+        console.log('Jay Shree Ram');
+      }
+
+      printGreetings('Jay');
+      printGreetings('Rajan');
+      printGreetings('Sushil');
+      printGreetings();
+
+      function sum(num1, num2) {
+        console.log(num1 + num2);
+      }
+
+      sum(10, 20);
+      sum(20, 30);
+      sum(40, 150);
+
+      function calculator(num1, num2, op) {
+        switch (op) {
+          case '+':
+            console.log(num1 + num2);
+            break;
+          case '-':
+            console.log(num1 - num2);
+            break;
+          case '*':
+            console.log(num1 * num2);
+            break;
+          case '/':
+            console.log(num1 / num2);
+            break;
+          case '%':
+            console.log(num1 % num2);
+            break;
+          default:
+            console.log('Wrong input');
+        }
+      }
+
+      calculator(10, 20, '/');
+
+      function doSomeSecretThing(name) {
+        return name + '---';
+      }
+
+      console.log(doSomeSecretThing('Jay'));
+
+      function doSquares(num1, num2) {
+        return [num1 ** 2, num2 ** 2];
+      }
+
+      let [n1, n2] = doSquares(10, 20);
+
+      console.log(n1);
+      console.log(n2);
+
+      some.addEventListener('click', () => {});
+    </script>
+  </body>
+</html>
