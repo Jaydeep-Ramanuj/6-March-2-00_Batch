@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      table {
+        width: 100%;
+        font-size: medium;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 450;
+        padding: 3px;
+      }
+      tr {
+        background-color: whitesmoke;
+        padding: 6px;
+      }
+      th {
+        background-color: rgba(62, 62, 64, 0.281);
+        padding: 6px;
+
+        text-transform: capitalize;
+      }
+      td {
+        background-color: rgba(234, 238, 240, 0.459);
+        color: black;
+        text-align: center;
+        padding: 9px;
+      }
+
+      .btn {
+        border: none;
+        padding: 3px;
+        border-radius: 12px;
+
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+          rgba(0, 0, 0, 0.24) 0px 1px 2px;
+      }
+      .btn:hover {
+        transition: all 300ms;
+        background-color: #282828;
+        transform: scale(1.1);
+        color: wheat;
+      }
+      .editform {
+        position: absolute;
+        top: 6.3%;
+        overflow: hidden;
+        height: 450px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(245, 245, 245, 0.549);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(1px);
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+      }
+
+      .conclosebtn {
+        position: absolute;
+        right: 3%;
+        top: 6%;
+        font-size: x-large;
+        color: red;
+        border: none;
+        background-color: transparent;
+        outline: none;
+        z-index: 3;
+      }
+      .conclosebtn i {
+        background-color: transparent;
+      }
+      .conclosebtn i:hover {
+        color: #282828;
+        transform: scale(1.1);
+        transition: all 300ms;
+      }
+      .empForm {
+        width: 100%;
+        height: 300px;
+        padding: 3px;
+        display: flex;
+        background-color: rgba(245, 245, 245, 0.549);
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        font-family: 'Poppins', sans-serif;
+      }
+      .wrapper-1,
+      .wrapper-2,
+      .wrapper-3 {
+        width: 100%;
+        padding: 3px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+      }
+      .wrapper-2 {
+        gap: 100px;
+      }
+      .wrapper-3 {
+        gap: 40px;
+      }
+
+      label {
+        color: grey;
+        font-weight: 600;
+      }
+
+      .empForm input {
+        padding: 3px;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid grey;
+        background-color: transparent;
+        color: #282828;
+        font-weight: bold;
+      }
+      .updatebtn {
+        border: none;
+        outline: none;
+        border-radius: 12px;
+        background-color: wheat;
+        color: brown;
+        padding: 12px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="emp-data">
+      <tr>
+        <th>Company Name</th>
+        <th>User ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Type</th>
+        <th>Industry Type</th>
+        <th>Join Date</th>
+        <th>Budget</th>
+        <th>Country</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </table>
+
+    <script>
+      emp = [
+        {
+          cname: 'Dholakia Ent',
+          uid: '361999',
+          fname: 'Jay Dholakia',
+          email: 'dholakiajay@gmail.com',
+          type: 'Partner',
+          itype: 'Designer',
+          date: '12/12/21',
+          budget: '9M',
+          country: 'India',
+          status: 'Active',
+        },
+        {
+          cname: 'Dholakia.com',
+          uid: '1591996',
+          fname: 'Pratik Dholakia',
+          email: 'dholakiajay@gmail.com',
+          type: 'Partner',
+          itype: 'Mobile',
+          date: '15/11/22',
+          budget: '9M',
+          country: 'India',
+          status: 'Active',
+        },
+        {
+          cname: 'Dholakia Transport',
+          uid: '1822002',
+          fname: 'Amar Dholakia',
+          email: 'dholakiaamar@gmail.com',
+          type: 'Partner',
+          itype: 'Commercial',
+          date: '02/5/22',
+          budget: '6M',
+          country: 'India',
+          status: 'Active',
+        },
+        {
+          cname: 'D M G',
+          uid: '2621966',
+          fname: 'Amit Dholakia',
+          email: 'dholakiaamit@gmail.com',
+          type: 'Owner',
+          itype: 'Owner',
+          date: '03/6/99',
+          budget: '300M',
+          country: 'India',
+          status: 'Active',
+        },
+        {
+          cname: 'N D Ent',
+          uid: '2451970',
+          fname: 'Nalin Dholakia',
+          email: 'dholakiaNalin@gmail.com',
+          type: 'CO-Owner',
+          itype: 'Customer / Sales',
+          date: '01/9/79',
+          budget: '3M',
+          country: 'India',
+          status: 'Active',
+        },
+        {
+          cname: 'Jayu Ent',
+          uid: '5319997',
+          fname: 'Jaymin Dholakia',
+          email: 'dholakiaJaymin@gmail.com',
+          type: 'partner',
+          itype: 'Electric',
+          date: '01/1/22',
+          budget: '2M',
+          country: 'India',
+          status: 'Active',
+        },
+        {
+          cname: 'Shreeji Ent',
+          uid: '26112004',
+          fname: 'Bhavya Dholakia',
+          email: 'dholakiaBhavya@gmail.com',
+          type: 'partner',
+          itype: 'Logistic',
+          date: '01/1/22',
+          budget: '1M',
+          country: 'India',
+          status: 'Active',
+        },
+        {
+          cname: 'J D Ent',
+          uid: '12121944',
+          fname: 'Jayraj Dholakia',
+          email: 'dholakiaJayraj@gmail.com',
+          type: 'partner',
+          itype: 'Sales',
+          date: '06/4/23',
+          budget: '0.5M',
+          country: 'India',
+          status: 'Active',
+        },
+        {
+          cname: 'Dobariyal Ent',
+          uid: '13102023',
+          fname: 'Viraj Dholakia',
+          email: 'dholakiaViraj@gmail.com',
+          type: 'partner',
+          itype: 'banking',
+          date: '01/1/24',
+          budget: '0.3M',
+          country: 'India',
+          status: 'Active',
+        },
+      ];
+
+      table = document.getElementById('emp-data');
+
+      function makenewRow(emp) {
+        newRow = document.createElement('tr');
+        newRow.innerHTML = `<td>${emp.cname}</td>
+      <td>${emp.uid}</td>
+      <td>${emp.fname}</td>
+      <td>${emp.email}</td>
+      <td style="color:brown; font-weight:630;">${emp.type}</td>
+      <td>${emp.itype}</td>
+      <td>${emp.date}</td>
+      <td style="color: rgb(8, 8, 132); font-weight:630;">${emp.budget}</td>
+      <td>${emp.country}</td>
+      <td style="color:green; font-weight:630;">${emp.status}</td>
+      <td><button class="btn" id="edit" onclick="editdata(this)"><i class="fa-solid fa-pen-to-square"></i></button> &nbsp; <button class="btn" id="delete" onclick="deletedata(this)"><i class="fa-solid fa-trash-can"></i></button></td>
+      `;
+
+        return newRow;
+      }
+
+      emp.forEach((emp) => {
+        table.append(makenewRow(emp));
+      });
+      // =================================================================
+      function editdata(element) {
+        companyName = element.parentElement.parentElement.children[0];
+        userId = element.parentElement.parentElement.children[1];
+        fullName = element.parentElement.parentElement.children[2];
+        emailAddress = element.parentElement.parentElement.children[3];
+        customerType = element.parentElement.parentElement.children[4];
+        typeOfIndustry = element.parentElement.parentElement.children[5];
+        dateOfJoin = element.parentElement.parentElement.children[6];
+        budgetOfEmp = element.parentElement.parentElement.children[7];
+        countryOfEmp = element.parentElement.parentElement.children[8];
+        statusOfEmp = element.parentElement.parentElement.children[9];
+        con = document.createElement('div');
+
+        empDetails = document.createElement('div');
+        empDetails.classList.add('editform');
+
+        empDetails.innerHTML = `
+        <button id="con-close" class="conclosebtn" onclick="deletecon(this)"><i class="fa-solid fa-circle-xmark"></i></button>
+        
+        <form class="empForm">
+            <h1>Person Details</h1>
+      <div class="wrapper-1">
+        <label>
+          Company Name
+          <input type="text" name="cname" placeholder="Company Name" value = "${companyName.innerText}"      />
+        </label>
+        <label>
+          User ID
+          <input type="text" readonly name="uid" placeholder="User Id" value = "${userId.innerText}"         />
+        </label>
+      </div>
+
+      <div class="wrapper-2">
+        <label>
+          Name
+          <input type="text" name="fname" placeholder="Enter Your Name" value = "${fullName.innerText}"       />
+        </label>
+        <label>
+          Email
+          <input type="text" name="email" placeholder="Enter Email"  value = "${emailAddress.innerText}"      />
+        </label>
+      </div>
+
+      <div class="wrapper-3">
+        <label>
+          Customer Type
+          <input type="text" name="type" placeholder="Customer Type" value = "${customerType.innerText}"       />
+        </label>
+        <label>
+          Industry Type
+          <input type="text" name="itype" placeholder="Industry Type" value = "${typeOfIndustry.innerText}"     />
+        </label>
+        <label>
+          Join Date
+          <input type="text" name="date" placeholder="Join Date" value =" ${dateOfJoin.innerText} "           />
+        </label>
+        <label>
+          Budget
+          <input type="text" name="budget" placeholder="Budget" value = "${budgetOfEmp.innerText}  "        />
+        </label>
+        <label>
+          Country
+          <input type="text" name="country" placeholder="Country" value = "${countryOfEmp.innerText}"         />
+        </label>
+        <label>
+          Status
+          <input type="text" name="currentstatus" placeholder="Status" value = "${statusOfEmp.innerText}"      />
+        </label>
+      </div> 
+      <button id="btnupdate" class="updatebtn" type="button">Update</button>
+    </form>
+
+
+
+        `;
+
+        con.append(empDetails);
+        document.body.append(con);
+      }
+
+      // =================================================================
+
+      function deletecon(element) {
+        element.parentElement.style.display = 'none';
+      }
+
+      // =================================================================
+
+      function deletedata(element) {
+        element.parentElement.parentElement.style.display = 'none';
+      }
+
+      // =================================================================
+    </script>
+  </body>
+</html>
