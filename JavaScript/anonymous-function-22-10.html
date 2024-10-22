@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function foo() {
+        console.log('Function Foo()');
+      }
+
+      foo();
+
+      func = function some() {
+        console.log('func 1');
+      };
+
+      // Anonymous function, it is used to make function without name
+
+      func2 = function () {
+        console.log('func 2');
+      };
+      func3 = () => {
+        console.log('func 3');
+      };
+
+      func();
+      func2();
+      func3();
+
+      let logic = {
+        print: (str) => {
+          console.log(str);
+        },
+        sum: (num1, num2) => {
+          return num1 + num2;
+        },
+        pow: (number, power) => {
+          return number ** power;
+        },
+
+        mul: (n1, n2) => n1 * n2,
+      };
+
+      console.log(logic);
+
+      console.log(logic.sum(10, 20));
+      console.log(logic.mul(10, 20));
+
+      //   console.log(console);
+
+      //   document.body.addEventListener('click', () => {});
+    </script>
+  </body>
+</html>
