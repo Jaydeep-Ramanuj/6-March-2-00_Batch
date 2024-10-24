@@ -33,6 +33,10 @@
 
       btnStyle3 = `width:${width}; height:${height}; background-color:${color}; border:${border}; border-radius:${bora}; margin:${margin}`;
       box.style.cssText = btnStyle3;
+
+      console.log(window.getComputedStyle(box));
+      console.log(window.getComputedStyle(box).backgroundColor);
+      console.log(window.getComputedStyle(box).height);
     </script>
   </body>
 </html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .parent {
+        display: flex;
+      }
+
+      .child {
+        height: 100px;
+        width: 100px;
+        background-color: tomato;
+        border-radius: 12px;
+        /* margin: 50px auto; */
+
+        position: relative;
+        /* left: 100px; */
+      }
+
+      #special {
+        background-color: teal;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child"></div>
+      <div class="child" id="special"></div>
+    </div>
+
+    <script>
+      let special = document.querySelector('#special');
+
+      console.dir(special);
+      console.dir(special.offsetTop);
+      console.dir(special.offsetLeft);
+      console.dir(special.clientHeight);
+      console.dir(special.clientWidth);
+    </script>
+  </body>
+</html>
