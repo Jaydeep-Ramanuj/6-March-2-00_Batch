@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>Stop spying</button>
+    <script>
+      console.log(window);
+
+      let locationArray = [];
+
+      // window.Navigator.Geolocation.getCurrentPosition(()=>{})
+      document.querySelector('button').onclick = () => {
+        clearInterval(getLocation);
+
+        console.log(locationArray);
+      };
+
+      let getLocation = setInterval(() => {
+        window.navigator.geolocation.getCurrentPosition((response) => {
+          console.log(response);
+          // console.log(response.coords.latitude);
+          // console.log(response.coords.longitude);
+
+          locationArray.push({
+            'long:': response.coords.longitude,
+            lat: response.coords.latitude,
+            time: response.timestamp,
+          });
+        });
+      }, 1000);
+    </script>
+  </body>
+</html>

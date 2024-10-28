@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>Click to Copy</button>
+    <script>
+      console.log(window.navigator.clipboard);
+
+      window.navigator.clipboard.readText().then((response) => {
+        console.log(response);
+      });
+
+      document.querySelector('button').onclick = () => {
+        window.navigator.clipboard
+          .writeText('fa-solid fa-house')
+          .then((response) => {
+            console.log(response);
+          });
+      };
+    </script>
+  </body>
+</html>
