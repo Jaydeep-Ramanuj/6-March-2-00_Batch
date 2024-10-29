@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <input type="email" name="name" id="" />
+      <div class="feedback" style="display: none"></div>
+      <button>Submit</button>
+    </form>
+
+    <script>
+      'use strict';
+
+      //   @ts-nocheck
+
+      let email = document.getElementsByName('name')[0];
+      let btn = document.getElementsByTagName('button')[0];
+      let feedback = document.getElementsByClassName('feedback')[0];
+
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        let inputVal = email.value;
+        feedback.style.display = 'block';
+
+        // if (checkEmail()) {
+        //   feedback.textContent = 'Email is Valid';
+        //   feedback.style.color = 'green';
+        // } else {
+        //   feedback.textContent = 'Email is NOT Valid';
+        //   feedback.style.color = 'red';
+        // }
+
+        // let isEmailValid = checkEmail(inputVal);
+        let isEmailValid = checkEmailUsingRegex(inputVal);
+
+        feedback.textContent = isEmailValid
+          ? 'Email is Valid'
+          : 'Email is NOT Valid';
+
+        feedback.style.color = isEmailValid ? 'green' : 'red';
+      });
+
+      function checkEmail(emailVal) {
+        let isEmpty = true;
+
+        let hasAt = false;
+        let hasDot = false;
+        let isAtAndDotNotTogether = false;
+        let isSomethingBeforeAndAfterDot = false;
+        let isSomethingBeforeAndAfterAt = false;
+        let hasAnySpecialSymbol = true;
+
+        // check if it is empty
+        isEmpty = emailVal == '' ? true : false;
+
+        //  check if it has @ and .
+        hasAt = emailVal.includes('@');
+        hasDot = emailVal.includes('.');
+
+        // check if @ and . are together
+        isAtAndDotNotTogether = !(
+          emailVal.includes('@.') || emailVal.includes('.@')
+        );
+
+        //  check if @ and . has something before and after it
+
+        isSomethingBeforeAndAfterAt =
+          hasAt && emailVal.slice(0, emailVal.indexOf('@')).length != 0;
+
+        isSomethingBeforeAndAfterDot =
+          hasDot &&
+          emailVal.slice(emailVal.lastIndexOf('.') + 1, emailVal.length)
+            .length != 0;
+
+        // check if ts has any special symbols
+
+        let specialSymbols = `!#$%^&*()_+{}:"][],/?><~'"\``.split('');
+
+        // hasAnySpecialSymbol =
+        //   emailVal.length != 0 &&
+        //   emailVal.split('').every((ch) => !emailVal.includes(ch));
+
+        // console.log('isEmpty:', isEmpty);
+        // console.log('hasAt:', hasAt);
+
+        // console.log('hasDot:', hasDot);
+
+        // console.log('isAtAndDotNOTTogether:', isAtAndDotNotTogether);
+
+        // console.log(
+        //   'isSomethingBeforeAndAfterDot:',
+        //   isSomethingBeforeAndAfterDot
+        // );
+
+        // console.log(
+        //   'isSomethingBeforeAndAfterAt:',
+        //   isSomethingBeforeAndAfterAt
+        // );
+
+        console.log(hasAnySpecialSymbol);
+
+        return (
+          !isEmpty &&
+          hasAt &&
+          hasDot &&
+          isAtAndDotNotTogether &&
+          isSomethingBeforeAndAfterAt &&
+          isSomethingBeforeAndAfterDot
+        );
+      }
+
+      function checkEmailUsingRegex(emailVal) {
+        let regex =
+          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+        return regex.test(emailVal);
+      }
+    </script>
+  </body>
+</html>
