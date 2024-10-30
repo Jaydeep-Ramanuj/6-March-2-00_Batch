@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   function greet(name) {
+      //     return () => {
+      //       console.log('Hello ' + name);
+      //     };
+      //   }
+
+      //   console.log(greet('Jay'));
+
+      function mul(num) {
+        return (n) => num * n;
+      }
+
+      //   console.log(mul5());
+
+      multi5 = mul(5);
+      multi3 = mul(3);
+
+      //   console.log(multi5);
+
+      console.log(multi5(10));
+      console.log(multi3(10));
+
+      function getData(path) {
+        return () =>
+          fetch(path)
+            .then((response) => response.json)
+            .then((data) => {
+              return data;
+            })
+            .catch((err) => console.log(err));
+      }
+
+      getDataFromRandomUserAPI = getData('https://randomuser.me/api/');
+
+      getDataFromRandomUserAPI().then((data) => {
+        console.log(data);
+      });
+    </script>
+  </body>
+</html>
