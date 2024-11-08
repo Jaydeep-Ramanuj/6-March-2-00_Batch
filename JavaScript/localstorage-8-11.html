@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let person = {
+        name: 'Ajay',
+        age: 23,
+        city: 'Rajkot',
+        course: 'WD',
+      };
+
+      console.log(window);
+
+      window.localStorage.setItem('name', 'jay');
+
+      console.log(window.localStorage.getItem('name'));
+
+      window.localStorage.setItem('person', JSON.stringify(person));
+
+      console.log(JSON.parse(window.localStorage.getItem('person')));
+
+      console.log(person.toString());
+
+      console.dir(window.alert);
+    </script>
+  </body>
+</html>

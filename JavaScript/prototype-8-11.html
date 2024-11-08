@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let nums = [10, 20, 30, 40, 50];
+      console.log(nums);
+
+      //   function makeSquareOfSecondValue(arr) {
+      //     arr[1] = arr[1] ** 2;
+      //   }
+
+      //   makeSquareOfSecondValue(nums);
+
+      console.dir(Array);
+
+      Array.prototype.makeSquareOfSecondValue = function () {
+        this[1] = this[1] ** 2;
+      };
+
+      nums.makeSquareOfSecondValue();
+      console.log(nums);
+
+      let names = ['a', 'b', 'c'];
+
+      names.makeSquareOfSecondValue();
+
+      function makeSuperElement(
+        tagName,
+        classes,
+        style,
+        text,
+        attr_name,
+        attr_val
+      ) {
+        let newEle = document.createElement(tagName);
+        newEle.className = classes;
+        newEle.setAttribute(attr_name, attr_val);
+        newEle.textContent = text;
+        newEle.style.cssText = style;
+
+        return newEle;
+      }
+
+      document.body.append(
+        makeSuperElement(
+          'div',
+          'some thing else',
+          'height: 300px;width: 300px;background-color: tomato;border-radius: 12px;margin: 50px auto;',
+          'This is super Element',
+          'id',
+          'super'
+        )
+      );
+
+      let obj1 = {
+        name: 'Jay',
+        age: 23,
+        sing: () => {
+          console.log('Singing');
+        },
+        code: () => {
+          console.log('This is some super complex code');
+        },
+      };
+      let obj2 = {
+        name: 'Ajay',
+        age: 26,
+        dance: () => {
+          console.log('Dancing');
+        },
+      };
+
+      obj2.__proto__ = obj1;
+
+      obj2.sing();
+      obj2.code();
+      console.log(obj2.name);
+
+      console.log('obj1: ', obj1);
+      console.log('obj2: ', obj2);
+    </script>
+  </body>
+</html>
