@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script>
+      //   function printSquare(num) {
+      //     console.log(num ** 2);
+      //   }
+
+      nums = [1, 2, 3, 4, 5];
+
+      //   nums.forEach((num) => printSquare(num));
+
+      //   nums.forEach((num, index) => {
+      //     console.log(index);
+      //   });
+
+      //   for (num of nums) {
+      //     printSquare(num);
+      //   }
+
+      //   function makeChunks(arr, size) {
+      //     let resultArr = [];
+      //     let counter = 0;
+      //     let tempArr = [];
+      //     arr.forEach((a) => {
+      //       if (counter < size) {
+      //         tempArr.push(a);
+      //         counter++;
+      //       }
+
+      //       if (counter == size) {
+      //         counter = 0;
+      //         resultArr.push([...tempArr]);
+      //         tempArr.splice(0, size);
+      //       }
+      //     });
+      //     return resultArr;
+      //   }
+
+      nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+      //   console.log(makeChunks(nums, 4));
+      console.log(_.chunk(nums, 4));
+
+      console.log(
+        _.findIndex(nums, (num) => {
+          return num == 4;
+        })
+      );
+
+      console.log(a);
+
+      let a = 10;
+
+      console.log(a);
+    </script>
+  </body>
+</html>
