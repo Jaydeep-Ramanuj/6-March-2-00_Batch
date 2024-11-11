@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        height: 300px;
+        width: 300px;
+        border-radius: 12px;
+        object-fit: cover;
+        margin: 50px auto;
+
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="getAttr">get attribute</button>
+    <button id="setAttr">set attribute</button>
+    <button id="removeAttr">remove attribute</button>
+    <img
+      src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=600"
+      alt="Image not loading"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      let img = $('img');
+      $('#getAttr').click(() => {
+        console.log(img.attr('alt'));
+      });
+      $('#setAttr').click(() => {
+        img.attr(
+          'src',
+          'https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg?auto=compress&cs=tinysrgb&w=600'
+        );
+      });
+      $('#removeAttr').click(() => {
+        img.removeAttr('src');
+      });
+    </script>
+  </body>
+</html>

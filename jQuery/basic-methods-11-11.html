@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+          .box {
+            height: 300px;
+            width: fit-content;
+            padding: 30px;
+            background-color: rgba(255, 99, 71, 0.332);
+            border: 2px solid black;
+            border-radius: 12px;
+            margin: 20px auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+          }
+        </style>
+      </head>
+      <body>
+        <button id="getInnerText">get innerText</button>
+        <button id="setInnerText">set innerText</button>
+        <button id="getInnerHTML">get innerHTML</button>
+        <button id="setInnerHTML">set innerHTML</button>
+        <button id="getValue">get value</button>
+        <button id="setValue">set value</button>
+
+        <div class="box">
+          <p>This line is already present</p>
+        </div>
+        <input
+          type="text"
+          name=""
+          id="inp"
+          placeholder="Enter something here"
+          value="Something"
+        />
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+          integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        ></script>
+
+        <script>
+          let box = $('.box');
+          let inp = $('#inp');
+
+          $('#getInnerText').click(() => {
+            console.log(box.text());
+          });
+          $('#setInnerText').click(() => {
+            box.text('This will be new text');
+          });
+          $('#getInnerHTML').click(() => {
+            console.log(box.html());
+          });
+          $('#setInnerHTML').click(() => {
+            box.html('<mark>This is new HTML tag</mark>');
+          });
+          $('#getValue').click(() => {
+            console.log(inp.val());
+          });
+          $('#setValue').click(() => {
+            inp.val('New text written as value');
+          });
+        </script>
+      </body>
+    </html>
+  </body>
+</html>

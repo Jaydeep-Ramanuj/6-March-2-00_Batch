@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="click">Click</button>
+    <button id="dblclick">Double Click</button>
+    <button id="hover">Hover</button>
+    <input
+      type="text"
+      name=""
+      id="inp"
+      placeholder="Enter your name"
+      value="Something"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $('document').ready(() => {
+        console.log('Document is ready');
+
+        $('#click').click(() => {
+          console.log('Button clicked');
+        });
+        $('#dblclick').dblclick(() => {
+          console.log('Button dbl Clicked');
+        });
+        $('#hover').hover(() => {
+          console.log('Button hovered');
+        });
+        $('#inp').change(() => {
+          console.log($('#inp').val());
+        });
+        $('#inp').focus(() => {
+          console.log($('#inp').val());
+        });
+        $('#inp').blur(() => {
+          console.log($('#inp').val());
+        });
+      });
+
+      //   setTimeout(() => {
+      //     $('#inp').val('This is new val');
+      //   }, 1000);
+    </script>
+  </body>
+</html>
