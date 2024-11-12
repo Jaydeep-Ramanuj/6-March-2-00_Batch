@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">child1</div>
+      <div class="child" id="start">child2 => start</div>
+      <div class="child">child3</div>
+      <div class="child">child4</div>
+      <div class="child" id="special">child5 => special</div>
+      <div class="child">child6</div>
+      <div class="child">child7</div>
+      <div class="child" id="end">child8 => end</div>
+      <div class="child">child9</div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $('document').ready(() => {
+        console.log($('#special').siblings());
+
+        // console.log($('#special').next());
+        // console.log($('#special').nextAll());
+        // console.log($('#special').nextUntil('#end'));
+
+        console.log($('#special').prev());
+        console.log($('#special').prevAll());
+        console.log($('#special').prevUntil('#start'));
+      });
+    </script>
+  </body>
+</html>

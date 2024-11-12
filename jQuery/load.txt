@@ -1,0 +1,1 @@
+This is new data which is loaded using ajax load method
