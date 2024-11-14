@@ -1,0 +1,132 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-size: cover;
+  background-position: center;
+}
+
+.card {
+  max-width: 300px;
+  margin: 100px auto;
+  margin-top: 150px;
+  position: relative;
+  top: inherit;
+  left: inherit;
+  z-index: inherit;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  /* overflow: hidden; */
+  border-radius: 12px;
+  border: 5px solid transparent;
+  isolation: isolate;
+  transition: all 300ms;
+}
+.card:hover {
+  background-color: black;
+  color: whitesmoke;
+  border-color: rgba(255, 217, 0, 0.733);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  transform: translateY(-5px);
+}
+.card:hover .hp {
+  color: #24252e;
+}
+.card:hover .bg {
+  top: 60%;
+  left: 50px;
+}
+.card img {
+  display: block;
+  height: 200px;
+  margin: 0 auto;
+  transition: all 300ms;
+  position: relative;
+  top: inherit;
+  left: 20px;
+  z-index: inherit;
+}
+.card:hover img {
+  /* height: 300px; */
+  transform: scale(1.5) translateY(-50px);
+  filter: drop-shadow(5px 5px 15px rgba(255, 217, 0, 0.502));
+  /* top: -150px; */
+}
+.card .hp {
+  padding: 5px 15px;
+  background-color: whitesmoke;
+  border-radius: 12px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: inherit;
+}
+.card .info {
+  text-align: center;
+}
+.card .info .fire {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 5px 15px;
+  text-decoration: none;
+  color: white;
+  border-radius: 24px;
+  background-color: #ec9824;
+}
+.card .info .numbers {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+@media (min-width: 600px) {
+  .card {
+    display: flex;
+  }
+}
+@media (min-width: 800px) {
+  .card {
+    background-color: red;
+  }
+}
+
+.box, .other, .box2 {
+  height: 300px;
+  width: 300px;
+  background-color: tomato;
+  border-radius: 12px;
+  margin: 50px auto;
+  transition: all 300ms;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: end;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+}
+.box:hover, .other:hover, .box2:hover {
+  background-color: purple;
+  color: whitesmoke;
+  border-color: rgba(255, 217, 0, 0.733);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  transform: translateY(-5px);
+}
+
+.box2 {
+  background-color: teal;
+}
+
+.other {
+  width: 950px;
+  background-image: url(https://images.pexels.com/photos/11999969/pexels-photo-11999969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}/*# sourceMappingURL=card.css.map */

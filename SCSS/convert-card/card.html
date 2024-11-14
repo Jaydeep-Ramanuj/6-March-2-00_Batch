@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <link rel="stylesheet" href="card.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="card">
+      <!-- <div class="bg"></div> -->
+      <div class="hp">HP39</div>
+      <img src="pikachu-transparent-32576.png" alt="" />
+      <div class="info">
+        <h2>Pickachu</h2>
+        <a class="fire" href="">fire</a>
+        <div class="numbers">
+          <div class="number">
+            <b>52</b>
+            <br />
+            <p>Attack</p>
+          </div>
+          <div class="number">
+            <b>43</b>
+            <br />
+            <p>Defense</p>
+          </div>
+          <div class="number">
+            <b>65</b>
+            <br />
+            <p>Speed</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">Hellllo</div>
+    <div class="box2"></div>
+
+    <div class="other"></div>
+
+    <script>
+      let card = document.getElementsByClassName('card')[0];
+      card.addEventListener('mouseover', () => {
+        document.body.style.backgroundColor = '#24252e';
+        document.body.setAttribute(
+          'background',
+          //   'https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmRhODVxeGhzNHA4eDU2MnNyMDZiODR4M2Z6eTF4Z2x3ZGJqa200MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/TgygPXqxrx6PjwPymq/giphy.webp'
+          //   'https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTE1NjZ6bzE0aGFsYmNiemtqZWUwZDFweW5ubHowdTN2Y3I5cm41NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/MittlQxzZoEec/giphy.webp'
+          //   'https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExOXVnd3U5a3czYWcwdWRmYzlrOGNzamtjamlhZGJ0OHJzY2I0ajIydyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/dXJlpMJoLfaxG4Baav/giphy.webp'
+          'https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHBwMm4yeTVweGMybmphOHhvcXlhODM1cWk4aWZvcTY1b3UwbDA4MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/6E3CWgsz0a1KeLuFKY/giphy.webp'
+        );
+      });
+      card.addEventListener('mouseleave', () => {
+        document.body.style.backgroundColor = '#ffffff';
+        document.body.removeAttribute('background');
+      });
+    </script>
+  </body>
+</html>
