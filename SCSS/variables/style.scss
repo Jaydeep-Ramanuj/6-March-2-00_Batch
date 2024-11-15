@@ -1,0 +1,77 @@
+$box-width: 500px;
+$box-height: 500px;
+$inner-box-width: $box-width - 200px;
+$inner-box-height: $box-height - 100px;
+
+@debug 'Hi';
+
+$name: 'Jay';
+@debug $name;
+$age: 24;
+@debug $age;
+$names: 'Jay', 'Ajay', 'Sanjay';
+@debug $names;
+
+$isRunning: false;
+@debug $isRunning;
+
+$person: (
+  'name': 'Jay',
+  'age': 24,
+  'city': 'Rajkot',
+);
+@debug $person;
+
+$empty: null;
+@debug $empty;
+
+$color: #24252e;
+@debug $color;
+
+$n1: 10;
+$n2: 20;
+
+// Arithmetic
+
+// @debug $n1 + $n2;
+// @debug $n1 - $n2;
+// @debug $n1 * $n2;
+// @debug $n1 / $n2;
+// @debug $n1 % $n2;
+
+// Comparison
+// @debug $n1 < $n2;
+// @debug $n1 > $n2;
+// @debug $n1 <= $n2;
+// @debug $n1 >= $n2;
+// @debug $n1 == $n2;
+// @debug $n1 != $n2;
+
+// Logical
+
+// AND
+// @debug 10 < 5 and 2>4;
+// @debug 10 > 5 and 2>4;
+// @debug 10 > 5 and 2<4;
+
+// OR
+// @debug 10 < 5 or 2>4;
+// @debug 10 > 5 or 2>4;
+// @debug 10 > 5 or 2<4;
+
+// NOT
+// @debug not false;
+// @debug not(10 > 5);
+@debug not(10 < 5);
+
+// .box {
+//   height: $box-height;
+//   width: $box-width;
+//   background-color: tomato;
+
+//   .inner-box {
+//     height: $inner-box-height;
+//     width: $inner-box-width;
+//     background-color: teal;
+//   }
+// }
