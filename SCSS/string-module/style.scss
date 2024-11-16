@@ -1,0 +1,35 @@
+@use 'sass:string';
+
+$str: 'This is some long string';
+
+// @debug string.quote(something);
+li:nth-child(1):before {
+  content: $str;
+}
+li:nth-child(2):before {
+  content: string.quote(something);
+}
+li:nth-child(3):before {
+  content: string.unquote('some');
+}
+@error "This is serious error";
+
+@debug string.index($str, 'long');
+
+li:nth-child(4):before {
+  content: string.insert($str, ' else', 5);
+}
+@debug string.length($str);
+li:nth-child(5):before {
+  content: string.slice($str, 1, 10);
+}
+li:nth-child(6):before {
+  content: string.to-upper-case($str);
+}
+li:nth-child(7):before {
+  content: string.to-lower-case($str);
+}
+li:nth-child(8):before {
+  content: string.quote(string.unique-id());
+  //   @debug string.unique-id();
+}

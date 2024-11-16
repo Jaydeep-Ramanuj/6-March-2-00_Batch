@@ -1,0 +1,47 @@
+@use 'sass:color';
+
+$bg-color: red;
+
+.item {
+  height: 100px;
+  width: 100px;
+  border-radius: 12px;
+  margin: 0 auto;
+  margin-top: 50px;
+  list-style-type: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  font-weight: 600;
+  color: white;
+}
+
+.item:nth-child(1) {
+  background-color: $bg-color;
+}
+.item:nth-child(2) {
+  background-color: color.change($bg-color, $red: 100);
+}
+.item:nth-child(3) {
+  background-color: color.change($bg-color, $red: 100, $blue: 200);
+}
+.item:nth-child(4) {
+  background-color: color.change($bg-color, $hue: 180deg);
+}
+.item:nth-child(5) {
+  background-color: color.change($bg-color, $alpha: 0.3);
+}
+.item:nth-child(6) {
+  background-color: color.grayscale($color: #9b3cbb);
+}
+.item:nth-child(7) {
+  background-color: color.invert($color: #0dcb0d);
+}
+.item:nth-child(8) {
+  background-color: $bg-color;
+  &:hover {
+    background-color: color.change($bg-color, $lightness: 30%);
+  }
+}

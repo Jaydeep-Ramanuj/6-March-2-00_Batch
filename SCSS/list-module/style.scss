@@ -1,0 +1,15 @@
+@use 'sass:list';
+
+$colors: green, maroon, white, black, red, pink, blue, orange, yellow;
+
+$secondary-colors: gray, fuchsia, yellowgreen, aqua;
+
+@debug list.nth($colors, 2);
+@debug list.nth($colors, 4);
+
+@debug list.append($colors, tomato);
+@debug list.index($colors, pink);
+@debug list.is-bracketed($colors);
+@debug list.join($colors, $secondary-colors);
+@debug list.join($colors, $secondary-colors, 'space');
+@debug list.length($colors);

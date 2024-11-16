@@ -1,0 +1,15 @@
+@use 'sass:map';
+
+$person: (
+  'name': 'Jay',
+  'age': 21,
+  'city': 'Rajkot',
+  'course': 'WD',
+);
+
+@debug map.get($person, 'name');
+@debug map.has-key($person, 'phone');
+@debug map.keys($person);
+@debug map.remove($person, 'course');
+@debug map.set($person, 'phone', 13456);
+@debug map.values($person);
