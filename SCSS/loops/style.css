@@ -1,0 +1,1199 @@
+.bg-red-100 {
+  color: #ffcccc;
+}
+
+.bg-red-200 {
+  color: #ff9999;
+}
+
+.bg-red-300 {
+  color: #ff6666;
+}
+
+.bg-red-400 {
+  color: #ff3333;
+}
+
+.bg-red-500 {
+  color: red;
+}
+
+.bg-red-600 {
+  color: #cc0000;
+}
+
+.bg-red-700 {
+  color: #990000;
+}
+
+.bg-red-800 {
+  color: #660000;
+}
+
+.bg-red-900 {
+  color: #330000;
+}
+
+.bg-red-1000 {
+  color: black;
+}
+
+.bg-blue-100 {
+  color: #ccccff;
+}
+
+.bg-blue-200 {
+  color: #9999ff;
+}
+
+.bg-blue-300 {
+  color: #6666ff;
+}
+
+.bg-blue-400 {
+  color: #3333ff;
+}
+
+.bg-blue-500 {
+  color: blue;
+}
+
+.bg-blue-600 {
+  color: #0000cc;
+}
+
+.bg-blue-700 {
+  color: #000099;
+}
+
+.bg-blue-800 {
+  color: #000066;
+}
+
+.bg-blue-900 {
+  color: #000033;
+}
+
+.bg-blue-1000 {
+  color: black;
+}
+
+.bg-green-100 {
+  color: #ccffcc;
+}
+
+.bg-green-200 {
+  color: #99ff99;
+}
+
+.bg-green-300 {
+  color: #66ff66;
+}
+
+.bg-green-400 {
+  color: #33ff33;
+}
+
+.bg-green-500 {
+  color: lime;
+}
+
+.bg-green-600 {
+  color: #00cc00;
+}
+
+.bg-green-700 {
+  color: #009900;
+}
+
+.bg-green-800 {
+  color: #006600;
+}
+
+.bg-green-900 {
+  color: #003300;
+}
+
+.bg-green-1000 {
+  color: black;
+}
+
+.bg-magenta-100 {
+  color: #ffccff;
+}
+
+.bg-magenta-200 {
+  color: #ff99ff;
+}
+
+.bg-magenta-300 {
+  color: #ff66ff;
+}
+
+.bg-magenta-400 {
+  color: #ff33ff;
+}
+
+.bg-magenta-500 {
+  color: fuchsia;
+}
+
+.bg-magenta-600 {
+  color: #cc00cc;
+}
+
+.bg-magenta-700 {
+  color: #990099;
+}
+
+.bg-magenta-800 {
+  color: #660066;
+}
+
+.bg-magenta-900 {
+  color: #330033;
+}
+
+.bg-magenta-1000 {
+  color: black;
+}
+
+.bg-yellow-100 {
+  color: #ffffcc;
+}
+
+.bg-yellow-200 {
+  color: #ffff99;
+}
+
+.bg-yellow-300 {
+  color: #ffff66;
+}
+
+.bg-yellow-400 {
+  color: #ffff33;
+}
+
+.bg-yellow-500 {
+  color: yellow;
+}
+
+.bg-yellow-600 {
+  color: #cccc00;
+}
+
+.bg-yellow-700 {
+  color: #999900;
+}
+
+.bg-yellow-800 {
+  color: #666600;
+}
+
+.bg-yellow-900 {
+  color: #333300;
+}
+
+.bg-yellow-1000 {
+  color: black;
+}
+
+.bg-cyan-100 {
+  color: #ccffff;
+}
+
+.bg-cyan-200 {
+  color: #99ffff;
+}
+
+.bg-cyan-300 {
+  color: #66ffff;
+}
+
+.bg-cyan-400 {
+  color: #33ffff;
+}
+
+.bg-cyan-500 {
+  color: aqua;
+}
+
+.bg-cyan-600 {
+  color: #00cccc;
+}
+
+.bg-cyan-700 {
+  color: #009999;
+}
+
+.bg-cyan-800 {
+  color: #006666;
+}
+
+.bg-cyan-900 {
+  color: #003333;
+}
+
+.bg-cyan-1000 {
+  color: black;
+}
+
+.bg-orange-100 {
+  color: #ffedcc;
+}
+
+.bg-orange-200 {
+  color: #ffdb99;
+}
+
+.bg-orange-300 {
+  color: #ffc966;
+}
+
+.bg-orange-400 {
+  color: #ffb733;
+}
+
+.bg-orange-500 {
+  color: orange;
+}
+
+.bg-orange-600 {
+  color: #cc8400;
+}
+
+.bg-orange-700 {
+  color: #996300;
+}
+
+.bg-orange-800 {
+  color: #664200;
+}
+
+.bg-orange-900 {
+  color: #332100;
+}
+
+.bg-orange-1000 {
+  color: black;
+}
+
+.bg-teal-100 {
+  color: #ccffff;
+}
+
+.bg-teal-200 {
+  color: #99ffff;
+}
+
+.bg-teal-300 {
+  color: #66ffff;
+}
+
+.bg-teal-400 {
+  color: #33ffff;
+}
+
+.bg-teal-500 {
+  color: aqua;
+}
+
+.bg-teal-600 {
+  color: #00cccc;
+}
+
+.bg-teal-700 {
+  color: #009999;
+}
+
+.bg-teal-800 {
+  color: #006666;
+}
+
+.bg-teal-900 {
+  color: #003333;
+}
+
+.bg-teal-1000 {
+  color: black;
+}
+
+.bg-black-100 {
+  color: #e6e6e6;
+}
+
+.bg-black-200 {
+  color: #cccccc;
+}
+
+.bg-black-300 {
+  color: #b3b3b3;
+}
+
+.bg-black-400 {
+  color: #999999;
+}
+
+.bg-black-500 {
+  color: gray;
+}
+
+.bg-black-600 {
+  color: #666666;
+}
+
+.bg-black-700 {
+  color: #4d4d4d;
+}
+
+.bg-black-800 {
+  color: #333333;
+}
+
+.bg-black-900 {
+  color: #1a1a1a;
+}
+
+.bg-black-1000 {
+  color: black;
+}
+
+.bg-white-100 {
+  color: #e6e6e6;
+}
+
+.bg-white-200 {
+  color: #cccccc;
+}
+
+.bg-white-300 {
+  color: #b3b3b3;
+}
+
+.bg-white-400 {
+  color: #999999;
+}
+
+.bg-white-500 {
+  color: gray;
+}
+
+.bg-white-600 {
+  color: #666666;
+}
+
+.bg-white-700 {
+  color: #4d4d4d;
+}
+
+.bg-white-800 {
+  color: #333333;
+}
+
+.bg-white-900 {
+  color: #1a1a1a;
+}
+
+.bg-white-1000 {
+  color: black;
+}
+
+.text-red-100 {
+  color: #ffcccc;
+}
+
+.text-red-200 {
+  color: #ff9999;
+}
+
+.text-red-300 {
+  color: #ff6666;
+}
+
+.text-red-400 {
+  color: #ff3333;
+}
+
+.text-red-500 {
+  color: red;
+}
+
+.text-red-600 {
+  color: #cc0000;
+}
+
+.text-red-700 {
+  color: #990000;
+}
+
+.text-red-800 {
+  color: #660000;
+}
+
+.text-red-900 {
+  color: #330000;
+}
+
+.text-red-1000 {
+  color: black;
+}
+
+.text-blue-100 {
+  color: #ccccff;
+}
+
+.text-blue-200 {
+  color: #9999ff;
+}
+
+.text-blue-300 {
+  color: #6666ff;
+}
+
+.text-blue-400 {
+  color: #3333ff;
+}
+
+.text-blue-500 {
+  color: blue;
+}
+
+.text-blue-600 {
+  color: #0000cc;
+}
+
+.text-blue-700 {
+  color: #000099;
+}
+
+.text-blue-800 {
+  color: #000066;
+}
+
+.text-blue-900 {
+  color: #000033;
+}
+
+.text-blue-1000 {
+  color: black;
+}
+
+.text-green-100 {
+  color: #ccffcc;
+}
+
+.text-green-200 {
+  color: #99ff99;
+}
+
+.text-green-300 {
+  color: #66ff66;
+}
+
+.text-green-400 {
+  color: #33ff33;
+}
+
+.text-green-500 {
+  color: lime;
+}
+
+.text-green-600 {
+  color: #00cc00;
+}
+
+.text-green-700 {
+  color: #009900;
+}
+
+.text-green-800 {
+  color: #006600;
+}
+
+.text-green-900 {
+  color: #003300;
+}
+
+.text-green-1000 {
+  color: black;
+}
+
+.text-magenta-100 {
+  color: #ffccff;
+}
+
+.text-magenta-200 {
+  color: #ff99ff;
+}
+
+.text-magenta-300 {
+  color: #ff66ff;
+}
+
+.text-magenta-400 {
+  color: #ff33ff;
+}
+
+.text-magenta-500 {
+  color: fuchsia;
+}
+
+.text-magenta-600 {
+  color: #cc00cc;
+}
+
+.text-magenta-700 {
+  color: #990099;
+}
+
+.text-magenta-800 {
+  color: #660066;
+}
+
+.text-magenta-900 {
+  color: #330033;
+}
+
+.text-magenta-1000 {
+  color: black;
+}
+
+.text-yellow-100 {
+  color: #ffffcc;
+}
+
+.text-yellow-200 {
+  color: #ffff99;
+}
+
+.text-yellow-300 {
+  color: #ffff66;
+}
+
+.text-yellow-400 {
+  color: #ffff33;
+}
+
+.text-yellow-500 {
+  color: yellow;
+}
+
+.text-yellow-600 {
+  color: #cccc00;
+}
+
+.text-yellow-700 {
+  color: #999900;
+}
+
+.text-yellow-800 {
+  color: #666600;
+}
+
+.text-yellow-900 {
+  color: #333300;
+}
+
+.text-yellow-1000 {
+  color: black;
+}
+
+.text-cyan-100 {
+  color: #ccffff;
+}
+
+.text-cyan-200 {
+  color: #99ffff;
+}
+
+.text-cyan-300 {
+  color: #66ffff;
+}
+
+.text-cyan-400 {
+  color: #33ffff;
+}
+
+.text-cyan-500 {
+  color: aqua;
+}
+
+.text-cyan-600 {
+  color: #00cccc;
+}
+
+.text-cyan-700 {
+  color: #009999;
+}
+
+.text-cyan-800 {
+  color: #006666;
+}
+
+.text-cyan-900 {
+  color: #003333;
+}
+
+.text-cyan-1000 {
+  color: black;
+}
+
+.text-orange-100 {
+  color: #ffedcc;
+}
+
+.text-orange-200 {
+  color: #ffdb99;
+}
+
+.text-orange-300 {
+  color: #ffc966;
+}
+
+.text-orange-400 {
+  color: #ffb733;
+}
+
+.text-orange-500 {
+  color: orange;
+}
+
+.text-orange-600 {
+  color: #cc8400;
+}
+
+.text-orange-700 {
+  color: #996300;
+}
+
+.text-orange-800 {
+  color: #664200;
+}
+
+.text-orange-900 {
+  color: #332100;
+}
+
+.text-orange-1000 {
+  color: black;
+}
+
+.text-teal-100 {
+  color: #ccffff;
+}
+
+.text-teal-200 {
+  color: #99ffff;
+}
+
+.text-teal-300 {
+  color: #66ffff;
+}
+
+.text-teal-400 {
+  color: #33ffff;
+}
+
+.text-teal-500 {
+  color: aqua;
+}
+
+.text-teal-600 {
+  color: #00cccc;
+}
+
+.text-teal-700 {
+  color: #009999;
+}
+
+.text-teal-800 {
+  color: #006666;
+}
+
+.text-teal-900 {
+  color: #003333;
+}
+
+.text-teal-1000 {
+  color: black;
+}
+
+.text-black-100 {
+  color: #e6e6e6;
+}
+
+.text-black-200 {
+  color: #cccccc;
+}
+
+.text-black-300 {
+  color: #b3b3b3;
+}
+
+.text-black-400 {
+  color: #999999;
+}
+
+.text-black-500 {
+  color: gray;
+}
+
+.text-black-600 {
+  color: #666666;
+}
+
+.text-black-700 {
+  color: #4d4d4d;
+}
+
+.text-black-800 {
+  color: #333333;
+}
+
+.text-black-900 {
+  color: #1a1a1a;
+}
+
+.text-black-1000 {
+  color: black;
+}
+
+.text-white-100 {
+  color: #e6e6e6;
+}
+
+.text-white-200 {
+  color: #cccccc;
+}
+
+.text-white-300 {
+  color: #b3b3b3;
+}
+
+.text-white-400 {
+  color: #999999;
+}
+
+.text-white-500 {
+  color: gray;
+}
+
+.text-white-600 {
+  color: #666666;
+}
+
+.text-white-700 {
+  color: #4d4d4d;
+}
+
+.text-white-800 {
+  color: #333333;
+}
+
+.text-white-900 {
+  color: #1a1a1a;
+}
+
+.text-white-1000 {
+  color: black;
+}
+
+.border-red-100 {
+  color: #ffcccc;
+}
+
+.border-red-200 {
+  color: #ff9999;
+}
+
+.border-red-300 {
+  color: #ff6666;
+}
+
+.border-red-400 {
+  color: #ff3333;
+}
+
+.border-red-500 {
+  color: red;
+}
+
+.border-red-600 {
+  color: #cc0000;
+}
+
+.border-red-700 {
+  color: #990000;
+}
+
+.border-red-800 {
+  color: #660000;
+}
+
+.border-red-900 {
+  color: #330000;
+}
+
+.border-red-1000 {
+  color: black;
+}
+
+.border-blue-100 {
+  color: #ccccff;
+}
+
+.border-blue-200 {
+  color: #9999ff;
+}
+
+.border-blue-300 {
+  color: #6666ff;
+}
+
+.border-blue-400 {
+  color: #3333ff;
+}
+
+.border-blue-500 {
+  color: blue;
+}
+
+.border-blue-600 {
+  color: #0000cc;
+}
+
+.border-blue-700 {
+  color: #000099;
+}
+
+.border-blue-800 {
+  color: #000066;
+}
+
+.border-blue-900 {
+  color: #000033;
+}
+
+.border-blue-1000 {
+  color: black;
+}
+
+.border-green-100 {
+  color: #ccffcc;
+}
+
+.border-green-200 {
+  color: #99ff99;
+}
+
+.border-green-300 {
+  color: #66ff66;
+}
+
+.border-green-400 {
+  color: #33ff33;
+}
+
+.border-green-500 {
+  color: lime;
+}
+
+.border-green-600 {
+  color: #00cc00;
+}
+
+.border-green-700 {
+  color: #009900;
+}
+
+.border-green-800 {
+  color: #006600;
+}
+
+.border-green-900 {
+  color: #003300;
+}
+
+.border-green-1000 {
+  color: black;
+}
+
+.border-magenta-100 {
+  color: #ffccff;
+}
+
+.border-magenta-200 {
+  color: #ff99ff;
+}
+
+.border-magenta-300 {
+  color: #ff66ff;
+}
+
+.border-magenta-400 {
+  color: #ff33ff;
+}
+
+.border-magenta-500 {
+  color: fuchsia;
+}
+
+.border-magenta-600 {
+  color: #cc00cc;
+}
+
+.border-magenta-700 {
+  color: #990099;
+}
+
+.border-magenta-800 {
+  color: #660066;
+}
+
+.border-magenta-900 {
+  color: #330033;
+}
+
+.border-magenta-1000 {
+  color: black;
+}
+
+.border-yellow-100 {
+  color: #ffffcc;
+}
+
+.border-yellow-200 {
+  color: #ffff99;
+}
+
+.border-yellow-300 {
+  color: #ffff66;
+}
+
+.border-yellow-400 {
+  color: #ffff33;
+}
+
+.border-yellow-500 {
+  color: yellow;
+}
+
+.border-yellow-600 {
+  color: #cccc00;
+}
+
+.border-yellow-700 {
+  color: #999900;
+}
+
+.border-yellow-800 {
+  color: #666600;
+}
+
+.border-yellow-900 {
+  color: #333300;
+}
+
+.border-yellow-1000 {
+  color: black;
+}
+
+.border-cyan-100 {
+  color: #ccffff;
+}
+
+.border-cyan-200 {
+  color: #99ffff;
+}
+
+.border-cyan-300 {
+  color: #66ffff;
+}
+
+.border-cyan-400 {
+  color: #33ffff;
+}
+
+.border-cyan-500 {
+  color: aqua;
+}
+
+.border-cyan-600 {
+  color: #00cccc;
+}
+
+.border-cyan-700 {
+  color: #009999;
+}
+
+.border-cyan-800 {
+  color: #006666;
+}
+
+.border-cyan-900 {
+  color: #003333;
+}
+
+.border-cyan-1000 {
+  color: black;
+}
+
+.border-orange-100 {
+  color: #ffedcc;
+}
+
+.border-orange-200 {
+  color: #ffdb99;
+}
+
+.border-orange-300 {
+  color: #ffc966;
+}
+
+.border-orange-400 {
+  color: #ffb733;
+}
+
+.border-orange-500 {
+  color: orange;
+}
+
+.border-orange-600 {
+  color: #cc8400;
+}
+
+.border-orange-700 {
+  color: #996300;
+}
+
+.border-orange-800 {
+  color: #664200;
+}
+
+.border-orange-900 {
+  color: #332100;
+}
+
+.border-orange-1000 {
+  color: black;
+}
+
+.border-teal-100 {
+  color: #ccffff;
+}
+
+.border-teal-200 {
+  color: #99ffff;
+}
+
+.border-teal-300 {
+  color: #66ffff;
+}
+
+.border-teal-400 {
+  color: #33ffff;
+}
+
+.border-teal-500 {
+  color: aqua;
+}
+
+.border-teal-600 {
+  color: #00cccc;
+}
+
+.border-teal-700 {
+  color: #009999;
+}
+
+.border-teal-800 {
+  color: #006666;
+}
+
+.border-teal-900 {
+  color: #003333;
+}
+
+.border-teal-1000 {
+  color: black;
+}
+
+.border-black-100 {
+  color: #e6e6e6;
+}
+
+.border-black-200 {
+  color: #cccccc;
+}
+
+.border-black-300 {
+  color: #b3b3b3;
+}
+
+.border-black-400 {
+  color: #999999;
+}
+
+.border-black-500 {
+  color: gray;
+}
+
+.border-black-600 {
+  color: #666666;
+}
+
+.border-black-700 {
+  color: #4d4d4d;
+}
+
+.border-black-800 {
+  color: #333333;
+}
+
+.border-black-900 {
+  color: #1a1a1a;
+}
+
+.border-black-1000 {
+  color: black;
+}
+
+.border-white-100 {
+  color: #e6e6e6;
+}
+
+.border-white-200 {
+  color: #cccccc;
+}
+
+.border-white-300 {
+  color: #b3b3b3;
+}
+
+.border-white-400 {
+  color: #999999;
+}
+
+.border-white-500 {
+  color: gray;
+}
+
+.border-white-600 {
+  color: #666666;
+}
+
+.border-white-700 {
+  color: #4d4d4d;
+}
+
+.border-white-800 {
+  color: #333333;
+}
+
+.border-white-900 {
+  color: #1a1a1a;
+}
+
+.border-white-1000 {
+  color: black;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,32 @@
+@use 'sass:color';
+
+$colors: red, blue, green, magenta, yellow, cyan, orange, teal, black, white;
+
+// @for $i from 1 through 20 {
+//   .h-#{$i} {
+//     height: $i * 5px;
+//   }
+// }
+// @for $i from 1 through 10 {
+//   .w-#{$i} {
+//     height: $i * 100px;
+//   }
+// }
+// @for $i from 1 through 10 {
+//   .bora-#{$i} {
+//     height: $i * 2px;
+//   }
+// }
+
+$props: 'bg', 'text', 'border';
+
+@each $prop in $props {
+  @each $color in $colors {
+    @for $i from 1 through 10 {
+      .#{$prop}-#{$color}-#{$i*100} {
+        $shade: 100-($i * 10);
+        color: color.change($color, $lightness: $shade * 1%);
+      }
+    }
+  }
+}

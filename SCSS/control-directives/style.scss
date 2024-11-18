@@ -1,0 +1,17 @@
+$width: 400px;
+
+.box {
+  width: $width;
+  height: 300px;
+  border-radius: 12px;
+  margin: 0 auto;
+  margin-top: 50px;
+
+  @if ($width>1000px) {
+    background-color: red;
+  } @else if($width>500px) {
+    background-color: orange;
+  } @else {
+    background-color: green;
+  }
+}

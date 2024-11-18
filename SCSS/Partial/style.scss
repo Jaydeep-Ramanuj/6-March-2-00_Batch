@@ -1,0 +1,10 @@
+@use './utils/variables' as v;
+@use './utils/mixins' as m;
+
+// @debug variables.$fs-sm;
+@debug v.$fs-sm;
+
+.box {
+  font-style: v.$fs-sm;
+  @include m.slow();
+}

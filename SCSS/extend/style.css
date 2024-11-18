@@ -1,0 +1,16 @@
+.box, .box2 {
+  height: 300px;
+  width: 300px;
+  background-color: tomato;
+  margin: 0 auto;
+  margin-top: 50px;
+  border-radius: 12px;
+  transition: all 300ms;
+}
+.box:hover, .box2:hover {
+  transform: scale(1.1) rotate(45deg);
+}
+
+.box2 {
+  background-color: teal;
+}/*# sourceMappingURL=style.css.map */
