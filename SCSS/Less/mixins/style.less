@@ -1,0 +1,26 @@
+.f-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slow(@prop:all,@dur:300ms) {
+  transition: @prop @dur;
+}
+
+.hover-effect {
+  .slow();
+  &:hover {
+    transform: translateY(-10px);
+  }
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  background-color: tomato;
+  border-radius: 12px;
+
+  .f-center();
+  .hover-effect();
+}

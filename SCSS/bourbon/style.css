@@ -1,0 +1,37 @@
+.box .inner-box {
+  height: 300px;
+  width: 300px;
+  border-radius: 12px;
+  background-color: tomato;
+  position: relative;
+  top: 0;
+  left: 10em;
+}
+
+button, [type=button], [type=reset], [type=submit] {
+  background-color: #f00;
+}
+
+[type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=time], [type=url], [type=week], input:not([type]), textarea {
+  border: 1px solid #ccc;
+}
+
+[type=color]:hover, [type=date]:hover, [type=datetime]:hover, [type=datetime-local]:hover, [type=email]:hover, [type=month]:hover, [type=number]:hover, [type=password]:hover, [type=search]:hover, [type=tel]:hover, [type=text]:hover, [type=time]:hover, [type=url]:hover, [type=week]:hover, input:not([type]):hover, textarea:hover {
+  border: 1px solid #aaa;
+}
+
+.triangle {
+  border-style: solid;
+  height: 0;
+  width: 0;
+  border-color: transparent transparent #b25c9c;
+  border-width: 0 0 2rem 2rem;
+}
+
+.element {
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab;
+}
+
+/*# sourceMappingURL=style.css.map */

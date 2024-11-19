@@ -1,0 +1,27 @@
+@height: 500px;
+@width:@height + 200px;
+@bg-color: tomato;
+@bora: 12px;
+
+
+@var-name:some;
+
+
+// string interpolation
+
+
+
+.@{var-name}{
+    height: 100px;
+    width: 100px;
+    border-radius: 12px;
+    background-color: teal;
+}
+
+
+.box {
+  height: @height;
+  width: @width;
+  background-color: @bg-color;
+  border-radius: @bora;
+}

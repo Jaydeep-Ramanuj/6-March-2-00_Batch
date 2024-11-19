@@ -1,0 +1,17 @@
+.card {
+  width: fit-content;
+}
+.card img {
+  height: 50%;
+  width: 50%;
+  object-fit: cover;
+}
+.card .content .name {
+  color: grey;
+}
+.card .content .info {
+  background-color: #24252e;
+}
+.card .content .info .desc {
+  font-size: 14px;
+}

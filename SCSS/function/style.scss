@@ -1,0 +1,23 @@
+@use 'sass:color';
+@use 'sass:list';
+
+@function addWidth($w1, $w2) {
+  @return $w1 + $w2;
+}
+
+@function lightenColor($cl, $val) {
+  @return color.change($cl, $lightness: $val);
+}
+
+@function getItem($arr, $num) {
+  @return list.nth($arr, $num);
+}
+
+$bora: 12px, 24px, 36px, 48px;
+
+.box {
+  $width: 500px;
+  width: addWidth(500, 200px);
+  background-color: lightenColor(red, 30%);
+  border-radius: getItem($bora, 3);
+}
