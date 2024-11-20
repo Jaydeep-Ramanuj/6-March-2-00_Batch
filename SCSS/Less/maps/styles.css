@@ -1,0 +1,8 @@
+.box {
+  height: 300px;
+  width: 300px;
+  background-color: tomato;
+  color: blue;
+  border: 20px solid pink;
+  font-size: 64px;
+}

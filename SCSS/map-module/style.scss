@@ -7,9 +7,25 @@ $person: (
   'course': 'WD',
 );
 
+
+$colors:(
+  "primary":#2a6fbe,
+  "secondary":#91a3ae,
+  "tertiary":#24252e
+);
+
+
 @debug map.get($person, 'name');
 @debug map.has-key($person, 'phone');
 @debug map.keys($person);
 @debug map.remove($person, 'course');
 @debug map.set($person, 'phone', 13456);
 @debug map.values($person);
+
+
+
+.box{
+  height: 300px;
+  width: 300px;
+  background-color: map.get($colors,"primary");
+}

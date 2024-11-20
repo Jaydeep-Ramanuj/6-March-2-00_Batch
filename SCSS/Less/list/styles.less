@@ -1,0 +1,22 @@
+@colors: tomato, green, yellowgreen, orange, pink, teal, aqua;
+
+// length(@colors);
+
+.li:nth-child(1):before {
+  content: length(@colors);
+}
+.li:nth-child(2):before {
+  content: extract(@colors, 5);
+}
+.li:nth-child(3):before {
+  background-image: range(2, 5);
+}
+.li:nth-child(3):before {
+  background-image: range(2, 5);
+}
+
+
+each( @colors,
+{.sel-@{value}{
+  color: @value;
+}})

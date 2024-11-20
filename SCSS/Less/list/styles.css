@@ -1,0 +1,33 @@
+.li:nth-child(1):before {
+  content: 7;
+}
+.li:nth-child(2):before {
+  content: pink;
+}
+.li:nth-child(3):before {
+  background-image: 2 3 4 5;
+}
+.li:nth-child(3):before {
+  background-image: 2 3 4 5;
+}
+.sel-tomato {
+  color: tomato;
+}
+.sel-green {
+  color: green;
+}
+.sel-yellowgreen {
+  color: yellowgreen;
+}
+.sel-orange {
+  color: orange;
+}
+.sel-pink {
+  color: pink;
+}
+.sel-teal {
+  color: teal;
+}
+.sel-aqua {
+  color: aqua;
+}

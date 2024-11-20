@@ -1,0 +1,8 @@
+.box {
+  height: 300px;
+  width: 300px;
+  background-color: tomato;
+}
+.box:hover {
+  background-color: #23315e;
+}

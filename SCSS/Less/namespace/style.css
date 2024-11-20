@@ -1,0 +1,13 @@
+.btn1 {
+  padding: 5px;
+  background-color: rgba(0, 0, 255, 0.577);
+  color: white;
+  border-radius: 12px;
+  transition: all 300ms;
+}
+.btn1:active {
+  transform: scale(0.9);
+}
+.btn1:hover {
+  transform: translateY(10px);
+}
