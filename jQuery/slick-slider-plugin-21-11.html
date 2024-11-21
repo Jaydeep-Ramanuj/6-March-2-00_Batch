@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="Plugins/slick-1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="Plugins/slick-1.8.1/slick/slick-theme.css"
+    />
+    <style>
+      body {
+        padding: 100px;
+        background-color: #24252e;
+      }
+      img {
+        max-height: 500px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="your-class">
+      <img
+        src="https://images.pexels.com/photos/26691362/pexels-photo-26691362/free-photo-of-black-mercedes-s450.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt=""
+      />
+      <img
+        src="https://images.pexels.com/photos/18705319/pexels-photo-18705319/free-photo-of-black-mercedes-s-class.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt=""
+      />
+      <img
+        src="https://images.pexels.com/photos/26690620/pexels-photo-26690620/free-photo-of-mercedes-in-a-garage.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt=""
+      />
+      <img
+        src="https://images.pexels.com/photos/12170315/pexels-photo-12170315.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt=""
+      />
+      <img
+        src="https://images.pexels.com/photos/120049/pexels-photo-120049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt=""
+      />
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="Plugins/slick-1.8.1/slick/slick.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $('.your-class').slick({
+          accessibility: false,
+          autoplay: true,
+          autoplaySpeed: 500,
+          arrows: false,
+          centerMode: true,
+          centerPadding: '150px',
+          dots: true,
+          draggable: false,
+          pauseOnFocus: true,
+        });
+      });
+    </script>
+  </body>
+</html>
