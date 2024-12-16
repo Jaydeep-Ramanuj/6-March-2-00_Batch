@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss-cli": "^11.0.0"
+  },
+  "scripts": {
+    "build:css": "postcss src/*.css --dir dist --watch",
+    "build:style": "stylelint src/*.css"
+  },
+  "devDependencies": {
+    "cssnano": "^7.0.6",
+    "postcss": "^8.4.49",
+    "stylelint": "^16.12.0",
+    "stylelint-config-standard": "^36.0.1"
+  }
+}
