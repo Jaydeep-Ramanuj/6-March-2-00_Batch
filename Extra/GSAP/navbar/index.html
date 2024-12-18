@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+      }
+      body {
+        background-color: #24252e;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+
+        padding: 20px 100px;
+        position: relative;
+      }
+
+      nav {
+        display: flex;
+      }
+      nav a {
+        text-decoration: none;
+        color: white;
+        margin-left: 20px;
+        display: block;
+      }
+      .horizontal-nav {
+        display: none;
+      }
+      .vertical-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: absolute;
+        right: 30px;
+        top: 50px;
+      }
+
+      @media (min-width: 768px) {
+        .vertical-nav {
+          display: none;
+        }
+
+        .horizontal-nav {
+          display: flex;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">LOGO</div>
+
+      <nav class="horizontal-nav">
+        <a href="">Home</a>
+        <a href="">Product</a>
+        <a href="">Pricing</a>
+        <a href="">About</a>
+        <a href="">Contact</a>
+      </nav>
+      <nav class="vertical-nav">
+        <a href="">Home</a>
+        <a href="">Product</a>
+        <a href="">Pricing</a>
+        <a href="">About</a>
+        <a href="">Contact</a>
+      </nav>
+    </header>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      //   gsap.from('.logo', {
+      //     y: -20,
+      //     opacity: 0,
+      //     duration: 0.5,
+      //     delay: 0.5,
+      //   });
+      //   //   gsap.from('nav', {
+      //   //     y: -20,
+      //   //     opacity: 0,
+      //   //     duration: 0.5,
+      //   //     delay: 0.5,
+      //   //   });
+      //   gsap.from('nav a', {
+      //     y: -20,
+      //     opacity: 0,
+      //     duration: 0.5,
+      //     delay: 0.5,
+      //     stagger: 0.3,
+      //   });
+
+      //   gsap.to('nav a:nth-child(1)', {
+      //     color: 'tomato',
+      //   });
+
+      const tl = gsap.timeline();
+
+      //   tl.from('.logo', {
+      //     y: -20,
+      //     opacity: 0,
+      //     duration: 0.5,
+      //     delay: 0.5,
+      //   });
+
+      //   tl.from('nav a', {
+      //     y: -20,
+      //     opacity: 0,
+      //     duration: 0.5,
+      //     stagger: 0.3,
+      //   });
+      //   tl.to('nav a:nth-child(1)', {
+      //     color: 'tomato',
+      //   });
+
+      let logoSlideAnimation = {
+        y: -20,
+        opacity: 0,
+        duration: 0.5,
+        delay: 0.5,
+      };
+      let menuSlideAnimation = {
+        y: -20,
+        opacity: 0,
+        duration: 0.5,
+        stagger: 0.3,
+      };
+      console.log(window.screen.availWidth);
+
+      if (window.screen.availWidth > 768) {
+        console.log('***');
+
+        tl.from('.logo', logoSlideAnimation)
+          .from('.horizontal-nav a', menuSlideAnimation)
+          .to('nav a:nth-child(1)', {
+            color: 'tomato',
+          });
+      } else {
+        tl.from('.logo', logoSlideAnimation)
+          .from('.vertical-nav a', {
+            x: 30,
+            opacity: 0,
+            duration: 0.5,
+            stagger: 0.3,
+          })
+          .to('nav a:nth-child(1)', {
+            color: 'tomato',
+          });
+      }
+    </script>
+  </body>
+</html>
