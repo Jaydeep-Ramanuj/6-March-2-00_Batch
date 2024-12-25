@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .slider {
+        width: 100%;
+        height: 600vh;
+      }
+      .slide {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .slide img {
+        height: 60px;
+      }
+      /* .slide:nth-child(1) {
+        background-color: tomato;
+      }
+      .slide:nth-child(2) {
+        background-color: orange;
+      }
+      .slide:nth-child(3) {
+        background-color: teal;
+      }
+      .slide:nth-child(4) {
+        background-color: yellow;
+      }
+      .slide:nth-child(5) {
+        background-color: violet;
+      }
+      .slide:nth-child(6) {
+        background-color: turquoise;
+      } */
+
+      .slide-vertical {
+        height: 90px;
+        position: absolute;
+        top: 30%;
+        transform: translate(-50%, -50%);
+        /* display: none; */
+        visibility: hidden;
+        opacity: 0;
+      }
+
+      .slide-vertical:nth-of-type(1) {
+        left: 50%;
+        visibility: visible;
+        opacity: 1;
+      }
+      .slide-vertical:nth-of-type(2) {
+        left: 42%;
+      }
+      .slide-vertical:nth-of-type(3) {
+        left: 45%;
+      }
+      .slide-vertical:nth-of-type(4) {
+        left: 45%;
+      }
+      .slide-vertical:nth-of-type(5) {
+        left: 53%;
+      }
+
+      .final-product {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+      .product {
+        height: 350px;
+        z-index: 1;
+        /* position: relative;
+        left: 50%;
+        bottom: 50%;
+        transform: translate(-50%, 50%); */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slider">
+      <div class="slide">
+        <img class="slide-horizontal" src="images/betelnut2.png" alt="" />
+      </div>
+      <div class="slide">
+        <img class="slide-horizontal" src="images/cardamom2.png" alt="" />
+      </div>
+      <div class="slide">
+        <img
+          class="slide-horizontal"
+          src="images/sandale_wood_oil2.png"
+          alt=""
+        />
+      </div>
+      <div class="slide">
+        <img class="slide-horizontal" src="images/rose_pettle2.png" alt="" />
+      </div>
+      <div class="slide">
+        <img class="slide-horizontal" src="images/Kewda_2.png" alt="" />
+      </div>
+      <img
+        class="slide-vertical"
+        data-offset="0"
+        src="images/betelnut3.png"
+        alt=""
+      />
+      <img
+        class="slide-vertical"
+        data-offset="-10"
+        src="images/cardamom3.png"
+        alt=""
+      />
+      <img
+        class="slide-vertical"
+        data-offset="-50"
+        src="images/sandale_wood_oil3.png"
+        alt=""
+      />
+      <img
+        class="slide-vertical"
+        data-offset="50"
+        src="images/rose_pettle3.png"
+        alt=""
+      />
+      <img
+        class="slide-vertical"
+        data-offset="50"
+        src="images/Kewda_3.png"
+        alt=""
+      />
+
+      <div class="final-product">
+        <img class="product" src="images/product.png" alt="" />
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      let vw = window.innerWidth;
+      let vh = window.innerHeight;
+
+      let currentSlide = 1;
+
+      let ingredients = document.querySelectorAll('.slider .slide-vertical');
+
+      window.addEventListener('scroll', () => {
+        // if (window.pageYOffset > vh) {
+        //   ingredients[1].style.display = 'block';
+        // }
+        // if (window.pageYOffset > 2 * vh) {
+        //   ingredients[2].style.display = 'block';
+        // }
+        // if (window.pageYOffset > 3 * vh) {
+        //   ingredients[3].style.display = 'block';
+        // }
+        // if (window.pageYOffset > 4 * vh) {
+        //   ingredients[4].style.display = 'block';
+        // }
+
+        ingredients.forEach((ingredient) => {
+          ingredient.style.top =
+            window.pageYOffset +
+            vh / 2 +
+            Number(ingredient.getAttribute('data-offset')) +
+            'px';
+        });
+      });
+
+      gsap.from('.slide:nth-child(1) .slide-horizontal', {
+        x: -vw / 2,
+        duration: 1.5,
+        scrollTrigger: {
+          trigger: '.slide:nth-child(1) .slide-horizontal',
+        },
+      });
+      gsap.from('.slide:nth-child(2) .slide-horizontal', {
+        x: vw / 2,
+        duration: 1.5,
+        scrollTrigger: {
+          trigger: '.slide:nth-child(2) .slide-horizontal',
+          onEnter: () => {
+            slideIngredients(2);
+          },
+        },
+      });
+      gsap.from('.slide:nth-child(3) .slide-horizontal', {
+        x: -vw / 2,
+        duration: 1.5,
+        scrollTrigger: {
+          trigger: '.slide:nth-child(3) .slide-horizontal',
+          onEnter: () => {
+            slideIngredients(3);
+          },
+        },
+      });
+      gsap.from('.slide:nth-child(4) .slide-horizontal', {
+        x: vw / 2,
+        duration: 1.5,
+        scrollTrigger: {
+          trigger: '.slide:nth-child(4) .slide-horizontal',
+          onEnter: () => {
+            slideIngredients(4);
+          },
+        },
+      });
+      gsap.from('.slide:nth-child(5) .slide-horizontal', {
+        x: -vw / 2,
+        duration: 1.5,
+        scrollTrigger: {
+          trigger: '.slide:nth-child(5) .slide-horizontal',
+          onEnter: () => {
+            slideIngredients(5);
+          },
+        },
+      });
+
+      //   gsap.to('.slider .slide-vertical', {
+      //     y: 5 * vh,
+      //     // duration: 5,
+      //     scrollTrigger: {
+      //       scrub: true,
+      //     },
+      //   });
+
+      function slideIngredients(num) {
+        document.querySelector(
+          `.slide-vertical:nth-of-type(${num})`
+        ).style.visibility = 'visible';
+        document.querySelector(
+          `.slide-vertical:nth-of-type(${num})`
+        ).style.opacity = '1';
+      }
+    </script>
+  </body>
+</html>
